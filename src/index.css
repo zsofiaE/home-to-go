@@ -15,7 +15,7 @@
 }
 
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -35,7 +35,7 @@
 }
 
 a {
-  font-weight: 500;
+  /* font-weight: 500; */
   color: #646cff;
   text-decoration: inherit;
 }
@@ -48,12 +48,25 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 0;
+  margin: 5px 20px;
+}
+
+nav > div > a{
+  padding: 0 15px;
 }
 
 button {
@@ -77,6 +90,14 @@ button:focus-visible {
 
 .card {
   padding: 2em;
+}
+
+.links-right{
+  display: flex;
+}
+
+.links-right > p{
+  padding: 0 15px;
 }
 
 @media (prefers-color-scheme: light) {

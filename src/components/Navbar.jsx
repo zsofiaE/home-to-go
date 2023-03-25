@@ -2,17 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
-        <nav>
-            <Link to="/"><h1 className="logo">home to go</h1></Link>
-            <div className="navbar">
+        <nav className="navigation">
+            <Link to="/"><p className="logo"> 🛤️ home to go 🏡</p></Link>
+            <div className="navbar header">
                 <NavLink to="/">Home</NavLink>
-                <NavLink to="about"> About Us</NavLink>
-                <NavLink to="contact"> Contact</NavLink>
-                <NavLink to="cities"> All cities</NavLink>
-                <NavLink to="cart">Cart<Cart /></NavLink>
+                <NavLink to="shortlist">♡ Shortlist</NavLink>
+                <NavLink to="contact">✉️ Contact us</NavLink>
             </div>
         </nav>
-
     )
 };
 
