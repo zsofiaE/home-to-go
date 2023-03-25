@@ -28,7 +28,7 @@ function App() {
           <Route path='cities/:cityId' element={<CityDetailsPage />}/>
           <Route path='cities/:cityId/:homeId' element={<HomeDetailsPage  />} />
           <Route path='contact' element={<Contact />} />
-          <Route path='shortlist' elemtn={<Shortlist />} />
+          <Route path='shortlist' element={<Shortlist />} />
           <Route path='about' element={<About/>}/>
           <Route path='terms'element={<TermsConditions/>} />
           <Route path='privacy' element={<PrivacyCookiePolicies/>} />

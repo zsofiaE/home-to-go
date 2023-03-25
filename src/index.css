@@ -22,8 +22,8 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  /* height: 6em; */
+  padding: 1em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -61,12 +61,19 @@ h1 {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  padding: 0;
-  margin: 5px 20px;
+  /* padding: 10px; */
+  margin: 10px 20px;
 }
 
-nav > div > a{
-  padding: 0 15px;
+nav > div > a,
+ .navigation > div > a,
+ .navigation > div > p{
+  padding: 0 1em;
+}
+
+
+.links-right{
+  display: flex;
 }
 
 button {
@@ -92,13 +99,6 @@ button:focus-visible {
   padding: 2em;
 }
 
-.links-right{
-  display: flex;
-}
-
-.links-right > p{
-  padding: 0 15px;
-}
 
 @media (prefers-color-scheme: light) {
   :root {
