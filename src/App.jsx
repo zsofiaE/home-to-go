@@ -23,14 +23,13 @@ function App() {
   const [count, setCount] = useState(0);
 
 
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<RootLayout />} >
           <Route index element={<HomePage  />} />
           <Route path='cities' element={<SeeAllCitiesPage />}/>
           <Route path='cities/:cityId' element={<CityDetailsPage />}/>
-          <Route path='cities/:cityId/:homeId' element={<HomeDetailsPage  />} />
+          <Route path='homes/:homeId' element={<HomeDetailsPage  />} />
           <Route path='contact' element={<Contact />} />
           <Route path='shortlist' element={<Shortlist />} />
           <Route path='about' element={<About/>}/>

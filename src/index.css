@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 }
@@ -15,12 +15,14 @@ body {
 #root {
   width: 100%;
   margin: 0;
+  font-family: 'Epilogue', sans-serif;
   text-align: center;
 }
 
 .logo {
   /* height: 6em; */
-  padding: 1em;
+  /* padding: 1em; */
+  margin: 15px 0;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -29,12 +31,14 @@ body {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #8261fbaa);
 }
 
 a {
   /* font-weight: 500; */
   /* color: #646cff; */
+  font-size: 16px;
+  line-height: 24px;
   color:rgb(240, 240, 240);
   text-decoration: inherit;
   margin: 0;
@@ -61,18 +65,20 @@ html {
   text-decoration: none;
   background: rgb(63,94,251);
   background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  padding: 0 20px;
 }
 
 .navbar-logo{
   display: flex;
-  align-items: flex-start;
-  padding-left: 10px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .logo-icon{
   width: 20%;
-  padding: 16px 5px;
-  
+  position: relative;
+  top: -5px;
+  /* padding: 16px 5px; */
 }
 
 nav > div > a,
@@ -81,33 +87,34 @@ nav > div > a,
   padding: 0 1em;
 }
 
-/* .banner{
-  position: relative;
-  text-align: center;
-  backdrop-filter: blur(2px);
-  background: rgba(0, 0, 0, 0.5);
-} */
-
-.banner-title{
+.hero-title{
   margin: 0;
-  padding-top: 100px;
 }
 
-.banner-text{
-  margin: 0;
-  height: 40vh;
+.hero-text-box{
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url("/cover-img.png");
   background-repeat: no-repeat;
   backdrop-filter: blur(2px);
-  background-size: auto;
+  background-size: cover;
   color: white;
-  text-align: center;
-  vertical-align: middle;
+  
+}
+
+footer{
+  height: 100px;
 }
 
 
 .links-right{
   display: flex;
+}
+
+.links-right > p{
+  color:rgb(240, 240, 240);
 }
 
 button {
