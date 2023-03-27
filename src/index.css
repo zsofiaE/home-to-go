@@ -6,31 +6,72 @@
 
 body {
   margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  height: 100vh;
 }
 
 #root {
-  margin: 0 ;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
+.logo {
+  /* height: 6em; */
+  padding: 1em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+a {
+  /* font-weight: 500; */
+  color: #646cff;
+  text-decoration: inherit;
+  margin: 0 ;
+}
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
 html {
   overflow-y: scroll;
 }
 
-/*.scroll {
-  overflow-y: scroll;
-
-  /*height: 15vh;
-  
-}*/
-
 .App {
   position:relative;
   z-index: 1;
+}
+
+.navigation{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  /* padding: 10px; */
+  margin: 10px 20px;
+}
+
+nav > div > a,
+ .navigation > div > a,
+ .navigation > div > p{
+  padding: 0 1em;
+}
+
+
+.links-right{
+  display: flex;
 }
 
 button {
@@ -48,5 +89,18 @@ button {
 
 .card {
   padding: 2em;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
 
