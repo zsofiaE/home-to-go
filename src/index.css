@@ -49,6 +49,16 @@ h1 {
   line-height: 1.1;
 }
 
+h3{
+  font-size: 2.25em;
+  line-height: 3em;
+}
+
+p{
+  font-size: 1.25em;
+  line-height: 2em;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -56,6 +66,20 @@ html {
 .App {
   position:relative;
   z-index: 1;
+}
+
+input{
+  border-radius: 12px;
+  border: 1px solid #CED3D8;
+  background: #FFFFFF;
+  
+  color: #CED3D8;
+  font-size: 20px;
+  line-height: 20.5px;
+  padding: 12px 20px;
+  width: 25vw;
+
+
 }
 
 .navigation{
@@ -103,6 +127,26 @@ nav > div > a,
   color: white;
   
 }
+
+.cta-container{
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  background-color:  rgba(63,94,251,01);
+  color:rgb(240, 240, 240);
+  padding: 80px 100px;
+}
+
+.cta-icons{
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-brands-names{
+  display: flex;
+ 
+}
+
 
 footer{
   height: 100px;
