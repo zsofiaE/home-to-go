@@ -4,7 +4,7 @@ import HomePage from "./pages/HomePage";
 import SeeAllCitiesPage from "./pages/SeeAllCitiesPage";
 import CityDetailsPage from "./pages/CityDetailsPage";
 import HomeDetailsPage from "./pages/HomeDetailsPage";
-import ApiCall_AllCities from "./components/allCitiesDB";
+import CitiesApi from "./components/citiesApi_cmp";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,7 +15,7 @@ function App() {
 
       <div>
         <HomePage />
-        <ApiCall_AllCities />
+        <CitiesApi />
         <SeeAllCitiesPage />
         <CityDetailsPage />
         <HomeDetailsPage />
