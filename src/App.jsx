@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider, Route, Link, useParams, createRoutesFromElements, Outlet } from "react-router-dom";
 
@@ -16,8 +17,11 @@ import About from './pages/About'
 import TermsConditions from './pages/TermsConditions'
 import PrivacyCookiePolicies from './pages/PrivacyCookiePolicies';
 
+import ApiCall_AllCities from "./components/allCitiesDB";
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
 
 
   const router = createBrowserRouter(
@@ -41,6 +45,7 @@ function App() {
         <RouterProvider router={router}/>
 
   )
+
 }
 
-export default App
+export default App;
