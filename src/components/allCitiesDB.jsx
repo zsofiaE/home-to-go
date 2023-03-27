@@ -3,7 +3,7 @@ import AsyncSelect from "React-select/async";
 import axios from "axios";
 /*-------------------------------------------------------------------------*/
 
-export default function ApiCall_AllCities() {
+const ApiCallAllCities = () => {
  
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -56,4 +56,6 @@ export default function ApiCall_AllCities() {
     </div>
   );
 }
+
+export default ApiCallAllCities;
 

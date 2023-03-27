@@ -14,8 +14,7 @@ body {
 
 #root {
   width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
   text-align: center;
 }
 
@@ -35,9 +34,10 @@ body {
 
 a {
   /* font-weight: 500; */
-  color: #646cff;
+  /* color: #646cff; */
+  color:rgb(240, 240, 240);
   text-decoration: inherit;
-  margin: 0 ;
+  margin: 0;
 }
 
 h1 {
@@ -59,14 +59,50 @@ html {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  /* padding: 10px; */
-  margin: 10px 20px;
+  background: rgb(63,94,251);
+  background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+.navbar-logo{
+  display: flex;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.logo-icon{
+  width: 20%;
+  padding: 16px 5px;
+  
 }
 
 nav > div > a,
  .navigation > div > a,
  .navigation > div > p{
   padding: 0 1em;
+}
+
+/* .banner{
+  position: relative;
+  text-align: center;
+  backdrop-filter: blur(2px);
+  background: rgba(0, 0, 0, 0.5);
+} */
+
+.banner-title{
+  margin: 0;
+  padding-top: 100px;
+}
+
+.banner-text{
+  margin: 0;
+  height: 40vh;
+  background-image: url("/cover-img.png");
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  background-size: auto;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
 }
 
 
@@ -81,17 +117,16 @@ button {
   font-size: 1em;  
   font-weight: 500;
   font-family: inherit;
- 
+
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 
 .card {
   padding: 2em;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -102,5 +137,5 @@ button {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
