@@ -72,14 +72,11 @@ input{
   border-radius: 12px;
   border: 1px solid #CED3D8;
   background: #FFFFFF;
-  
   color: #CED3D8;
   font-size: 20px;
   line-height: 20.5px;
   padding: 12px 20px;
   width: 25vw;
-
-
 }
 
 .navigation{
@@ -116,7 +113,7 @@ nav > div > a,
 }
 
 .hero-text-box{
-  height: 45vh;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -124,8 +121,7 @@ nav > div > a,
   background-repeat: no-repeat;
   backdrop-filter: blur(2px);
   background-size: cover;
-  color: white;
-  
+  color: white; 
 }
 
 .cta-container{
@@ -134,7 +130,7 @@ nav > div > a,
   text-align: left;
   background-color:  rgba(63,94,251,01);
   color:rgb(240, 240, 240);
-  padding: 80px 100px;
+  padding: 50px 100px;
 }
 
 .cta-icons{
@@ -144,14 +140,11 @@ nav > div > a,
 
 .fa-brands-names{
   display: flex;
- 
 }
-
 
 footer{
   height: 100px;
 }
-
 
 .links-right{
   display: flex;
@@ -168,7 +161,6 @@ button {
   font-size: 1em;  
   font-weight: 500;
   font-family: inherit;
-
   cursor: pointer;
   transition: border-color 0.25s;
 }
