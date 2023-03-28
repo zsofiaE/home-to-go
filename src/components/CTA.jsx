@@ -1,4 +1,7 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  } from '@fortawesome/free-solid-svg-icons';
+import {faFacebook, faTwitter, faInstagram  } from '@fortawesome/free-brands-svg-icons';
 
 
 const CTA = () => {
@@ -14,17 +17,18 @@ const CTA = () => {
             </form>
          </div>
          <div className='cta-right'>
-            <h3>Let’s Socialize</h3>
-            <div className='fa-brands-names'>
-                <div className="cta-icons">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-facebook"></i>
+            <h3>Let's Socialize</h3>
+            <div className='cta-icons-container'>
+                <div className="fa-icons">
+                    <FontAwesomeIcon icon={faFacebook}  classname="fa-brands" size="2x"></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faTwitter} classname="fa-brands" size="2x"></FontAwesomeIcon>
+                    <FontAwesomeIcon icon={faInstagram} classname="fa-brands" size="2x"></FontAwesomeIcon>
                 </div>
-                <div>
-                    <p>Instagram</p>
+                <div className='fa-names'>
+                <FontAwesomeIcon icon={faFacebook}  classname="fa-brands" size="2x"></FontAwesomeIcon> 
+                 <p>Facebook</p>
                     <p>Twitter</p>
-                    <p>Facebook</p>
+                    <p>Instagram</p>
                 </div>
                 </div>
             </div>

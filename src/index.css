@@ -133,13 +133,20 @@ nav > div > a,
   padding: 50px 100px;
 }
 
-.cta-icons{
+.fa-icons, .fa-names{
   display: flex;
   flex-direction: column;
 }
 
-.fa-brands-names{
+.fa-icons{
+  line-height: 2em;
+  padding: 2em;;
+
+}
+
+.cta-icons-container{
   display: flex;
+
 }
 
 footer{
