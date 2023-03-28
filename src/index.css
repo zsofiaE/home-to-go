@@ -1,7 +1,6 @@
 :root {
   /* font-family: 'Poppins', sans-serif; */
-  line-height: 1.5;
-  font-weight: 400;
+  /* line-height: 1.5; */
 }
 
 body {
@@ -9,29 +8,19 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  height: 100vh;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #root {
   width: 100%;
   margin: 0;
   font-family: 'Epilogue', sans-serif;
+  font-weight: 400px;
   text-align: center;
-}
-
-.logo {
-  /* height: 6em; */
-  /* padding: 1em; */
-  margin: 15px 0;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #8261fbaa);
 }
 
 a {
@@ -40,18 +29,27 @@ a {
   font-size: 16px;
   line-height: 24px;
   color:rgb(240, 240, 240);
-  text-decoration: inherit;
+  text-decoration: none;
   margin: 0;
+}
+
+h1, h3,{
+  line-height: 1.1;
 }
 
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
+  font-weight: 500px;
 }
 
 h3{
   font-size: 2.25em;
-  line-height: 3em;
+
+}
+
+h4{
+  font-size: 1.5em;
+  font-weight: 300;
 }
 
 p{
@@ -77,6 +75,22 @@ input{
   line-height: 20.5px;
   padding: 12px 20px;
   width: 25vw;
+}
+
+.logo {
+  font-size: 1.5em;
+  /* height: 6em; */
+  /* padding: 1em; */
+  margin: 15px 0;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #aeafc3aa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #bfb9d5aa);
 }
 
 .navigation{
@@ -111,17 +125,59 @@ nav > div > a,
 .hero-title{
   margin: 0;
 }
+/* .hero-bg-image{
+  height: 45vh;
+  z-index: -1;
+  background:  rgba(0, 0, 0, 0.535);
+  background-image: url("/cover-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+} */
 
-.hero-text-box{
-  height: 40vh;
+/* .hero-text-box{
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /* position: absolute;
+  top: 28.25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+  width: 100%;
+  height: 45vh;
+  padding: 40px;
+  text-align: center;
+}  */
+
+.bg-image{
+  height: 45vh;
+  width: 100%;
+  background-image: url("/cover-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: blur(2px); 
+  -webkit-filter: blur(2px); */
+}
+
+.img-overlay{
+  height: 45vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url("/cover-img.png");
-  background-repeat: no-repeat;
-  backdrop-filter: blur(2px);
-  background-size: cover;
-  color: white; 
+  align-items: center;
+  color: white;
+/* --- entwieder i apply blur hier in diesn Konstrukt, dann Text is auch geblurt. 
+  oder benutze den Konstruk above--auskommentiert--, dann aber habe funktioniert der bg-color on the img nicht ---*/
+  /* filter: blur(2px); 
+  -webkit-filter: blur(2px); */
 }
 
 .cta-container{
@@ -133,20 +189,25 @@ nav > div > a,
   padding: 50px 100px;
 }
 
-.fa-icons, .fa-names{
+/* .fa-icons, .fa-names{
   display: flex;
   flex-direction: column;
-}
+} */
 
-.fa-icons{
+/* .fa-icons{
   line-height: 2em;
   padding: 2em;;
-
-}
+} */
 
 .cta-icons-container{
   display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
 
+.cta-icons-container > p > span {
+  margin: 20px;
+  vertical-align: text-bottom;
 }
 
 footer{
