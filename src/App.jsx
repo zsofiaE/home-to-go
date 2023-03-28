@@ -1,7 +1,3 @@
-
-
-import CitiesApi from "./components/citiesApi_cmp";
-
 import { useState } from 'react'
 import { createBrowserRouter, RouterProvider, Route, Link, useParams, createRoutesFromElements, Outlet } from "react-router-dom";
 
@@ -20,8 +16,6 @@ import About from './pages/About'
 import TermsConditions from './pages/TermsConditions'
 import PrivacyCookiePolicies from './pages/PrivacyCookiePolicies';
 
-import ApiCall_AllCities from "./components/allCitiesDB";
-import CitiesApi from "./components/citiesApi_cmp";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -45,9 +39,7 @@ function App() {
   )
   
     return (
-
         <RouterProvider router={router}/>
-
   )
 
 }

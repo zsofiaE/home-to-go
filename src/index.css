@@ -39,7 +39,6 @@ h1 {
 
 h3{
   font-size: 2.25em;
-
 }
 
 h4{
@@ -229,9 +228,52 @@ button {
   transition: border-color 0.25s;
 }
 
-.card {
-  padding: 2em;
+.city-list-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,  minmax(320px, 1fr ));
+  grid-gap: 3rem;
+  padding: 3rem;
+
 }
+
+.city-list-card {
+  width: 320px;
+  height: 200px;
+  
+ border: solid 1px rgb(27, 88, 101);
+/* übernimmt von hier keine Styling */
+}
+
+.city-list-bg{
+  width: 320px;
+  height: 200px;
+  
+  border: solid 1px rgb(200, 50, 230);
+  background-image: url("/placeholder-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  border-radius: 24px;
+  
+} 
+
+.city-list-details{
+  border: solid 1px greenyellow;
+  width: 300px;
+  height: 100px;
+ position: absolute;
+  top: 78%;
+  left: 38%; 
+  /* transform: translate(-50%, -50%); */
+  z-index: 2;
+  color: white;
+ 
+ 
+  text-align: center;
+}
+
+
 
 /* @media (prefers-color-scheme: light) {
   :root {
