@@ -1,8 +1,12 @@
 import React from 'react'
+import ApiCallAllCities from '../components/allCitiesDB'
 
 const HomePage = () => {
   return (
-    <div>Content for the Home Page</div>
+    <div>
+      <ApiCallAllCities />
+      <h1>Content for the Home Page</h1>
+      </div>
   )
 }
 

@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 const Links = () => {
     return (
       
-        <div className="navigation">
+        <footer className="navigation footer">
             <div className="links-left">
                 <NavLink to="about" >About us</NavLink>
                 <NavLink to="terms" >Terms & Conditions</NavLink>
@@ -11,9 +11,9 @@ const Links = () => {
             </div>
             <div className="links-right">
                 <p>2022</p>
-                <Link to="/"><p className=""> 🏘️ home to go</p></Link>
+                <Link to="/"><p className="">©home to go</p></Link>
             </div>
-        </div>
+        </footer>
 
     )
 };

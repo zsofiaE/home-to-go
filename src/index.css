@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
   line-height: 1.5;
   font-weight: 400;
 }
@@ -14,14 +14,15 @@ body {
 
 #root {
   width: 100%;
-  margin: 0 auto;
-  padding: 2rem;
+  margin: 0;
+  font-family: 'Epilogue', sans-serif;
   text-align: center;
 }
 
 .logo {
   /* height: 6em; */
-  padding: 1em;
+  /* padding: 1em; */
+  margin: 15px 0;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -30,14 +31,17 @@ body {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #8261fbaa);
 }
 
 a {
   /* font-weight: 500; */
-  color: #646cff;
+  /* color: #646cff; */
+  font-size: 16px;
+  line-height: 24px;
+  color:rgb(240, 240, 240);
   text-decoration: inherit;
-  margin: 0 ;
+  margin: 0;
 }
 
 h1 {
@@ -59,8 +63,22 @@ html {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  /* padding: 10px; */
-  margin: 10px 20px;
+  background: rgb(63,94,251);
+  background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  padding: 0 20px;
+}
+
+.navbar-logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo-icon{
+  width: 20%;
+  position: relative;
+  top: -5px;
+  /* padding: 16px 5px; */
 }
 
 nav > div > a,
@@ -69,9 +87,34 @@ nav > div > a,
   padding: 0 1em;
 }
 
+.hero-title{
+  margin: 0;
+}
+
+.hero-text-box{
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("/cover-img.png");
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  background-size: cover;
+  color: white;
+  
+}
+
+footer{
+  height: 100px;
+}
+
 
 .links-right{
   display: flex;
+}
+
+.links-right > p{
+  color:rgb(240, 240, 240);
 }
 
 button {
@@ -81,17 +124,16 @@ button {
   font-size: 1em;  
   font-weight: 500;
   font-family: inherit;
- 
+
   cursor: pointer;
   transition: border-color 0.25s;
 }
-
 
 .card {
   padding: 2em;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -102,5 +144,5 @@ button {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
