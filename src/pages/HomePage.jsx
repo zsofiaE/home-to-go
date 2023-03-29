@@ -10,7 +10,9 @@ const HomePage = () => {
       <CitiesApi />
       <h3>Cards for the first 9 City results</h3>
       <CityList />
+      <button>See All Cities</button>
       <HP_Section />
+      
       </div>
   )
 }
