@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@200;400;500;600&family=Poppins&display=swap');
+
 body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  /* min-width: 320px; */
+  font-family: 'Epilogue', sans-serif;
+  font-weight: 400px;
   height: 100%;
 }
 
@@ -22,8 +26,8 @@ body {
 #root {
   width: 100%;
   margin: 0;
-  font-family: 'Epilogue', sans-serif;
-  font-weight: 400px;
+  /* font-family: 'Epilogue', sans-serif;
+  font-weight: 400px; */
   text-align: center;
 }
 
@@ -183,7 +187,7 @@ nav > div > a,
   -webkit-filter: blur(2px); */
 }
 
-.cta-container{
+.section-container{
   display: flex;
   justify-content: space-around;
   text-align: left;
@@ -201,6 +205,15 @@ nav > div > a,
   line-height: 2em;
   padding: 2em;;
 } */
+
+.material-symbols-outlilned{
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 
 .cta-icons-container{
   display: flex;

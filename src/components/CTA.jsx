@@ -5,8 +5,8 @@ import {faFacebook, faTwitter, faInstagram  } from '@fortawesome/free-brands-svg
 
 const CTA = () => {
   return (
-    <section className='cta-container'>
-        <div className='cta-left'>
+    <section className='section-container'>
+        <div className='section-left'>
             <h3>Keep in touch</h3>
             <p>Curious about new offerings? Sign up for our <br/>
             weekly newsletter and stay informed.</p>
@@ -15,7 +15,7 @@ const CTA = () => {
                 <input id="cta-input" type="email" placeholder="Your email"/>
             </form>
          </div>
-         <div className='cta-right'>
+         <div className='section-right'>
             <h3>Let's Socialize</h3>
             <div className='cta-icons-container'>
                     <p><FontAwesomeIcon icon={faFacebook}  className="fa-brands" size="2x"></FontAwesomeIcon><span>Facebook</span></p>
