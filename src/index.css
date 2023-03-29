@@ -9,6 +9,15 @@ body {
 * {
   box-sizing: border-box;
 }
+/*does it make sense to use this * styling oin react  or just in JS project? would it be the#root instead to apply this styling*/
+
+:root{
+  /* --primary-dark:#0a3233; */
+  --primary-light: #f5f5f5;
+  /* --yellow:rgba(253, 187, 45, 0.5);
+  --turquoise: #22c1c3b3; */
+  --border-radius: 24px;
+}
 
 #root {
   width: 100%;
@@ -218,7 +227,7 @@ footer{
 }
 
 button {
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;  
@@ -231,45 +240,45 @@ button {
 .city-list-container{
   display: grid;
   grid-template-columns: repeat(auto-fit,  minmax(320px, 1fr ));
-  grid-gap: 3rem;
-  padding: 3rem;
+  grid-gap: 2.5em;
+  padding: 5em;
 
 }
 
 .city-list-card {
-  width: 320px;
-  height: 200px;
-  
+  width: 400px;
+  height: 300px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
  border: solid 1px rgb(27, 88, 101);
-/* übernimmt von hier keine Styling */
+ position: relative;
+ text-align: center;
+ color: white;
 }
 
 .city-list-bg{
-  width: 320px;
-  height: 200px;
-  
+  width: 100%;
+  height: 100%;
   border: solid 1px rgb(200, 50, 230);
-  background-image: url("/placeholder-unsplash.jpg");
+  /* background-image: url("/placeholder-unsplash.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   filter: blur(1px);
-  border-radius: 24px;
-  
+  border-radius: var(--border-radius);
 } 
 
 .city-list-details{
   border: solid 1px greenyellow;
-  width: 300px;
-  height: 100px;
- position: absolute;
-  top: 78%;
-  left: 38%; 
-  /* transform: translate(-50%, -50%); */
-  z-index: 2;
-  color: white;
- 
- 
+  width: 90%;
+  height: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(252, 250, 250);
   text-align: center;
 }
 
