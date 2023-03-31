@@ -5,7 +5,7 @@ function CitiesApi()
 {
   let [page, setPage] = useState(1);
   const [cities, setCities] = useState([]);
-  const [error, setError] = useState(null);
+  const [err, setError] = useState(null);
 
   const handleChange = (selectedOption) => {
     console.log("handleChangeTest", selectedOption);
@@ -19,12 +19,9 @@ function CitiesApi()
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.response);
         setCities([...cities, ...data.response ]);
-        console.log(cities);
 
         if (page < 2) {
-          console.log(page);
           setPage(page + 1);
         }
       })
