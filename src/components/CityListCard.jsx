@@ -1,18 +1,20 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { CitiesContext} from '../Context/CitiesContext'
 
-const CityListCard = () => {
+
+const CityListCard = ({ city }) => {
+
+  // let properties = ({city.property.count});
   return (
-    <>
-      <div className="city-list-card">
-        <img className="city-list-bg" src="/placeholder-unsplash.jpg" alt="" />
-        {/* <div className="city-list-bg" ></div> */}
-        <div className="city-list-details">
-          <h2>PlaceholderCity</h2>
-          <h5>2 Properties</h5>
-        </div>
+   
+    <div className="city-list-card">
+      <img className="city-list-bg" src={city.image_url} alt={city.name} />
+      <div className="city-list-details">
+        <h4>{city.name} </h4>
+        <h5>
+           {city.property_count} properties</h5>
       </div>
-     
-    </>
+    </div>
   );
 };
 
