@@ -10,9 +10,8 @@ const CityListCard = ({ city }) => {
     <div className="city-list-card">
       <img className="city-list-bg" src={city.image_url} alt={city.name} />
       <div className="city-list-details">
-        <h4>{city.name} </h4>
-        <h5>
-           {city.property_count} properties</h5>
+        <h3>{city.name} </h3>
+        <h5>{city.property_count} properties</h5>
       </div>
     </div>
   );
