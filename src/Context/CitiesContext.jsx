@@ -8,19 +8,23 @@ const CitiesContextProvider = ({children}) => {
 
     useEffect(() => {
         fetch(url)
-        .then(arr => arr.json())
-        .then(function(res) {
+
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data.response);
+          setCities([...cities, ...data.response ]);
+          console.log(cities);
+        })
+        .catch(err => console.log(err));
 
             return setCities(() => [...cities,...res.response])
-        });
-    }, []);
+       
+        
+    }, [page],)
 
-
-
-    console.log(cities)
 
   return (
-    <CitiesContext.Provider value={{cities, setProducts}}>
+    <CitiesContext.Provider value={{cities, setCities}}>
         {children}
     </CitiesContext.Provider>
    
