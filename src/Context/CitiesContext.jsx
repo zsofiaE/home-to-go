@@ -1,27 +1,39 @@
 import { createContext, useEffect, useState } from 'react'
 
 export const CitiesContext = createContext();
+
 const CitiesContextProvider = ({children}) => {
+
     const[cities, setCities] = useState([]);
     let [page, setPage] = useState(1);
-    const url = `https://unilife-server.herokuapp.com/cities?limit=10&page=${page}`;
 
     useEffect(() => {
-        fetch(url)
-
+      let abortController = new AbortController();
+      let { signal } = abortController;
+        fetch(`https://unilife-server.herokuapp.com/cities?limit=10&page=${page}`, {signal}
+        )
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.response);
-          setCities([...cities, ...data.response ]);
-          console.log(cities);
+          setCities([...cities, ...data.response]);
+
+          /* loop over pages in the database */
+          if (page < 2) {
+            setPage(page + 1);
+          }
         })
-        .catch(err => console.log(err));
 
-            return setCities(() => [...cities,...res.response])
-       
+        .catch((err) => {
+          if (err.name === "AbortError") {
+          }
+        });
+
+        return () => {
+          abortController.abort();
+        };      
         
-    }, [page],)
+    }, [page],);
 
+    console.log(cities,`response`);
 
   return (
     <CitiesContext.Provider value={{cities, setCities}}>
@@ -30,6 +42,5 @@ const CitiesContextProvider = ({children}) => {
    
   )
 }
-
 
 export default CitiesContextProvider;
