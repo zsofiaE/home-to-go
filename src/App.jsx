@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { createBrowserRouter, RouterProvider, Route, Link, useParams, createRoutesFromElements, Outlet } from "react-router-dom";
 
 
 import RootLayout from './layouts/RootLayout'
+import { CitiesContext } from "./Context/CitiesContext";
 
 import HomePage from './pages/HomePage'
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage'
@@ -18,15 +19,14 @@ import PrivacyCookiePolicies from './pages/PrivacyCookiePolicies';
 
 
 function App() {
-  const [count, setCount] = useState(0);
 
-
+  const { cities } = useContext(CitiesContext);
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<RootLayout />} >
           <Route index element={<HomePage  />} />
           <Route path='cities' element={<SeeAllCitiesPage />}/>
-          <Route path='cities/:cityId' element={<CityDetailsPage />}/>
+          <Route path='cities/:id/' element={<CityDetailsPage cities={cities}/>}/>
           <Route path='homes/:homeId' element={<HomeDetailsPage  />} />
           <Route path='contact' element={<Contact />} />
           <Route path='shortlist' element={<Shortlist />} />

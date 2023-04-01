@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart  } from '@fortawesome/free-solid-svg-icons';
+
 
 const HP_Section = () => {
   return (
@@ -9,7 +12,7 @@ const HP_Section = () => {
       <div className="section-left">
         <div className="section-left-icons">
             <img
-              src="/real_estate_agent.png"
+              src="/real-estate-agent.png"
               alt="Hands holding house"
               width="52px"
             />
@@ -37,6 +40,17 @@ const HP_Section = () => {
                 </p>
             </div>
           </div>
+
+          {/* <div className="section-left-icons">
+          <h3><FontAwesomeIcon icon={faHeart} className="fa-brands heart" size="1x"></FontAwesomeIcon>Your favorite</h3>
+             <div className="favorites">
+              
+                <p>
+                  Shortlist your favourite properties and send <br />
+                  enquiries in one click.
+                </p>
+            </div>
+          </div> */}
         
       </div>
       <div className="section-right">

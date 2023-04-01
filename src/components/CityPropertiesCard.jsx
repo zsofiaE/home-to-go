@@ -2,8 +2,8 @@ import React, { Fragment, useContext } from "react";
 import { CitiesContext} from '../Context/CitiesContext'
 import { Link } from "react-router-dom";
 
-const CityListCard = ({ city }) => {
-
+const CityPropertiesCard = ({ city }) => {
+console.log("thisCityId", city._id)
   return ( 
     <div className="city-list-card">
       <Link to={"cities/"+ city._id}>
@@ -17,4 +17,4 @@ const CityListCard = ({ city }) => {
   );
 };
 
-export default CityListCard;
+export default CityPropertiesCard;

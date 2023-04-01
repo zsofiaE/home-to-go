@@ -19,8 +19,10 @@ body {
   --primary-dark:black;
   --primary-light: #f5f5f5;
   /* --yellow:rgba(253, 187, 45, 0.5);*/
+  --pink: rgba(252,70,107,1);
   --blue: rgba(63,94,251,1); 
   --border-radius: 24px;
+  --gradient: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
 
 #root {
@@ -218,6 +220,17 @@ nav > div > a,
   flex-direction: column;
 }
 
+.heart{
+ color:  rgba(252,70,107);
+  
+}
+
+.favorites-title{
+  line-height: 40px;
+  margin-top: 0;
+  font-size: 1.75em;
+}
+
 .real-estate > h3{
   line-height: 40px;
   margin-top: 0;
@@ -324,7 +337,6 @@ button {
   grid-template-columns: repeat(auto-fit,  minmax(320px, 1fr ));
   grid-gap: 2.5em;
   padding: 5em;
-
 }
 
 .city-list-card {
@@ -369,7 +381,6 @@ button {
 }
 
 
-
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -383,3 +394,8 @@ button {
   }
 } */
 
+.detailedPageTestMimi {
+  display: flex;
+  justify-content: center;
+  border:rgb(200, 50, 230) solid 2px;
+}
