@@ -1,5 +1,7 @@
 import React, { Fragment, useContext } from "react";
+
 import { CitiesContext } from "../Context/CitiesContext";
+
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,8 +11,8 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
-const CityPropertiesCard = ({ city }) => {
-  // console.log("thisCityPropertyId", city)
+const CityPropertiesCard = ({ property, key }) => {
+  // console.log(key, "cityKey");
   return (
     <div className="property-list-card">
       <div
