@@ -26,8 +26,9 @@ const CityPropertiesContextProvider = ({children}) => {
         };      
         
     }, [],);
+    // Note: the empty deps array [] means this useEffect will run once
 
-  return (
+    return (
     <CityPropertiesContext.Provider value={{cityProperties, setCityProperties}}>
         {children}
     </CityPropertiesContext.Provider>   
