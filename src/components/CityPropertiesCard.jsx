@@ -11,8 +11,8 @@ import {
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
-const CityPropertiesCard = ({ property, key }) => {
-  // console.log(key, "cityKey");
+const CityPropertiesCard = ({ city, propertyId }) => {
+  //  console.log( "thisCityPropertyID", city);
   return (
     <div className="property-list-card">
       <div
@@ -76,9 +76,9 @@ const CityPropertiesCard = ({ property, key }) => {
           <FontAwesomeIcon icon={faHouse} /> View Home
         </button>
 
-        {/*<Link to={"homes/"+ cityProperties._id}>
-        <h5>{cityProperties.availability} properties</h5>
-  </Link>*/}
+      <Link to={"homes/"+ propertyId}>
+        <h5>availability {city.availability} </h5>
+      </Link>
       </div>
     </div>
   );

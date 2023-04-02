@@ -13,7 +13,7 @@ console.log(cityProperty, "cityProperty");
   return (
     <div className="HOME">
       <div>HomeDetailsPage</div>
-      <PropertyDetails />
+      <PropertyDetails key={cityProperty._id} propertyId={cityProperty._id}/>
     </div>
   )
 }
