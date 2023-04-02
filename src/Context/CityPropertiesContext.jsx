@@ -32,8 +32,7 @@ const CityPropertiesContextProvider = ({children}) => {
   return (
     <CityPropertiesContext.Provider value={{cityProperties, setCityProperties}}>
         {children}
-    </CityPropertiesContext.Provider>
-   
+    </CityPropertiesContext.Provider>   
   )
 }
 

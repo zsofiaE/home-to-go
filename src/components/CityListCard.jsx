@@ -1,5 +1,4 @@
 import React, { Fragment, useContext } from "react";
-import { CitiesContext} from '../Context/CitiesContext'
 import { Link } from "react-router-dom";
 
 const CityListCard = ({ city }) => {

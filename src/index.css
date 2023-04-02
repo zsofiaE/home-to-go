@@ -344,6 +344,11 @@ button {
 
 
 }
+.city-property-container {
+display: grid;
+grid-template-columns: repeat(auto-fit,  minmax(320px, 1fr ));
+grid-gap: 2.5em;
+padding: 5em;}
 
 .city-list-card {
   width: 400px;
@@ -355,6 +360,18 @@ button {
  position: relative;
  /* text-align: center; */
 
+}
+.property-list-card {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+ border: solid 1px rgb(55, 232, 19);
+ position: relative;
+ text-align: center;
+ color: blue;
 }
 
 .city-list-bg{

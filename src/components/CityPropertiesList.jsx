@@ -7,15 +7,12 @@ const CityPropertiesList = (cityName, key) => {
   const { cityProperties } = useContext(CityPropertiesContext);
 
   return (
-    <>
-      <div className="city-list-container">
+      <div className="city-property-container">
  
         {cityProperties.map((cityProperty) => (
           <CityPropertiesCard city={cityProperty} key={cityProperty._id} />
         ))} 
       </div>
-
-    </>
   );
 };
 
