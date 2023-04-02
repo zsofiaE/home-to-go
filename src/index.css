@@ -342,6 +342,7 @@ button {
   padding: 5em;
   justify-items: center;
 
+
 }
 
 .city-list-card {
@@ -383,7 +384,6 @@ button {
 }
 
 
-
 /* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -397,3 +397,8 @@ button {
   }
 } */
 
+.detailedPageTestMimi {
+  display: flex;
+  justify-content: center;
+  border:rgb(200, 50, 230) solid 2px;
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+/*import { useEffect, useState } from "react";
 import AsyncSelect from "React-select/async";
 
 function CitiesApi() 
@@ -33,10 +33,10 @@ function CitiesApi()
     return () => {
       abortController.abort();
     };
-  }, [page]);
+  }, [page]);*/
 
   /*load options into the search bar*/
-  const loadOptions = (searchValue, callback) => {
+  /*const loadOptions = (searchValue, callback) => {
     setTimeout(() => {
       const mappedOptions = cities.map(item => ({
         ...item,
@@ -62,4 +62,4 @@ function CitiesApi()
   );
 }
 
-export default CitiesApi;
+export default CitiesApi;*/
