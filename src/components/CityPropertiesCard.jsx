@@ -72,12 +72,10 @@ const CityPropertiesCard = ({ city, propertyId }) => {
             {city.address.street},{city.address.city},{city.address.postcode}
           </div>
         </div>
+        <Link to={"homes/"+ propertyId}>
         <button className="property-view-btn">
           <FontAwesomeIcon icon={faHouse} /> View Home
         </button>
-
-      <Link to={"homes/"+ propertyId}>
-        <h5>availability {city.availability} </h5>
       </Link>
       </div>
     </div>
