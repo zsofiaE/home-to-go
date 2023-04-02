@@ -4,36 +4,16 @@ import PropertyDetails from "../components/PropertyDetails";
 
 const HomeDetailsPage = ({cityProperties}) => {
 
-console.log(cityProperties, "cityHOMECheck")
-
 const { id } = useParams();
 
 const cityProperty = cityProperties.filter((cityProperty) => cityProperty._id === id)[0]
-console.log(cityProperty, "cityProperty");
-  return (
+
+return (
     <div className="HOME">
       <div>HomeDetailsPage</div>
-      <PropertyDetails key={cityProperty._id} propertyId={cityProperty._id}/>
+      <PropertyDetails key={cityProperty._id} propertyId={cityProperty._id} property={cityProperty.property_description}/>
     </div>
   )
 }
 
 export default HomeDetailsPage
-
- /* <{city.property_count} homes in {city.name}
-      <section>
-      <CityPropertiesList cityName={city.name} key={city._id}/>
-      </section>
-      </div>*/
-
-
-
-/*import React from 'react'
-
-const HomeDetailsPage = () => {
-  return (
-    <div>HomeDetailsPage</div>
-  )
-}
-
-export default HomeDetailsPage*/
