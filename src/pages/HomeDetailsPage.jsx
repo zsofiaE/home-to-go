@@ -1,4 +1,31 @@
-import React from 'react'
+import React, { Fragment, useContext } from "react";
+import { useParams } from "react-router-dom";
+
+
+const HomeDetailsPage = ({cityProperties}) => {
+console.log(cityProperties, "cityPropertiesCheck")
+const { id } = useParams();
+
+const cityProperty = cityProperties.filter((cityProperty) => cityProperty._id === id)[0]
+console.log(cityProperty, "cityProperty");
+  return (
+    <div className="detailedPageTestMimi">
+      <div>HomeDetailsPage</div>
+    </div>
+  )
+}
+
+export default HomeDetailsPage
+
+ /* <{city.property_count} homes in {city.name}
+      <section>
+      <CityPropertiesList cityName={city.name} key={city._id}/>
+      </section>
+      </div>*/
+
+
+
+/*import React from 'react'
 
 const HomeDetailsPage = () => {
   return (
@@ -6,4 +33,4 @@ const HomeDetailsPage = () => {
   )
 }
 
-export default HomeDetailsPage
+export default HomeDetailsPage*/

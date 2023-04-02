@@ -33,13 +33,10 @@ const CitiesContextProvider = ({children}) => {
         
     }, [page],);
 
-    console.log(cities,`response`);
-
   return (
     <CitiesContext.Provider value={{cities, setCities}}>
         {children}
-    </CitiesContext.Provider>
-   
+    </CitiesContext.Provider> 
   )
 }
 

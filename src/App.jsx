@@ -3,7 +3,9 @@ import { createBrowserRouter, RouterProvider, Route, Link, useParams, createRout
 
 
 import RootLayout from './layouts/RootLayout'
+
 import { CitiesContext } from "./Context/CitiesContext";
+import { CityPropertiesContext } from "./Context/CityPropertiesContext";
 
 import HomePage from './pages/HomePage'
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage'
@@ -21,13 +23,16 @@ import PrivacyCookiePolicies from './pages/PrivacyCookiePolicies';
 function App() {
 
   const { cities } = useContext(CitiesContext);
+  const { cityProperties } = useContext(CityPropertiesContext);
+
+console.log(cityProperties, "APPdebug1")
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path='/' element={<RootLayout />} >
           <Route index element={<HomePage  />} />
           <Route path='cities' element={<SeeAllCitiesPage />}/>
           <Route path='cities/:id/' element={<CityDetailsPage cities={cities}/>}/>
-          <Route path='homes/:homeId' element={<HomeDetailsPage  />} />
+          <Route path='homes/:id/' element={<HomeDetailsPage  cityProperties={cityProperties}/>} />
           <Route path='contact' element={<Contact />} />
           <Route path='shortlist' element={<Shortlist />} />
           <Route path='about' element={<About/>}/>

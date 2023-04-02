@@ -2,17 +2,17 @@ import React, { Fragment, useContext } from "react";
 import { CitiesContext} from '../Context/CitiesContext'
 import { Link } from "react-router-dom";
 
-const CityPropertiesCard = ({ city }) => {
-console.log("thisCityId", city._id)
+const CityPropertiesCard = ({ city, key }) => {
+
+
+console.log("thisCityPropertyId", city)
   return ( 
-    <div className="city-list-card">
-      <Link to={"cities/"+ city._id}>
-      <img className="city-list-bg" src={city.image_url} alt={city.name} />
-      <div className="city-list-details">
-        <h3>{city.name}</h3>
-        <h5>{city.property_count} properties</h5>
-      </div>
-      </Link>
+    <div className="property-list-card">
+      <h1>{city.property_type}</h1>
+      <h2>{city.furnished}</h2>
+      {/*<Link to={"homes/"+ cityProperties._id}>
+        <h5>{cityProperties.availability} properties</h5>
+  </Link>*/}
     </div>
   );
 };
