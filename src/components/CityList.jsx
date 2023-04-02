@@ -11,8 +11,7 @@ const CityList = () => {
     <>
       <div className="city-list-container">
       {cities.map((city) => (
-          <CityListCard
-        
+          <CityListCard      
             city={city}
             key={city._id}
           />

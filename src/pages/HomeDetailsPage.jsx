@@ -1,16 +1,19 @@
 import React, { Fragment, useContext } from "react";
 import { useParams } from "react-router-dom";
-
+import PropertyDetails from "../components/PropertyDetails";
 
 const HomeDetailsPage = ({cityProperties}) => {
-console.log(cityProperties, "cityPropertiesCheck")
+
+console.log(cityProperties, "cityHOMECheck")
+
 const { id } = useParams();
 
 const cityProperty = cityProperties.filter((cityProperty) => cityProperty._id === id)[0]
 console.log(cityProperty, "cityProperty");
   return (
-    <div className="detailedPageTestMimi">
+    <div className="HOME">
       <div>HomeDetailsPage</div>
+      <PropertyDetails />
     </div>
   )
 }

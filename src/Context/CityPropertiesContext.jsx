@@ -5,6 +5,7 @@ export const CityPropertiesContext = createContext();
 const CityPropertiesContextProvider = ({children}) => {
 
     const[cityProperties, setCityProperties] = useState([]);
+    const[cityProperties2, setCityProperties2] = useState([]);
 
     useEffect(() => {
       let abortController = new AbortController();
@@ -14,6 +15,8 @@ const CityPropertiesContextProvider = ({children}) => {
         .then((res) => res.json())
         .then((data) => {
           setCityProperties([...cityProperties, ...data.response]);
+          setCityProperties2([...cityProperties2, ...data.response]);
+
         })
 
         .catch((err) => {
@@ -27,10 +30,8 @@ const CityPropertiesContextProvider = ({children}) => {
         
     }, [],);
 
-    console.log(cityProperties,`responseCityProperties`);
-
   return (
-    <CityPropertiesContext.Provider value={{cityProperties, setCityProperties}}>
+    <CityPropertiesContext.Provider value={{cityProperties, setCityProperties, cityProperties2, setCityProperties2}}>
         {children}
     </CityPropertiesContext.Provider>   
   )
