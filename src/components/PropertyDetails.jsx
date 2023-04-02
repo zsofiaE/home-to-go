@@ -1,11 +1,11 @@
 import React, { Fragment, useContext } from "react";
 
-const PropertyDetails = ({ }) => {
+const PropertyDetails = ({ propertyId }) => {
 
   return ( 
     <div className="property">
       <h1>Property Name</h1>
-      <h2>Details</h2>
+      <h2>{propertyId}</h2>
  
     </div>
   );

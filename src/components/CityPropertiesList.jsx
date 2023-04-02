@@ -4,17 +4,14 @@ import { CityPropertiesContext } from "../Context/CityPropertiesContext";
 import CityPropertiesCard from "./CityPropertiesCard";
 
 const CityPropertiesList = () => {
-  const { cityProperties2 } = useContext(CityPropertiesContext);
+  const { cityProperties } = useContext(CityPropertiesContext);
 
   return (
-    <>
-      <div className="city-list-container">
-        {cityProperties2.map((cityProperty) => (
-          <CityPropertiesCard property={cityProperty} key={cityProperty._id} />
-        ))} 
-      </div>
-
-    </>
+    <div className="city-list-container">
+      {cityProperties.map((cityProperty) => (
+        <CityPropertiesCard city={cityProperty} key={cityProperty._id} propertyId={cityProperty._id} />
+      ))}
+    </div>
   );
 };
 
