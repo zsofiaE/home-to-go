@@ -1,10 +1,13 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import OpenViewingModal from "../Modals/OpenModal";
+import Modal from "../Modals/Modal";
+
 
 
 const HomeDetails = ({ propertyId, propertyDesc }) => {
-
+  const [openModal, setOpenModal] = useState(false);
   return ( 
     <div className="property">
       <p><FontAwesomeIcon icon={faChevronLeft} /> Back to Search</p>
@@ -18,7 +21,8 @@ const HomeDetails = ({ propertyId, propertyDesc }) => {
             display: 'flex'
           }}>
             <button>Shortlist</button>
-            <button>Book a Viewing</button>
+            <button className="open-modal-btn" onClick={() => setOpenModal
+              (true)}>Book  Viewing</button>
           </div>
          </div>
           <div className="home-grid-item desc">
@@ -31,9 +35,10 @@ const HomeDetails = ({ propertyId, propertyDesc }) => {
           <div className="home-grid-item key-features">
            <div>Key Features</div>
           </div>
-
+          
 
       </div>
+      {openModal && <Modal closeModal={setOpenModal} />}
      
      
  

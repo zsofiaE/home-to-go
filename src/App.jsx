@@ -19,6 +19,8 @@ import About from './pages/About'
 import TermsConditions from './pages/TermsConditions'
 import PrivacyCookiePolicies from './pages/PrivacyCookiePolicies';
 
+import Modal from './Modals/Modal';
+
 
 function App() {
 
@@ -38,6 +40,7 @@ function App() {
           <Route path='terms'element={<TermsConditions/>} />
           <Route path='privacy' element={<PrivacyCookiePolicies/>} />
           <Route path="*" element={<Error />} />
+          <Route path='modal' element={<Modal/>} />
       </Route>
     )
   )
