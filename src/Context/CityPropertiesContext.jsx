@@ -14,6 +14,7 @@ const CityPropertiesContextProvider = ({children}) => {
         .then((res) => res.json())
         .then((data) => {
           setCityProperties([...cityProperties, ...data.response]);
+          
         })
 
         .catch((err) => {
