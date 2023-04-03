@@ -1,14 +1,14 @@
 import React, { Fragment, useContext } from "react";
 
-const PropertyDetails = ({ propertyId, propertyDesc }) => {
+const HomeDetails = ({ propertyId, property }) => {
 
   return ( 
     <div className="property">
-      <h1>{propertyDesc}</h1>
+      <p>{property}</p>
       <h2>{propertyId}</h2>
  
     </div>
   );
 };
 
-export default PropertyDetails;
+export default HomeDetails;

@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from "react";
 import { useParams } from "react-router-dom";
-import PropertyDetails from "../components/PropertyDetails";
+import HomeDetails from "../components/HomeDetails";
 
 const HomeDetailsPage = ({cityProperties}) => {
 
@@ -11,7 +11,7 @@ const cityProperty = cityProperties.filter((cityProperty) => cityProperty._id ==
 return (
     <div className="HOME">
       <div>HomeDetailsPage</div>
-      <PropertyDetails key={cityProperty._id} propertyId={cityProperty._id} property={cityProperty.property_description}/>
+      <HomeDetails key={cityProperty._id} propertyId={cityProperty._id} property={cityProperty.property_description}/>
     </div>
   )
 }

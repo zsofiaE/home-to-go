@@ -498,3 +498,8 @@ button {
   justify-content: center;
   border:rgb(200, 50, 230) solid 2px;
 }
+
+.property {
+  color: black;
+  border: solid green 3px;
+}
