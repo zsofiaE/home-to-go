@@ -335,7 +335,7 @@ button {
   grid-template-columns: repeat(auto-fit,  minmax(320px, 1fr ));
   /* grid-template-columns: repeat(3, 1fr); */
   grid-gap: 2.5em;
-  padding: 5em;
+  padding:  2.5em 5em;
   justify-items: center;
 }
 
@@ -348,7 +348,6 @@ button {
   align-items: center; */
  position: relative;
  /* text-align: center; */
-
 }
 
 .city-list-bg{
@@ -477,6 +476,26 @@ button {
     border: solid 0.5px #CED3D8;
 
    }
+
+   /*----------------------home details styling ---------------*/
+
+   .home-grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px ;
+    padding: 80px;
+    justify-content: space-evenly;
+   
+    align-items: center;
+
+   }
+
+   .home-grid-item{
+    border: 1px solid rgba(38, 144, 155, 0.8);
+
+    
+   }
  
 
 
@@ -496,5 +515,6 @@ button {
 .detailedPageTestMimi {
   display: flex;
   justify-content: center;
-  border:rgb(200, 50, 230) solid 2px;
+  align-items: center;
+  /* border:rgb(200, 50, 230) solid 2px; */
 }

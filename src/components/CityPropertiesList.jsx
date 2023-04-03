@@ -9,6 +9,7 @@ const CityPropertiesList = () => {
   return (
     <div className="city-list-container">
       {cityProperties.map((cityProperty) => (
+        console.log(cityProperties),
         <CityPropertiesCard city={cityProperty} key={cityProperty._id} propertyId={cityProperty._id} />
       ))}
     </div>
