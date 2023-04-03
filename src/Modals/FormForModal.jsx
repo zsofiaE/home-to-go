@@ -23,34 +23,39 @@ const FormForModal = () => {
     return (
       
       <form onSubmit={handleSubmit}>
-        <label>Name<br/>
-        <input 
-          type="text" 
-          name="username" 
-          value={inputs.name || ""} 
-          onChange={handleChange}
-        />
-        </label><br/>
-        <label>Email<br/>
+        <div className="form-left">
+          <label>Name<br/>
           <input 
-            type="email" 
-            name="email" 
-            value={inputs.email || ""} 
+            type="text" 
+            name="username" 
+            value={inputs.name || ""} 
             onChange={handleChange}
           />
           </label><br/>
-          <label>Phone Number<br/>
-            <input type="text"
-            name="phone"
-            value={inputs.phone || ""}
-            onChange={handleChange}
+          <label>Email<br/>
+            <input 
+              type="email" 
+              name="email" 
+              value={inputs.email || ""} 
+              onChange={handleChange}
             />
-          </label><br />
-          <label>Message
-            <textarea></textarea>
-          </label>
-          {/* <input type="submit" /> */}
+            </label><br/>
+            <label>Phone Number<br/>
+              <input type="text"
+              name="phone"
+              value={inputs.phone || ""}
+              onChange={handleChange}
+              />
+            </label><br />
+          </div>
+          <div className="form-right">
+            <label>Message
+              <textarea></textarea>
+            </label>
+            {/* <input type="submit" /> */}
+          </div>
       </form>
+
     )
   
 }
