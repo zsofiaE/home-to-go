@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Select from "React-select/async";
 
 import { CitiesContext } from "../Context/CitiesContext";
-//import CityListCard from "./CityListCard";
+import CityListCard from "./CityListCard";
 
 const SearchBarCityList = () => {
     const { cities } = useContext(CitiesContext);

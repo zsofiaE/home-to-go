@@ -5,6 +5,8 @@ export const CityPropertiesContext = createContext();
 const CityPropertiesContextProvider = ({children}) => {
 
     const[cityProperties, setCityProperties] = useState([]);
+    
+
 
     useEffect(() => {
       let abortController = new AbortController();
