@@ -62,6 +62,7 @@ const FormForModal = () => {
               </textarea>
             </label>
             {/* <input type="submit" /> */}
+            <button className="submit-btn">Submit</button>
           </div>
       </form>
 

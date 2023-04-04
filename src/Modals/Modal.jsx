@@ -1,6 +1,8 @@
 import React from 'react'
 import FormForModal from './FormForModal';
 import './Modal.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelopesBulk, faHouseCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 
 const Modal = ({ closeModal }) => {
@@ -9,6 +11,8 @@ const Modal = ({ closeModal }) => {
     <div className="modal-background">
       <div className="modal-container">
           <div className='close-btn'>
+            {/* <FontAwesomeIcon icon={faEnvelopesBulk} size="2xl" style={{color: "#3f5efb"}} pull="right" className='modal-icons'/> */}
+            <FontAwesomeIcon icon={faHouseCircleCheck} size="2xl" style={{color: "#3f5efb"}} pull="right" className='modal-icons'/>
             <button onClick={() => closeModal(false)}> X </button>
           </div>
           <div className="modal-title">
@@ -18,9 +22,9 @@ const Modal = ({ closeModal }) => {
           <div className="modal-body">
             <FormForModal />
           </div>
-          <div className="modal-footer">
-            <button className="submit-btn">Submit</button>
-          </div>
+          {/* <div className="modal-footer">
+            
+          </div> */}
         </div>
       </div>
    

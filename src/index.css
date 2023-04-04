@@ -20,7 +20,7 @@ body {
   --primary-light: #f5f5f5;
   /* --yellow:rgba(253, 187, 45, 0.5);*/
   --pink: rgba(252,70,107,1);
-  --blue: rgba(63,94,251,1); 
+  --blue: #3f5efb; 
   --border-radius: 24px;
   --gradient: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
@@ -210,6 +210,8 @@ nav > div > a,
   -webkit-filter: blur(2px); */
 }
 
+/*-----------styling the Section Part of the HomePage---------*/
+
 .section-container{
   display: flex;
   justify-content: space-around;
@@ -231,10 +233,17 @@ nav > div > a,
   flex-direction: column;
 }
 
-.heart{
+/* .heart{
  color:  rgba(252,70,107);
   
+} */
+
+.fa-icons{
+  line-height: 2em;
+  padding: 0 15px 0 50px;
+  color: #3f5efb;
 }
+
 
 .favorites-title{
   line-height: 40px;
@@ -269,33 +278,6 @@ nav > div > a,
   position: relative;
   bottom: -55px;
 
-}
-
-/* .fa-icons, .fa-names{
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .material-symbols-outlilned{
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 300,
-  'GRAD' 0,
-  'opsz' 48
-} */
-
-.material-symbols-outlined {
-  font-family: 'Material Symbols Outlined';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
 }
 
 
@@ -464,11 +446,6 @@ button {
     flex-direction: column;
     justify-content: space-evenly;
    }
-
-   /* .fa-icons{
-  line-height: 2em;
-  padding: 0 5px 0 45px;
-} */
 
 
    .property-view-btn{
