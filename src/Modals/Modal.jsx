@@ -12,7 +12,7 @@ const Modal = ({ closeModal }) => {
             <button onClick={() => closeModal(false)}> X </button>
           </div>
           <div className="modal-title">
-            <h4>Book a viewing</h4>
+            <h3>Book a viewing</h3>
             <p>Address street, City, 1234</p>
           </div>
           <div className="modal-body">

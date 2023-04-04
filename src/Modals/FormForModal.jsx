@@ -22,35 +22,47 @@ const FormForModal = () => {
   
     return (
       
-      <form onSubmit={handleSubmit}>
-        <label>Name<br/>
-        <input 
-          type="text" 
-          name="username" 
-          value={inputs.name || ""} 
-          onChange={handleChange}
-        />
-        </label><br/>
-        <label>Email<br/>
+      <form onSubmit={handleSubmit} className='modal-form-container'>
+
+        <div className="form-left">
+          <label>Name<br/>
           <input 
-            type="email" 
-            name="email" 
-            value={inputs.email || ""} 
+            type="text" 
+            name="username"
+            placeholder="Enter your name" 
+            value={inputs.name || ""} 
             onChange={handleChange}
           />
           </label><br/>
-          <label>Phone Number<br/>
-            <input type="text"
-            name="phone"
-            value={inputs.phone || ""}
-            onChange={handleChange}
+          <label>Email<br/>
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Enter your email address"
+              value={inputs.email || ""} 
+              onChange={handleChange}
             />
-          </label><br />
-          <label>Message
-            <textarea></textarea>
-          </label>
-          {/* <input type="submit" /> */}
+            </label><br/>
+            <label>Phone Number<br/>
+              <input type="text"
+              name="phone"
+              placeholder="Enter your phone number"
+              value={inputs.phone || ""}
+              onChange={handleChange}
+              />
+            </label><br />
+          </div>
+          <div className="form-right">
+            <label >Message
+              <textarea
+              rows={8}
+                  placeholder="Enter your message" >
+              </textarea>
+            </label>
+            {/* <input type="submit" /> */}
+          </div>
       </form>
+
     )
   
 }
