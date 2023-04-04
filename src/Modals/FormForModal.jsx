@@ -55,8 +55,10 @@ const FormForModal = () => {
           <div className="form-right">
             <label >Message
               <textarea
-              rows={8}
+                  rows={8}
                   placeholder="Enter your message" >
+                  {/* value={textarea} 
+                  onChange={handleChange} */}
               </textarea>
             </label>
             {/* <input type="submit" /> */}

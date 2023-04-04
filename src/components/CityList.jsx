@@ -10,6 +10,7 @@ const CityList = () => {
   return (
     <>
       <div className="city-list-container">
+        {/*  if statement -  index number*/ }
       {cities.map((city) => (
           <CityListCard      
             city={city}
