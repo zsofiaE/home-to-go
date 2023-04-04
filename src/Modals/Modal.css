@@ -39,6 +39,13 @@
     font-size: 20px;
     color: black;
     margin: 0;
+    z-index: 2;
+  
+}
+
+.modal-icons{
+    font-size: 64px;
+
 }
 
 .modal-title{
@@ -59,19 +66,17 @@
         font-weight: 400;
     }
 
-
-
 .modal-body {
     flex: 50%;
     text-align: left;
     /* padding: 20px; */
 }
 
-.modal-footer {
+/* .modal-footer {
     
     display: flex;
     justify-content: flex-end;
-  }
+  } */
   
   .modal-form-container{
     display: flex;
@@ -83,6 +88,8 @@
   .form-left{
     padding-right: 50px; 
   }
+
+
 
 
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart  } from '@fortawesome/free-solid-svg-icons';
+import { faHandPointRight, faHeart  } from '@fortawesome/free-solid-svg-icons';
 
 
 const HP_Section = () => {
@@ -11,11 +11,12 @@ const HP_Section = () => {
     <section className="section-container dark">
       <div className="section-left">
         <div className="section-left-icons">
-            <img
+            {/* <img
               src="/real-estate-agent.png"
               alt="Hands holding house"
               width="52px"
-            />
+            /> */}
+            <div><FontAwesomeIcon icon={faHandPointRight} size="2xl" style={{color: "#7980ff"}} className="fa-icons" /></div>
             <div className="real-estate">
               <h3>Best selection</h3>
               <p>
@@ -28,10 +29,11 @@ const HP_Section = () => {
           </div>
         </div>
           <div className="section-left-icons">
-            <img 
+            {/* <img 
               src="/icon_favorites.png" 
               alt="Favorits" 
-              width="52px" />
+              width="52px" /> */}
+              <div><FontAwesomeIcon icon={faHeart} size="2xl" style={{color: "#7980ff",}} className="fa-icons" /></div>
              <div className="favorites">
                 <h3>Your favorite</h3>
                 <p>
