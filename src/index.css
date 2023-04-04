@@ -6,7 +6,7 @@ body {
   place-items: center;
   /* min-width: 320px; */
   font-family: 'Epilogue', sans-serif;
-  font-weight: 400px;
+  font-weight: 400;
   height: 100%;
 }
 
@@ -35,8 +35,6 @@ body {
 }
 
 a {
-  /* font-weight: 500; */
-  /* color: #646cff; */
   font-size: 16px;
   line-height: 24px;
   color:rgb(240, 240, 240);
@@ -50,7 +48,7 @@ h1, h3{
 
 h1 {
   font-size: 3.2em;
-  font-weight: 500px;
+  font-weight: 500;
 }
 
 h2{
@@ -87,14 +85,26 @@ html {
 }
 
 input, textarea{
+  background: #FFFFFF;
   border-radius: 12px;
   border: 1px solid #CED3D8;
-  background: #FFFFFF;
-  color: #CED3D8;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 300;
   font-size: 20px;
-  line-height: 20.5px;
+  line-height: 20px;
   padding: 12px 20px;
+  margin: 15px;
   width: 25vw;
+}
+
+label{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 40px;
+  color: black;
+  margin: 0 15px;
 }
 
 .logo {

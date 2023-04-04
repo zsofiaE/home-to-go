@@ -30,6 +30,7 @@
 .close-btn {
     display: flex;
     justify-content: flex-end;
+  
 }
 
 .close-btn button {
@@ -37,16 +38,33 @@
     border: none;
     font-size: 20px;
     color: black;
+    margin: 0;
 }
 
 .modal-title{
     text-align: left;
-}
+    /* padding: 20px; */
+    font-weight: 500;
+    font-size: 26px;
+    /* line-height: 48px; */
+    margin: 10px;
+    }
+
+    .modal-title h3 {
+        margin: 0;
+    }
+
+    .modal-title  p {
+        margin: 15px 0 15px 10px;
+        font-weight: 400;
+    }
+
+
 
 .modal-body {
     flex: 50%;
     text-align: left;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .modal-footer {
@@ -55,5 +73,16 @@
     justify-content: flex-end;
   }
   
+  .modal-form-container{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    /*as i have text-alig left for the moda-body - it is also good for the labels - there is not working this styling)*/
+  }
+
+  .form-left{
+    padding-right: 50px; 
+  }
+
 
 
