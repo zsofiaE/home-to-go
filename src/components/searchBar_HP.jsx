@@ -2,13 +2,18 @@ import React, { useContext } from "react";
 import Select from "React-select/async";
 
 import { CitiesContext } from "../Context/CitiesContext";
+import { PropertiesContext } from "../Context/PropertiesContext";
 import CityListCard from "./CityListCard";
 
 const SearchBarCityList = () => {
     const { cities } = useContext(CitiesContext);
+    const { setSelectedCity } = useContext(PropertiesContext);
 
     const handleChange = (selectedOption) => {
         console.log("handleChangeTest", selectedOption);
+       // selectedOption._id
+       setSelectedCity(selectedOption._id)
+       
         };
 
 

@@ -5,7 +5,7 @@ import { createBrowserRouter, RouterProvider, Route, Link, useParams, createRout
 import RootLayout from './layouts/RootLayout'
 
 import { CitiesContext } from "./Context/CitiesContext";
-import { CityPropertiesContext } from "./Context/CityPropertiesContext";
+import { PropertiesContext } from "./Context/PropertiesContext";
 
 import HomePage from './pages/HomePage'
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage'
@@ -25,7 +25,7 @@ import Modal from './Modals/Modal';
 function App() {
 
   const { cities } = useContext(CitiesContext);
-  const { cityProperties } = useContext(CityPropertiesContext);
+  const { cityProperties } = useContext(PropertiesContext);
 
   const router = createBrowserRouter(
     createRoutesFromElements(

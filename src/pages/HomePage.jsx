@@ -3,6 +3,8 @@ import CityList from '../components/CityList'
 import HP_Section from '../components/HP_Section'
 import SearchBarCityList from '../components/searchBar_HP'
 
+import CityListNew from '../components/cityListNEw'
+
 const HomePage = () => {
  const [seeAllCities, setSeeAllCities] = useState(false);
  
@@ -10,13 +12,22 @@ const HomePage = () => {
   return (
     <div>
       <SearchBarCityList /> 
-      <CityList />
+
+      <CityList /> 
+
+      <hr />
+
+      {/* <CityListNew /> */}
+      
       <button onClick={() => setSeeAllCities(true)}>See All Cities</button>
+
       <HP_Section />
+
       {seeAllCities && <CityList showAllCities={setSeeAllCities} />}
       {/* {seeAllCities ? <CityList /> : <CityList {...cities.slice(0, 9)} /> } */}
 
       </div>
+      
   )
 }
 

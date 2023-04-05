@@ -16,7 +16,7 @@ const CityList = () => {
         {/*  if statement -  index number*/}
         {/* {index < 9 : } */}
        
-      {cities.slice(0, 9).map((city) => (
+      {cities.map((city, i) => (
         
           <CityListCard      
             city={city}

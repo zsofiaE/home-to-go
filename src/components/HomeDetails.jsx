@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import OpenViewingModal from "../Modals/OpenModal";
 import Modal from "../Modals/Modal";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -10,7 +11,7 @@ const HomeDetails = ({ propertyId, propertyDesc }) => {
   const [openModal, setOpenModal] = useState(false);
   return ( 
     <div className="property">
-      <p><FontAwesomeIcon icon={faChevronLeft} /> Back to Search</p>
+      <NavLink to="/" style={{color:"black"}}> <p><FontAwesomeIcon icon={faChevronLeft} style={{color:"black"}}/> Back to Search</p></NavLink>
       <div className="home-grid-container">
         <div className="home-grid-item images">
           <div>IMAGES</div>
