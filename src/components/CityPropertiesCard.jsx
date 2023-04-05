@@ -25,7 +25,10 @@ const CityPropertiesCard = ({ city, propertyId }) => {
             alt={city.property_type} /> */}
       <div
         className="property-list-details"
-        style={{ margin: "0", padding: "0", fontSize: "12px" }}
+        style={{ 
+          margin: "0", 
+          padding: "0", 
+          fontSize: "12px" }}
       >
         <div className="property-price-and-details">
           <div className="pr-price">
