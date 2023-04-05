@@ -10,7 +10,7 @@ const cityProperty = cityProperties.filter((cityProperty) => cityProperty._id ==
 
 return (
     <div className="HOME">
-      <h3>HomeDetailsPage</h3>
+      <h3>HomeDetailsPage grid-Container</h3>
       <HomeDetails key={cityProperty._id} propertyId={cityProperty._id} property={cityProperty.property_description}/>
     </div>
   )

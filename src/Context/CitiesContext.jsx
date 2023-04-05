@@ -3,7 +3,7 @@ import { createContext, useEffect, useState } from 'react'
 export const CitiesContext = createContext();
 
 const CitiesContextProvider = ({children}) => {
-
+   
     const[cities, setCities] = useState([]);
     let [page, setPage] = useState(1);
 

@@ -5,15 +5,15 @@ import App from './App'
 import './index.css'
 
 import CitiesContextProvider from './Context/CitiesContext'
-import CityPropertiesContextProvider from './Context/CityPropertiesContext'
+import PropertiesContextProvider from './Context/PropertiesContext'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CitiesContextProvider>
-      <CityPropertiesContextProvider>
+      <PropertiesContextProvider>
       <App />
-      </CityPropertiesContextProvider>
+      </PropertiesContextProvider>
     </CitiesContextProvider>
   </React.StrictMode>,
 )

@@ -1,8 +1,5 @@
 import React, { Fragment, useContext } from "react";
 
-import { CitiesContext } from "../Context/CitiesContext";
-import { CityPropertiesContext } from "../Context/CityPropertiesContext";
-
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

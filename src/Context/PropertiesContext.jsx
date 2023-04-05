@@ -1,20 +1,25 @@
 import { createContext, useEffect, useState } from 'react'
 
-export const CityPropertiesContext = createContext();
+export const PropertiesContext = createContext();
 
-const CityPropertiesContextProvider = ({children}) => {
+const PropertiesContextProvider = ({children}) => {
 
+    const [selectedCity, setSelectedCity] = useState("");
     const[cityProperties, setCityProperties] = useState([]);
+
+    const [cityId, setcityId] = useState()
     
 
 
     useEffect(() => {
       let abortController = new AbortController();
       let { signal } = abortController;
-        fetch(`https://unilife-server.herokuapp.com/properties/city/633a96b96893d471a68cc891`, {signal}
+       console.log(selectedCity)
+        fetch(`https://unilife-server.herokuapp.com/properties/city/${selectedCity}`, {signal}
         )
         .then((res) => res.json())
         .then((data) => {
+          console.log(data.response)
           setCityProperties([...cityProperties, ...data.response]);
           
         })
@@ -28,14 +33,14 @@ const CityPropertiesContextProvider = ({children}) => {
           abortController.abort();
         };      
         
-    }, [],);
+    }, [selectedCity],);
     // Note: the empty deps array [] means this useEffect will run once
 
     return (
-    <CityPropertiesContext.Provider value={{cityProperties, setCityProperties}}>
+    <PropertiesContext.Provider value={{cityProperties, setCityProperties, selectedCity, setSelectedCity}}>
         {children}
-    </CityPropertiesContext.Provider>   
+    </PropertiesContext.Provider>   
   )
 }
 
-export default CityPropertiesContextProvider;
+export default PropertiesContextProvider;

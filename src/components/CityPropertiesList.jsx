@@ -1,10 +1,10 @@
 import React from "react";
 import { Fragment, useContext } from "react";
-import { CityPropertiesContext } from "../Context/CityPropertiesContext";
+import { PropertiesContext } from "../Context/PropertiesContext";
 import CityPropertiesCard from "./CityPropertiesCard";
 
 const CityPropertiesList = () => {
-  const { cityProperties } = useContext(CityPropertiesContext);
+  const { cityProperties } = useContext(PropertiesContext);
 
   return (
     <div className="city-list-container">

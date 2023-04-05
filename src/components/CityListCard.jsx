@@ -10,6 +10,7 @@ const CityListCard = ({ city }) => {
       <div className="city-list-details">
         <h3>{city.name}</h3>
         <h5>{city.property_count} properties</h5>
+        
       </div>
       </Link>
     </div>
