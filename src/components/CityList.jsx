@@ -11,9 +11,10 @@ const CityList = () => {
   
   return (
     <>
+      <h3>Student accommodations in our top cities</h3>
       <div className="city-list-container">
         {/*  if statement -  index number*/}
-        {/* if(let i=0; i < 9; i++)  */}
+        {/* {index < 9 : } */}
        
       {cities.slice(0, 9).map((city) => (
         
