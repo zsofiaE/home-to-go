@@ -27,7 +27,7 @@ const loadOptions = (searchValue, callback) => {
 
 
       return (
-        <div className="SearchField">
+        <div className="searchField">
         <Select  loadOptions={loadOptions} 
                       onChange={handleChange}   
                       backspaceRemovesValue
