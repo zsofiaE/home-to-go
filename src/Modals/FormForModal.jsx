@@ -24,8 +24,8 @@ const FormForModal = () => {
       
       <form onSubmit={handleSubmit} className='modal-form-container'>
 
-        <div className="form-left">
-          <label>Name<br/>
+        {/* <div className="form-left"> */}
+          <label className="grid-item-name">Name<br/>
           <input 
             type="text" 
             name="name"
@@ -34,7 +34,7 @@ const FormForModal = () => {
             onChange={handleChange}
           />
           </label><br/>
-          <label>Email<br/>
+          <label className="grid-item-email">Email<br/>
             <input 
               type="email" 
               name="email" 
@@ -43,7 +43,7 @@ const FormForModal = () => {
               onChange={handleChange}
             />
             </label><br/>
-            <label>Phone Number<br/>
+            <label className="grid-item-phone">Phone Number<br/>
               <input type="text"
               name="phone"
               placeholder="Enter your phone number"
@@ -51,18 +51,20 @@ const FormForModal = () => {
               onChange={handleChange}
               />
             </label><br />
-          </div>
-          <div className="form-right">
-            <label >Message
+          {/* </div> */}
+          {/* <div className="form-right"> */}
+            <label className="grid-item-msg">Message<br />
               <textarea
                   rows={8}
                   placeholder="Enter your message" >
                   {/* value={textarea} 
                   onChange={handleChange} */}
               </textarea>
-            </label>
-            {/* <input type="submit" /> */}
-          </div>
+            </label><br />
+            <button className="submit-btn" type="submit" >Submit</button>
+           {/* <input type="submit" /> */}
+          {/* </div> */}
+         
       </form>
 
     )

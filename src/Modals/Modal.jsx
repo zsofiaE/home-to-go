@@ -23,9 +23,9 @@ const Modal = (props) => {
           <div className="modal-body">
             {/* <FormForModal /> */}{props.children}
           </div>
-          <div className="modal-footer">
-            <button className="submit-btn">Submit</button>
-          </div>
+          {/* <div className="modal-footer">
+            
+          </div> */}
         </div>
       </div>
    

@@ -94,9 +94,9 @@ input, textarea{
   font-size: 20px;
   line-height: 20px;
   padding: 12px 20px;
-  margin: 15px;
-  width: 25vw;
-    /* width: 100%; */ /* still not fully resposnive, to check*/
+  margin: 5px 0;
+  /* width: 25vw; */
+    width: 100%;  /* still not fully resposnive, to check */
 }
 
 label{
@@ -105,7 +105,7 @@ label{
   font-size: 24px;
   line-height: 40px;
   color: black;
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .logo {
@@ -507,21 +507,6 @@ button {
 
     
    }
- 
-
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
 
 .detailedPageTestMimi {
   display: flex;
