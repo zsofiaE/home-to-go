@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import OpenViewingModal from "../Modals/OpenModal";
 import Modal from "../Modals/Modal";
+import FormForModal from "../Modals/FormForModal";
 
 
 
@@ -38,7 +39,14 @@ const HomeDetails = ({ propertyId, propertyDesc }) => {
           
 
       </div>
-      {openModal && <Modal closeModal={setOpenModal} />}
+      {/* {openModal && <Modal closeModal={setOpenModal} />} */}
+      <Modal title="Book a viewing"
+      onClose={() => setOpenModal(false)} openModal={openModal}>
+        {/* <ModalAdress></ModalAdress> */} 
+        {/* Modal Adrress will be a component, 
+        as I will need it from the API array, from propertyAddress */}
+        <FormForModal />
+        </Modal> 
      
      
  

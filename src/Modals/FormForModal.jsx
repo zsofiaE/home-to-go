@@ -28,7 +28,7 @@ const FormForModal = () => {
           <label>Name<br/>
           <input 
             type="text" 
-            name="username"
+            name="name"
             placeholder="Enter your name" 
             value={inputs.name || ""} 
             onChange={handleChange}

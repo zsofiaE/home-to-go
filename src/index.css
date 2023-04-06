@@ -96,6 +96,7 @@ input, textarea{
   padding: 12px 20px;
   margin: 15px;
   width: 25vw;
+    /* width: 100%; */ /* still not fiúlly resposnive, to check*/
 }
 
 label{

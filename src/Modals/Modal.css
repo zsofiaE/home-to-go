@@ -17,6 +17,7 @@
 
 .modal-container{
     width: 65%;
+    max-width: 900px;
     height: 70vh;
     border-radius: var(--border-radius);
     background-color: white;
