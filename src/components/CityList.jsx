@@ -16,17 +16,13 @@ const CityList = () => {
         {/*  if statement -  index number*/}
         {/* {index < 9 : } */}
        
-      {cities.map((city, i) => (
-        
-          <CityListCard      
-            city={city}
-            key={city._id}
-          />
+      {cities.map((city) => (  
+            
+          <CityListCard city={city} key={city._id}/>
           // let firstnine = cities.slice(0, 9)
           // console.log(first9);
       ))}
       </div>
-
     </>
   );
 };

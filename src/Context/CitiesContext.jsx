@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
-
 export const CitiesContext = createContext();
+/*------------------------------------------------------------------------------------------ */
 
 const CitiesContextProvider = ({children}) => {
    

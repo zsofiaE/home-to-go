@@ -13,7 +13,7 @@ const CityDetailsPage = ({ cities }) => {
         <h3>{city.property_count} homes in {city.name}</h3>
       </div>
       <section>
-        <CityPropertiesList cityName={city.name} key={city._id} />
+        <CityPropertiesList  cityName={city.name} id={city._id} />
       </section>
     </div>
   )
@@ -22,3 +22,4 @@ const CityDetailsPage = ({ cities }) => {
 export default CityDetailsPage
 
 
+//cityName={city.name} key={city._id}
