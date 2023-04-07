@@ -3,17 +3,23 @@ import { Fragment, useContext } from "react";
 import { PropertiesContext } from "../Context/PropertiesContext";
 import CityPropertiesCard from "./CityPropertiesCard";
 
+
 const CityPropertiesList = () => {
+
   const { cityProperties } = useContext(PropertiesContext);
 
   return (
+    <>
     <div className="city-list-container">
-      {cityProperties.map((cityProperty) => (
-        console.log(cityProperties),
-        <CityPropertiesCard city={cityProperty} key={cityProperty._id} propertyId={cityProperty._id} />
-      ))}
+    {cityProperties.map((property) => (  
+      console.log("propertyID", property[0]._id)  ,
+       <CityPropertiesCard city={property} key={property[0]._id} />
+    ))}
     </div>
+    </>
   );
 };
 
 export default CityPropertiesList;
+
+

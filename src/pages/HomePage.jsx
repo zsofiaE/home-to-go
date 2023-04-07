@@ -2,32 +2,22 @@ import React, {useState, useContext} from 'react'
 import CityList from '../components/CityList'
 import HP_Section from '../components/HP_Section'
 import SearchBarCityList from '../components/searchBar_HP'
-import SearchFilter from '../components/SearchFilter'
+//import SearchFilter from '../components/SearchFilter'
 
-import CityListNew from '../components/cityListNEw'
+//import CityListNew from '../components/cityListNEw'
 
 const HomePage = () => {
- const [seeAllCities, setSeeAllCities] = useState(false);
- 
  
   return (
     <div>
-      <SearchBarCityList /> 
-
-      {/*<SearchFilter />*/}
+      <SearchBarCityList />    
       <CityList /> 
 
       <hr />
-
-      {/* <CityListNew /> */}
-      
-
       <button onClick={() => setSeeAllCities(true)}>See All Cities</button>
 
       <HP_Section />
 
-      {seeAllCities && <CityList showAllCities={setSeeAllCities} />}
-      {/* {seeAllCities ? <CityList /> : <CityList {...cities.slice(0, 9)} /> } */}
 
       </div>
       

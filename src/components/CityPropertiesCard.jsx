@@ -1,25 +1,21 @@
 import React, { Fragment, useContext } from "react";
-
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBath,
-  faBed,
-  faHouse,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBath, faBed, faHouse, faLocationDot,} from "@fortawesome/free-solid-svg-icons";
 
-const CityPropertiesCard = ({ city, propertyId }) => {
-  //  console.log( "thisCityPropertyID", city);
+
+const CityPropertiesCard = ({ city }) => {
+  console.log("propType",city[0].property_type )
+
   return (
     <div className="property-list-card">
       <div
         className="property-bg-img"
-        style={{ backgroundImage: `url(${city.images[0]})` }}
+        style={{ backgroundImage: `url(${city[0].images[0]})` }}
       ></div>
       {/* <img className="propery-img" 
-            src={city.images[0]} 
-            alt={city.property_type} /> */}
+            src={city[0].images[0]} 
+            alt={city[0].property_type} /> */}
       <div
         className="property-list-details"
         style={{ 
@@ -38,7 +34,7 @@ const CityPropertiesCard = ({ city, propertyId }) => {
             >
               {" "}
               {"\u00A3"}
-              {city.rent}
+              {city[0].rent}
             </p>
             <p style={{ fontSize: "12px", lineHeight: "12.3px" }}>
               pppw including bills
@@ -46,11 +42,11 @@ const CityPropertiesCard = ({ city, propertyId }) => {
           </div>
           <div className="pr-details">
             <p>
-              <FontAwesomeIcon icon={faBed} /> {city.bedroom_count}{" "}
+              <FontAwesomeIcon icon={faBed} /> {city[0].bedroom_count}{" "}
             </p>
             <p>
               {" "}
-              <FontAwesomeIcon icon={faBath} /> {city.bathroom_count}
+              <FontAwesomeIcon icon={faBath} /> {city[0].bathroom_count}
             </p>
           </div>
         </div>
@@ -65,15 +61,15 @@ const CityPropertiesCard = ({ city, propertyId }) => {
               fontWeight: "500px"
             }}
           >
-            <p>{city.property_type}</p>
-            <p>{city.furnished} </p>
+            <p>{city[0].property_type}</p>
+            <p>{city[0].furnished} </p>
           </div>
           <div style={{ alignSelf: "self-start", padding: '0 40px' }}>
             <FontAwesomeIcon icon={faLocationDot} className="fa-icons"style={{ padding: '0 5px' }}/>
-            {city.address.street},{city.address.city},{city.address.postcode}
+            {city[0].address.street},{city[0].address.city},{city[0].address.postcode}
           </div>
         </div>
-        <Link to={"homes/"+ propertyId}>
+        <Link to={"homes/"+ city[0]._id}>
         <button className="property-view-btn">
           <FontAwesomeIcon icon={faHouse} /> View Home
         </button>

@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import Select from "React-select/async";
-
 import { CitiesContext } from "../Context/CitiesContext";
 import { PropertiesContext } from "../Context/PropertiesContext";
 import CityListCard from "./CityListCard";
 
-const SearchBarCityList = () => {
+
+
+const SearchBarCityList = ({children}) => {
+
     const { cities } = useContext(CitiesContext);
     const { setSelectedCity } = useContext(PropertiesContext);
 
@@ -25,13 +27,12 @@ const loadOptions = (searchValue, callback) => {
       label: item.name,
       value: item.name,
     }));
-    console.log("loadOptionsTest", searchValue, mappedOptions);
+    //console.log("loadOptionsTest", searchValue, mappedOptions);
     callback(mappedOptions);
   }, 250);
 };
 
-
-      return (
+return (
         <div className="searchField">
         <Select  loadOptions={loadOptions} 
                       onChange={handleChange}   
@@ -41,9 +42,9 @@ const loadOptions = (searchValue, callback) => {
                       isClearable={true}   
                       isSearchable={true}
         />      
-      </div>
+        </div>
       );
     };
     
-    export default SearchBarCityList;
+export default SearchBarCityList;
     
