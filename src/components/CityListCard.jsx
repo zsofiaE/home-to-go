@@ -2,6 +2,8 @@ import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 
 const CityListCard = ({ city }) => {
+
+  
   return ( 
     <div className="city-list-card">
       <Link to={"cities/"+ city._id}>
