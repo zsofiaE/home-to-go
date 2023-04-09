@@ -18,7 +18,7 @@ const CityList = () => {
        
       {cities.map((city) => (  
             
-          <CityListCard city={city} key={city._id}/>
+          <CityListCard city={city} key={city._id} cityId={city._id} cityName={city.name}/>
           // let firstnine = cities.slice(0, 9)
           // console.log(first9);
       ))}

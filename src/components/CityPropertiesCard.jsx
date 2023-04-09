@@ -6,7 +6,7 @@ import { faBath, faBed, faHouse, faLocationDot,} from "@fortawesome/free-solid-s
 
 
 const CityPropertiesCard = ({ property }) => {
-  console.log("property",property )
+  //console.log("property",property)
 
   return (
     <div className="property-list-card">
