@@ -1,63 +1,25 @@
-/*import { createContext, useEffect, useState } from 'react'
-export const PropertiesContext = createContext();
-//------------------------------------------------------------------------------------------ 
-
-const PropertiesContextProvider = ({children}) => {
-
-    const [selectedCity, setSelectedCity] = useState("");
-    const [cityProperties, setCityProperties] = useState([]);
-
-    useEffect(() => {
-      let abortController = new AbortController();
-      let { signal } = abortController;
-       //console.log(selectedCity)
-        fetch(`https://unilife-server.herokuapp.com/properties/city/${selectedCity}`, {signal}
-        )
-        .then((res) => res.json())
-        .then((data) => {
-          console.log("data",data.response)
-          setCityProperties(data.response);
-        })
-
-        .catch((err) => {
-          if (err.name === "AbortError") {
-          }
-        });
-
-        return () => {
-          abortController.abort();
-        };      
-        
-    }, [selectedCity],);
-
-    return (
-    <PropertiesContext.Provider value={{cityProperties, setCityProperties, selectedCity, setSelectedCity}}>
-        {children}
-    </PropertiesContext.Provider>   
-  )
-}
-
-export default PropertiesContextProvider;
-*/
 import { createContext, useEffect, useState } from 'react'
 export const PropertiesContext = createContext();
-import CityPropertiesList from "../components/CityPropertiesList";
 //------------------------------------------------------------------------------------------ 
 
 const PropertiesContextProvider = ({children}) => {
 
     const [selectedCity, setSelectedCity] = useState("");
     const [cityProperties, setCityProperties] = useState([]);
+    const [bedroomCount, setBedroomCount] = useState();
+    const [bedroom, setBedroom] = useState([]);
 
     useEffect(() => {
       let abortController = new AbortController();
       let { signal } = abortController;
-       //console.log(selectedCity)
+
         fetch(`https://unilife-server.herokuapp.com/properties/city/${selectedCity}`, {signal}
         )
         .then((res) => res.json())
-        .then((data) => {
+        .then((data) => 
+        {
           console.log("data",data.response)
+          console.log("dataBeds", data.response[0].bedroom_count)
           setCityProperties(data.response);
         })
 
@@ -72,8 +34,22 @@ const PropertiesContextProvider = ({children}) => {
         
     }, [selectedCity],);
 
+    //load options for the search bar
+    useEffect( ()=>{
+      setBedroomCount(
+        cityProperties.map((item) => ({
+          label: item.bedroom_count,
+          value: item._id,
+        }))
+      );
+    }, [cityProperties]);
+
+    console.log("bedroomCount", bedroomCount);
+
+
+
     return (
-    <PropertiesContext.Provider value={{cityProperties, setCityProperties, selectedCity, setSelectedCity}}>
+    <PropertiesContext.Provider value={{cityProperties, setCityProperties, selectedCity, setSelectedCity, bedroomCount, setBedroomCount}}>
         {children}
     </PropertiesContext.Provider>   
   )
