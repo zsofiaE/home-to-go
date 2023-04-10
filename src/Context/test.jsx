@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+/*import React, { useState, useEffect } from 'react';
 
 function PostRequestHooks() {
     const [postId, setPostId] = useState(null);
@@ -25,4 +25,4 @@ function PostRequestHooks() {
     );
 }
 
-export default  PostRequestHooks ;
+export default  PostRequestHooks ;*/

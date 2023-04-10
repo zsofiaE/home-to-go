@@ -9,6 +9,7 @@ const PropertiesContextProvider = ({children}) => {
     const [bedroomCount, setBedroomCount] = useState();
     const [bedroom, setBedroom] = useState([]);
 
+    console.log("selectedCity", selectedCity);
     useEffect(() => {
       let abortController = new AbortController();
       let { signal } = abortController;

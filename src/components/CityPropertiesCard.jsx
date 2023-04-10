@@ -4,10 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBath, faBed, faHouse, faLocationDot,} from "@fortawesome/free-solid-svg-icons";
 /*------------------------------------------------------------------------------------------ */
 
-
 const CityPropertiesCard = ({ property }) => {
-  //console.log("property",property)
-
   return (
     <div className="property-list-card">
       <div
