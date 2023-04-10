@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import CityPropertiesList from "../components/CityPropertiesList";
+import PropertiesList from "../components/PropertiesList";
 //---------------------------------------------------------------------------------
 
 const CityDetailsPage = () => {
@@ -7,7 +7,7 @@ const CityDetailsPage = () => {
   return (
     <>
       <section>
-        <CityPropertiesList />
+        <PropertiesList />
       </section>
     </>
   );

@@ -6,10 +6,11 @@ const PropertiesContextProvider = ({children}) => {
 
     const [selectedCity, setSelectedCity] = useState("");
     const [cityProperties, setCityProperties] = useState([]);
+    const [homeDetails, setHomeDetails] = useState([]);
+
     const [bedroomCount, setBedroomCount] = useState();
     const [bedroom, setBedroom] = useState([]);
-
-    console.log("selectedCity", selectedCity);
+ 
     useEffect(() => {
       let abortController = new AbortController();
       let { signal } = abortController;
@@ -19,9 +20,11 @@ const PropertiesContextProvider = ({children}) => {
         .then((res) => res.json())
         .then((data) => 
         {
-          console.log("data",data.response)
           console.log("dataBeds", data.response[0].bedroom_count)
+          console.log("dataFull",data)
+
           setCityProperties(data.response);
+          setHomeDetails(data);
         })
 
         .catch((err) => {
@@ -50,7 +53,7 @@ const PropertiesContextProvider = ({children}) => {
 
 
     return (
-    <PropertiesContext.Provider value={{cityProperties, setCityProperties, selectedCity, setSelectedCity, bedroomCount, setBedroomCount}}>
+    <PropertiesContext.Provider value={{cityProperties, setCityProperties, selectedCity, setSelectedCity, bedroomCount, setBedroomCount, homeDetails, setHomeDetails}}>
         {children}
     </PropertiesContext.Provider>   
   )

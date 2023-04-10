@@ -1,19 +1,19 @@
 import React from "react";
 import { Fragment, useContext } from "react";
 import { PropertiesContext } from "../Context/PropertiesContext";
-import { useParams } from "react-router-dom";
 //------------------------------------------------------------------------------------------ 
 
-const PropertiesCount = ({propsName, propsCount}) => {
+const PropertiesCount = () => {
+
+  const { homeDetails } = useContext(PropertiesContext);
 
   return (
     <>
       <div className="detailedPageTestMimi">
-      <h3>{propsCount} homes in </h3>   
+      <h3>{homeDetails.total} homes in {homeDetails.city_name}</h3>   
       </div>
     </>
   );
 };
 
 export default PropertiesCount;
-/*{propsName}*/

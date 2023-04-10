@@ -1,10 +1,11 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBath, faBed, faHouse, faLocationDot,} from "@fortawesome/free-solid-svg-icons";
-/*------------------------------------------------------------------------------------------ */
+//------------------------------------------------------------------------------------------ 
 
-const CityPropertiesCard = ({ property }) => {
+const PropertiesCard = ({ property }) => {
+
   return (
     <div className="property-list-card">
       <div
@@ -77,4 +78,4 @@ const CityPropertiesCard = ({ property }) => {
   );
 };
 
-export default CityPropertiesCard;
+export default PropertiesCard;
