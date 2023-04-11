@@ -7,13 +7,25 @@ import { PropertiesContext } from "../Context/PropertiesContext";
 const HomeDetailsPage = () => {
   const { cityProperties } = useContext(PropertiesContext);
 
+  const { id } = useParams();
+
+  const props = cityProperties.filter((props) => props._id === id)[0]
+
   return (
     <div className="HOME">
-      {cityProperties.map((cityProps) => (
-        <HomeDetails cityProps={cityProps} key={cityProps._id} id={cityProps._id}/>
-      ))}
+        <HomeDetails cityProps={props} key={props._id} id={props._id}/>
     </div>
   );
 };
 
 export default HomeDetailsPage;
+/*
+return (
+    <div className="HOME">
+      {cityProperties.map((cityProps) => (
+        <HomeDetails cityProps={cityProps} key={cityProps._id}/>
+      ))}
+    </div>
+  );
+};
+*/

@@ -9,6 +9,8 @@ import { PropertiesContext } from "../Context/PropertiesContext";
 
 const HomeDetails = ({cityProps, id}) => {
 
+
+  console.log("cityProps",cityProps)
   const [openModal, setOpenModal] = useState(false);
 
   const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li key={index}> {keyFeatures}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
