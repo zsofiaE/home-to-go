@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements} from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import HomePage from "./pages/HomePage";
-import SeeAllCitiesPage from "./pages/SeeAllCitiesPage";
 import CityDetailsPage from "./pages/CityDetailsPage";
 import HomeDetailsPage from "./pages/HomeDetailsPage";
 import Shortlist from "./pages/Shortlist";
@@ -18,7 +17,6 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<HomePage />} />
-        <Route path="cities" element={<SeeAllCitiesPage />} />
         <Route path="cities/:id/" element={<CityDetailsPage />} />
         <Route path="cities/:id/homes/:id/" element={<HomeDetailsPage />} />
         <Route path="contact" element={<Contact />} />

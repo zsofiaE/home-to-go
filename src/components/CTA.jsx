@@ -20,9 +20,7 @@ const CTA = () => {
             <div className='cta-icons-container'>
                     <p><FontAwesomeIcon icon={faFacebook}  className="fa-brands" size="2x"></FontAwesomeIcon><span>Facebook</span></p>
                     <p><FontAwesomeIcon icon={faTwitter} className="fa-brands" size="2x"></FontAwesomeIcon><span>Twitter</span></p> 
-                    <p><FontAwesomeIcon icon={faInstagram} className="fa-brands" size="2x"></FontAwesomeIcon><span>Instagram</span></p>
-               
-                
+                    <p><FontAwesomeIcon icon={faInstagram} className="fa-brands" size="2x"></FontAwesomeIcon><span>Instagram</span></p>                          
                 </div>
             </div>
     </section>
