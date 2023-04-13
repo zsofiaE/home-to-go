@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 
 const SearchBarCityList = () => {
   const { options } = useContext(CitiesContext);
-  const { setSelectedCity } = useContext(PropertiesContext);
+  const { setSelectedCity, setCityProperties } = useContext(PropertiesContext);
   const { bedroomCount } = useContext(PropertiesContext);
-  
+
+
   const handleChange = (selectedOption) => {
     console.log("handleChangeTest", selectedOption);
+   
     setSelectedCity(selectedOption.value);
   };
 

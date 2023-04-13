@@ -10,22 +10,36 @@ const PropertiesContextProvider = ({children}) => {
 
     const [bedroomCount, setBedroomCount] = useState();
     const [bedroom, setBedroom] = useState([]);
- 
+    let [page, setPage] = useState(1);
+    
+   /* useEffect(()=> {
+      setCityProperties([]);
+    },[selectedCity])*/
+
+
     useEffect(() => {
       let abortController = new AbortController();
       let { signal } = abortController;
 
-        fetch(`https://unilife-server.herokuapp.com/properties/city/${selectedCity}`, {signal}
+        fetch(`https://unilife-server.herokuapp.com/properties/city/${selectedCity}?page=${page}`, {signal}
         )
         .then((res) => res.json())
         .then((data) => 
         {
-          console.log("dataBeds", data.response[0].bedroom_count)
-          console.log("dataFull",data)
+          console.log("dataResponse", data)
+          console.log("page",page)
 
+          if (data.totalPages > 1) {
+          //  setPage(page + 1);
+            setCityProperties([...cityProperties, ...data.response]);
+            setHomeDetails(data);
+            return;
+          }
           setCityProperties(data.response);
           setHomeDetails(data);
         })
+
+          /// loop over pages in the database 
 
         .catch((err) => {
           if (err.name === "AbortError") {
@@ -36,7 +50,8 @@ const PropertiesContextProvider = ({children}) => {
           abortController.abort();
         };      
         
-    }, [selectedCity],);
+    }, [selectedCity, page],);
+    console.log("pageSecondTry",page)
 
     //load options for the search bar
     useEffect( ()=>{
