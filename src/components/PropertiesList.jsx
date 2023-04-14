@@ -12,7 +12,7 @@ const CityPropertiesList = () => {
   return (
     <>
     <PropertiesCount />
-      <div className="city-list-container">
+      <div className="city-list-container properties-container">
         {cityProperties.map(
           (property) => (
             (<PropertiesCard property={property} key={property._id} />)

@@ -39,6 +39,7 @@ a {
   color:rgb(240, 240, 240);
   text-decoration: none;
   margin: 0;
+  text-align: left;
 }
 
 h1, h3{
@@ -269,6 +270,7 @@ nav > div > a,
 .section-left{
   display: flex;
   flex-direction: column;
+  width: 150%;
 }
 
 /* .heart{
@@ -312,12 +314,23 @@ nav > div > a,
   margin: 0 10px;
 }
 .img-person{
-  background: url("/person.png");
+
   position: relative;
-  bottom: -55px;
-  /* max-width: 100%; */
+  bottom: -105px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 80%;
 
 }
+
+/* .bg-section-right{
+  height: 100%;
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  
+} */
 
 /*-------------styling the CTA section Part of the Home Page-------------*/
 
@@ -341,11 +354,15 @@ nav > div > a,
   margin-left: 0;
 }
 
+.fa-brands{
+  padding: 0px 10px 0px 0;
+}
+
 /*------------------styling the footer------------------------------------*/
 
 
 footer{
-  height: 100px;
+  height: auto;
   width: 100%;
 }
 
@@ -613,7 +630,7 @@ footer > p{
     font-size: 32px;
   }
 
-  /*-------------CTA on the Homepage ----------------*/
+  /*-------------CTA section on the Homepage ----------------*/
 
   .section-container{
     padding: 20px;
@@ -625,13 +642,18 @@ footer > p{
     font-size: 24px;
   }
 
-   /*-------------Footer ----------------*/
+  
 
+   /*-------------Footer ----------------*/
+   .footer{
+    align-items: flex-end;
+  }
  .links-left{
   display: flex;
   flex-direction: column;
   align-items: start;
  }
+
 
 
 }
@@ -643,8 +665,8 @@ footer > p{
   }
   .flex-item-column{
     width: 70%;
-  
   }
+
 }
 
 @media only screen and (max-width: 600px){
@@ -659,7 +681,17 @@ footer > p{
   justify-content: center;
   align-items: center;
 
-  /*under 700px would be bette*/
+  /*under 700px would be better*/
+}
+
+  .fa-brands{
+    padding: 0px 10px 0px 0;
+  }
+
+
+/*------footer-------*/
+.links-right a, p{
+  font-size: 16px;
 }
 
 }
