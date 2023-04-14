@@ -14,7 +14,7 @@ const CityList = () => {
 
   return (
     <>
-      <h3>Student accommodations in our top cities</h3>
+      <h3 className="section-title">Student accommodations in our top cities</h3>
       <div className="city-list-container">
         {cities.slice(0, visible).map((city) => (
           <CityListCard

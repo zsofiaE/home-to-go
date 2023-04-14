@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointRight, faHeart  } from '@fortawesome/free-solid-svg-icons';
 
 
-const HP_Section = () => {
+const Section_Desktop = () => {
   return (
     // <div className='symbols'>
     //   <span className="material-symbols-outlined"></span>
@@ -16,7 +16,7 @@ const HP_Section = () => {
               alt="Hands holding house"
               width="52px"
             /> */}
-            <div><FontAwesomeIcon icon={faHandPointRight} size="2xl" style={{color: "#7980ff"}} className="fa-icons" /></div>
+            <div><FontAwesomeIcon icon={faHandPointRight} size="2xl" className="fa-icons" /></div>
             <div className="real-estate">
               <h3>Best selection</h3>
               <p>
@@ -33,7 +33,7 @@ const HP_Section = () => {
               src="/icon_favorites.png" 
               alt="Favorits" 
               width="52px" /> */}
-              <div><FontAwesomeIcon icon={faHeart} size="2xl" style={{color: "#7980ff",}} className="fa-icons" /></div>
+              <div><FontAwesomeIcon icon={faHeart} size="2xl" className="fa-icons" /></div>
              <div className="favorites">
                 <h3>Your favorite</h3>
                 <p>
@@ -62,4 +62,4 @@ const HP_Section = () => {
   );
 };
 
-export default HP_Section;
+export default Section_Desktop;

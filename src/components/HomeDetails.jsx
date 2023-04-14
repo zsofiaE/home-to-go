@@ -17,11 +17,6 @@ const HomeDetails = ({cityProps, id}) => {
   const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li  key={index}> {keyFeatures}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
   //const listBedroomPrices = cityProps.bedroom_prices.map((bedroomPrices, index) => <li key={index}> {bedroomPrices}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
   
-
-
-
-
-  
 //            
 
   return (
@@ -36,7 +31,7 @@ const HomeDetails = ({cityProps, id}) => {
 
       <div className="home-grid-container">
         
-        <div className="home-grid-item">
+        <div className="home-grid-item grid-item-images">
           <div className="images">
               <img className="main-image" src={cityProps.images[0]} alt={cityProps.address.city}/>
               {/* <div className="property-bg-img"
@@ -53,7 +48,7 @@ const HomeDetails = ({cityProps, id}) => {
         </div>
 
 
-        <div className="home-grid-item ">
+        <div className="home-grid-item grid-item-details">
           <div className="details">
             <h3 className="home-details-h3" style={{textAlign: "center"}} >{cityProps.address.street}, {cityProps.address.city}, {cityProps.address.postcode}</h3> 
             
@@ -100,13 +95,13 @@ const HomeDetails = ({cityProps, id}) => {
           </div>
         
 
-        <div className="home-grid-item desc">
+        <div className="home-grid-item desc grid-item-desc">
           <h3 className="home-details-h3">Description</h3>
           <p className="p-desc">{cityProps.property_description}</p>
         </div>
 
 
-        <div className="home-grid-item prices">
+        <div className="home-grid-item prices grid-item-prices">
         <h3 className="home-details-h3">Bedroom Prices</h3>
           <div className="pr-flex-item">        
           <h4>Bedroom 1</h4>
@@ -130,7 +125,7 @@ const HomeDetails = ({cityProps, id}) => {
         </div>
 
 
-        <div className="home-grid-item key-features">          
+        <div className="home-grid-item key-features grid-item-features">          
           <h3 className="home-details-h3">Key Features</h3>
           <ul>{listKeyFeatures}</ul>
         </div>
