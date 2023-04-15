@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
-import Hamburger from "./Hamburger";
+
 import { useState } from "react";
 
 const Navbar = () => {

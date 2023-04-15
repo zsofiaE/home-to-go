@@ -46,6 +46,10 @@
     letter-spacing: 1.5px;;
   }
 
+  .city-list-details:hover{
+    color: var(--light-hover-shade-blue);
+  }
+
   @media only screen and (max-width: 1200px){
     /*Tablets [601px -> 1200px]*/
     .city-list-container{
