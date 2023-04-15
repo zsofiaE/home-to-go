@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   /* min-width: 320px; */
@@ -123,29 +124,18 @@ button {
   margin: 20px;
 }
 
-.logo {
-  font-size: 1.5em;
-  /* height: 6em; */
-  /* padding: 1em; */
-  margin: 15px 0;
-  will-change: filter;
-  transition: filter 300ms;
+button:hover {
+  cursor: pointer;
+  background-color: var(--pink);
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #aeafc3aa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #bfb9d5aa);
-}
+/*----------------------------styling Navbar -----------------------*/
 
 .navbar{
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  background: rgb(63,94,251);
   background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   padding: 0 20px;
 }
@@ -156,6 +146,13 @@ button {
   justify-content: space-around;
 }
 
+.logo:hover {
+  filter: drop-shadow(0 0 2em #aeafc3aa);
+}
+.logo-icon:hover {
+  filter: drop-shadow(0 0 2em #bfb9d5aa);
+}
+
 .logo-icon{
   width: 20%;
   position: relative;
@@ -163,20 +160,36 @@ button {
   /* padding: 16px 5px; */
 }
 
-nav > div > a,
- .navbar > div > a,
+.navigation{
+  display: flex;
+  align-items: center;/* - i dont need ias I have on navbar align items: center*/
+  justify-content: flex-end/*- i dont need as I have on navbar justify-content: space-between */
+ }
+
+
+ .navbar .navigation .links a,
  .navbar > div > p{
-  padding: 0 1em;
+  padding: 0 16px;
 }
 
-.hamburger{
+.navbar .navigation #hidden{
+  display: flex;
+
+}
+
+.navigation button{
+  display: none;
+  /* margin: 0 16px;*/
+} 
+
+/* .hamburger{
   display: none;
 }
 
 .navigation a {
   display: ${hamburgerOpen ? 'inline' : 'none'};
   
-}
+} */
 
 
 
@@ -609,21 +622,6 @@ footer > p{
   line-height: 44px;
  }
 
-
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
 .detailedPageTestMimi {
   display: flex;
   justify-content: center;
@@ -642,6 +640,10 @@ footer > p{
   }
   h3{
     font-size: 32px;
+  }
+
+  .logo {
+    font-size: 20px;
   }
 
   /*-------------CTA section on the Homepage ----------------*/
@@ -671,6 +673,7 @@ footer > p{
 }
 
 @media only screen and (max-width: 1000px){
+
   .section-flex-container{
     display: flex;
     flex-direction: column;
@@ -687,11 +690,53 @@ footer > p{
     width: 100%;
   }
 
-  .hamburger{
+  .navigation button{
+    display: flex;
+  }
+
+  .navbar .navigation .links {
+   display: none;
+  } 
+
+  .navbar .navigation #hidden{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    height: 280px; /* or auto*/
+    /* max-height: 280px; */
+    width: 100%;
+    background-color: #7980ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .navbar .navigation #hidden a{
+    margin: 10px;
+    font-size: 20px;
+  }
+
+
+  /* .navbar{
+    padding: 0 5px;
+  }
+
+ .navbar > div > a,
+ .navbar > div > p{
+  padding: 0 5px;
+ } */
+
+  /* .hamburger{
     display: fixed;
     padding-top: 10px;
     margin-left: 10px;
     z-index: 10;
+  } */
+
+  .hamburger-btn{
+    background-color: transparent;
+    margin: 10px;
   }
 
 /*--------CTA section on the Homepage-----*/
@@ -703,14 +748,13 @@ footer > p{
   /*under 700px would be better*/
 }
 
-  .fa-brands{
+ .fa-brands{
     padding: 0px 10px 0px 0;
   }
 
-
 /*------footer-------*/
-.links-right a, p{
-  font-size: 16px;
-}
+  .links-right a, p{
+    font-size: 16px;
+  }
 
 }

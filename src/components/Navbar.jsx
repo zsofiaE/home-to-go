@@ -1,15 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import Hamburger from "./Hamburger";
 import { useState } from "react";
 
 const Navbar = () => {
-const [hamburgerOpen, setHamburgerOpen] = useState(false);
+// const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
-const handleToggle = () => {
-    setHamburgerOpen(!hamburgerOpen)
-}
+// const handleToggle = () => {
+//     setHamburgerOpen(!hamburgerOpen)
+// }
+
+    const [showLinks, setShowLinks] = useState(false);
 
     return (
         <nav className="navbar">
@@ -20,13 +22,16 @@ const handleToggle = () => {
             </div>
             </Link>
             <div className="navigation">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="shortlist"><FontAwesomeIcon icon={faHeart} className="fa-brands" /> Shortlist</NavLink>
-                <NavLink to="contact"><FontAwesomeIcon icon={faEnvelope} className="fa-brands" /> Contact us</NavLink>
+                <div className="links" id={showLinks ? "hidden" : ""}>
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="shortlist"><FontAwesomeIcon icon={faHeart} className="fa-brands" /> Shortlist</NavLink>
+                    <NavLink to="contact"><FontAwesomeIcon icon={faEnvelope} className="fa-brands" /> Contact us</NavLink>
+                    </div>
+                <button class="hamburger-btn" onClick={()=>setShowLinks(!showLinks)}><FontAwesomeIcon icon={faBars} /></button>
             </div>
-            <div className="hamburger" onClick={handleToggle}>
+            {/* <div className="hamburger" onClick={handleToggle}>
                     <Hamburger isOpen={hamburgerOpen} />
-            </div>
+            </div> */}
 
         </nav>
     )
