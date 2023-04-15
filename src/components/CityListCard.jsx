@@ -1,6 +1,7 @@
 import React, { Fragment, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { PropertiesContext } from "../Context/PropertiesContext";
+import "../styles/CityList.css"
 
 const CityListCard = ({ city }) => 
 {
