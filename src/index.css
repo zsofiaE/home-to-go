@@ -305,7 +305,7 @@ button:hover {
 .section-left{
   display: flex;
   flex-direction: column;
-  width: 150%;
+  width: 100%;
 }
 
 /* .heart{
@@ -350,7 +350,7 @@ button:hover {
 }
 .img-person{
   position: relative;
-  bottom: -105px;
+  bottom: -55px;
   background-position: bottom;
   background-repeat: no-repeat;
   width: 80%;
