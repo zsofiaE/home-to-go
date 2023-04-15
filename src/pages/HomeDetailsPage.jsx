@@ -19,13 +19,3 @@ const HomeDetailsPage = () => {
 };
 
 export default HomeDetailsPage;
-/*
-return (
-    <div className="HOME">
-      {cityProperties.map((cityProps) => (
-        <HomeDetails cityProps={cityProps} key={cityProps._id}/>
-      ))}
-    </div>
-  );
-};
-*/

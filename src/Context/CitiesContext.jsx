@@ -46,10 +46,10 @@ const CitiesContextProvider = ({children}) => {
 
 
   return (
-    <CitiesContext.Provider value={{cities, setCities, options, setOptions}}>
-        {children}
-    </CitiesContext.Provider> 
-  )
+      <CitiesContext.Provider value={{cities, setCities, options, setOptions}}>
+          {children}
+      </CitiesContext.Provider> 
+    )
 }
 
 export default CitiesContextProvider;
