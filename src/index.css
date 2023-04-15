@@ -139,7 +139,8 @@ button {
   filter: drop-shadow(0 0 2em #bfb9d5aa);
 }
 
-.navigation{
+.navbar{
+  
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -163,10 +164,23 @@ button {
 }
 
 nav > div > a,
- .navigation > div > a,
- .navigation > div > p{
+ .navbar > div > a,
+ .navbar > div > p{
   padding: 0 1em;
 }
+
+.hamburger{
+  display: none;
+}
+
+.navigation a {
+  display: ${hamburgerOpen ? 'inline' : 'none'};
+  
+}
+
+
+
+/*--------------------------------Styling Hero Section--------------------------*/
 
 .hero-title{
   margin: 0;
@@ -642,8 +656,6 @@ footer > p{
     font-size: 24px;
   }
 
-  
-
    /*-------------Footer ----------------*/
    .footer{
     align-items: flex-end;
@@ -673,6 +685,13 @@ footer > p{
 /*Big smartphones [426px -> 600px]*/
   body{
     width: 100%;
+  }
+
+  .hamburger{
+    display: fixed;
+    padding-top: 10px;
+    margin-left: 10px;
+    z-index: 10;
   }
 
 /*--------CTA section on the Homepage-----*/
