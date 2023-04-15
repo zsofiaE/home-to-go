@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 
-const Links = () => {
+const FooterLinks = () => {
     return (
       
-        <footer className="navigation footer">
+        <footer className="navbar footer">
             <div className="links-left">
                 <NavLink to="about" >About us</NavLink>
                 <NavLink to="terms" >Terms & Conditions</NavLink>
@@ -18,4 +18,4 @@ const Links = () => {
     )
 };
 
-export default Links;
+export default FooterLinks;

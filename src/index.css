@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   display: flex;
   place-items: center;
   /* min-width: 320px; */
@@ -18,9 +19,11 @@ body {
 
 :root{
   --primary-dark:black;
-  --primary-light: #f5f5f5;
+  --primary-light: rgb(240, 240, 240);
   --pink: rgba(252,70,107,1);
   --blue: #3f5efb; 
+  --light-shade-blue: #6878ff;
+  --light-hover-shade-blue: #cfcdff;
   --border-radius: 24px;
   --gradient: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }
@@ -36,10 +39,15 @@ body {
 a {
   font-size: 16px;
   line-height: 24px;
-  color:rgb(240, 240, 240);
+  color:var(--primary-light);
   text-decoration: none;
   margin: 0;
   text-align: left;
+}
+
+a:hover{
+  /* color: #aca5db; */
+  color: #cfcdff;
 }
 
 h1, h3{
@@ -119,32 +127,31 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
   background-color: var(--blue);
+  /* background:linear-gradient(135deg,#00F5A0 0%,#00D9F5 100%); */
   color: white;
   margin: 20px;
 }
 
-.logo {
-  font-size: 1.5em;
-  /* height: 6em; */
-  /* padding: 1em; */
-  margin: 15px 0;
-  will-change: filter;
-  transition: filter 300ms;
+button:hover {
+  cursor: pointer;
+  background-color: #6878ff;
+  /*   */
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #aeafc3aa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #bfb9d5aa);
-}
+/*----------------------------styling Navbar -----------------------*/
 
-.navigation{
+.navbar{
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  background: rgb(63,94,251);
+  /* background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%); */
+  /* background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%); */
+  /* background: linear-gradient(90deg, #00CEE0 0%, #bb1cff 100%); */
+  /* background: linear-gradient(300deg, rgba(99,182,204,1) 20%, rgba(163,111,205,1) 60%); */
+  /* background:linear-gradient(90deg,#227B56 0%,#66B790 100%); */
+  /* background:linear-gradient(125deg,#870FFF 0%,#F89B29 100%); */
+  /* background:linear-gradient(135deg,#00F5A0 0%,#00D9F5 100%); */
   background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
   padding: 0 20px;
 }
@@ -155,6 +162,10 @@ button {
   justify-content: space-around;
 }
 
+.logo{
+  font-size: 24px;
+}
+
 .logo-icon{
   width: 20%;
   position: relative;
@@ -162,11 +173,37 @@ button {
   /* padding: 16px 5px; */
 }
 
-nav > div > a,
- .navigation > div > a,
- .navigation > div > p{
-  padding: 0 1em;
+.navigation{
+  display: flex;
+  align-items: center;/* - i dont need ias I have on navbar align items: center*/
+  justify-content: flex-end/*- i dont need as I have on navbar justify-content: space-between */
+ }
+
+ .navbar .navigation .links a,
+ .navbar > div > p, 
+ .navbar > div > a{
+  padding: 0 16px;
 }
+
+.navbar .navigation #hidden{
+  display: flex;
+}
+
+.navigation button{
+  display: none;
+  /* margin: 0 16px;*/
+} 
+
+/* .hamburger{
+  display: none;
+}
+
+.navigation a {
+  display: ${hamburgerOpen ? 'inline' : 'none'};
+  
+} */
+
+/*--------------------------------Styling Hero Section------------------------------------*/
 
 .hero-title{
   margin: 0;
@@ -243,13 +280,11 @@ nav > div > a,
 .flex-item-column{
   display: flex;
   flex-direction: column;
- 
   padding: 1%;
   margin: 20px;
 }
 
-
-/*-----------styling the 2. Section (SectionDesktop) Part of the HomePage---------*/
+/*-------------------styling the 2. Section (SectionDesktop) Part of the HomePage---------*/
 
 .section-container{
   display: flex;
@@ -260,7 +295,7 @@ nav > div > a,
 }
 
 .blue{
-  background-color:  rgba(63,94,251,01);
+  background-color: var(--blue);
 }
 
 .dark{
@@ -281,9 +316,9 @@ nav > div > a,
 .fa-icons{
   line-height: 2em;
   padding: 0 15px 0 30px;
-  color:#7980ff;
+  color: var(--light-shade-blue)
+  /* color:#7980ff; */
 }
-
 
 .favorites-title{
   line-height: 40px;
@@ -314,13 +349,11 @@ nav > div > a,
   margin: 0 10px;
 }
 .img-person{
-
   position: relative;
   bottom: -105px;
   background-position: bottom;
   background-repeat: no-repeat;
   width: 80%;
-
 }
 
 /* .bg-section-right{
@@ -328,8 +361,7 @@ nav > div > a,
   width: 100%;
   background-image: url(https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
   background-position: center;
-  background-repeat: no-repeat;
-  
+  background-repeat: no-repeat;  
 } */
 
 /*-------------styling the CTA section Part of the Home Page-------------*/
@@ -358,8 +390,7 @@ nav > div > a,
   padding: 0px 10px 0px 0;
 }
 
-/*------------------styling the footer------------------------------------*/
-
+/*-----------------------------------styling the footer------------------------------------*/
 
 footer{
   height: auto;
@@ -370,8 +401,8 @@ footer{
   background: black;
 }
 
-footer > p{
-  color:rgba(255, 255, 255, 0.6)
+footer > p, .links-right > p{
+  color:var(--primary-light);
 }
 
 .links-left, .links-right{
@@ -382,11 +413,8 @@ footer > p{
   display: flex;
 }
 
-.links-right > p{
-  color:rgb(240, 240, 240);
-}
 
-/*------city property grid Cards-----------*/
+/*-----------------------------------city property grid Cards-----------------------------*/
 
 .city-property-container {
   display: grid;
@@ -394,6 +422,7 @@ footer > p{
   grid-gap: 2.5em;
   padding: 5em;
 }
+
 
   .property-list-card {
     width: 400px;
@@ -465,7 +494,6 @@ footer > p{
     justify-content: space-evenly;
    }
 
-
    .property-view-btn{
     width: 100%;
     height: 25%;
@@ -529,7 +557,6 @@ footer > p{
   /* display: flex;
   flex-direction: column;
   align-items: center; */
-
  }
 
  .buttons{
@@ -546,7 +573,6 @@ footer > p{
   justify-content: space-evenly;
   align-items: center;
   /* border-top: 0.5px black solid; */
- 
  }
 
  .details-flex-items{
@@ -595,21 +621,6 @@ footer > p{
   line-height: 44px;
  }
 
-
-
-/* @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
 .detailedPageTestMimi {
   display: flex;
   justify-content: center;
@@ -630,6 +641,10 @@ footer > p{
     font-size: 32px;
   }
 
+  .logo {
+    font-size: 20px;
+  }
+
   /*-------------CTA section on the Homepage ----------------*/
 
   .section-container{
@@ -642,8 +657,6 @@ footer > p{
     font-size: 24px;
   }
 
-  
-
    /*-------------Footer ----------------*/
    .footer{
     align-items: flex-end;
@@ -653,12 +666,10 @@ footer > p{
   flex-direction: column;
   align-items: start;
  }
-
-
-
 }
 
 @media only screen and (max-width: 1000px){
+
   .section-flex-container{
     display: flex;
     flex-direction: column;
@@ -675,7 +686,60 @@ footer > p{
     width: 100%;
   }
 
-/*--------CTA section on the Homepage-----*/
+  .navigation button{
+    display: flex;
+  }
+
+  .navbar .navigation .links {
+   display: none;
+  } 
+
+  .navbar .navigation #hidden{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    height: 280px; /* or auto*/
+    /* max-height: 280px; */
+    width: 100%;
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .navbar .navigation #hidden a{
+    margin: 10px;
+    font-size: 20px;
+  }
+
+
+  /* .navbar{
+    padding: 0 5px;
+  }
+
+ .navbar > div > a,
+ .navbar > div > p{
+  padding: 0 5px;
+ } */
+
+  /* .hamburger{
+    display: fixed;
+    padding-top: 10px;
+    margin-left: 10px;
+    z-index: 10;
+  } */
+
+  .hamburger-btn{
+    background-color: transparent;
+    margin: 10px;
+  }
+
+  .hamburger-btn:hover{
+    background-color:  #a49dd3;
+  }
+
+/*----------------------------------CTA section on the Homepage---------------------------*/
 .section-container{
   flex-direction: column;
   justify-content: center;
@@ -684,14 +748,13 @@ footer > p{
   /*under 700px would be better*/
 }
 
-  .fa-brands{
+ .fa-brands{
     padding: 0px 10px 0px 0;
   }
 
-
 /*------footer-------*/
-.links-right a, p{
-  font-size: 16px;
-}
+  .links-right a, p{
+    font-size: 16px;
+  }
 
 }
