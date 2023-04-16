@@ -510,124 +510,7 @@ footer > p, .links-right > p{
 
    }
 
-/*----------------------home details styling ---------------*/
-
-.home-grid-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 40px ;
-    padding: 80px;
-    justify-content: center;
-    /* align-items: center; */
-    max-width: 2000px
-   }
-
-.home-grid-item{
-  text-align: left;
-    border: 1px dashed rgba(74, 152, 161, 0.8);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-   }
-
-.main-image{
-  width: 100%;
-  border-radius: var(--border-radius);
-  height: 400px; /*hier height more resposnsive*/
-   }
-
-.small-images-box{
-  width: 100%;
-  display: flex;
-}
-
-.small-image{
-  border-radius: var(--border-radius);
-  width: 32%;
-  margin: 5px;
-
-}
- .details{
-  padding: 20px;
-  border: solid 0.5px #CED3D8;
-  border-radius: var(--border-radius);
-  height: 80%;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
- }
-
- .buttons{
-  /* display: flex;
-  flex-direction: row; */
-  justify-content: center;
-  /* flex-basis: 100%; */
-  width: 100%;
- }
-
- .home-details-flex-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  /* border-top: 0.5px black solid; */
- }
-
- .details-flex-items{
- 
-  display: flex;
-  flex-direction: column;
-  flex: 0 0 160px;
- 
-  /* width: 160px; */
-  margin: 10px;
-  text-align: center;
-  line-height: 24px;
-  font-size: 16px;
- }
-
- .details-flex-items > p{
-  font-size: 16px;
- }
-
- .home-details-h3{
-  font-size: 30px;
-  font-weight: 400;
-  /* line-height: 48px; */
-  height: 25%;
-
- }
-
- .p-color{
-  color: var(--blue);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 48px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
- }
-
- .pr-flex-item{
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
- }
-
- .p-desc{
-  width: 80%;
-  line-height: 44px;
- }
-
-.detailedPageTestMimi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* border:rgb(200, 50, 230) solid 2px; */
-}
-
+/*--------------------home details styling in a separate file ../styles/HomeDetails.css---------------*/
 
 @media only screen and (max-width: 1200px){
   /*Tablets [601px -> 1200px]*/
@@ -646,7 +529,6 @@ footer > p, .links-right > p{
   }
 
   /*-------------CTA section on the Homepage ----------------*/
-
   .section-container{
     padding: 20px;
   }
@@ -661,11 +543,11 @@ footer > p, .links-right > p{
    .footer{
     align-items: flex-end;
   }
- .links-left{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
- }
+  .links-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
 }
 
 @media only screen and (max-width: 1000px){
@@ -677,7 +559,6 @@ footer > p, .links-right > p{
   .flex-item-column{
     width: 70%;
   }
-
 }
 
 @media only screen and (max-width: 600px){
@@ -689,11 +570,9 @@ footer > p, .links-right > p{
   .navigation button{
     display: flex;
   }
-
   .navbar .navigation .links {
    display: none;
   } 
-
   .navbar .navigation #hidden{
     position: absolute;
     left: 0;
@@ -707,22 +586,18 @@ footer > p, .links-right > p{
     align-items: center;
     justify-content: space-evenly;
   }
-
   .navbar .navigation #hidden a{
     margin: 10px;
     font-size: 20px;
   }
 
-
   /* .navbar{
     padding: 0 5px;
   }
-
- .navbar > div > a,
- .navbar > div > p{
-  padding: 0 5px;
- } */
-
+  .navbar > div > a,
+  .navbar > div > p{
+    padding: 0 5px;
+  } */
   /* .hamburger{
     display: fixed;
     padding-top: 10px;
@@ -734,7 +609,6 @@ footer > p, .links-right > p{
     background-color: transparent;
     margin: 10px;
   }
-
   .hamburger-btn:hover{
     background-color:  #a49dd3;
   }
@@ -756,5 +630,5 @@ footer > p, .links-right > p{
   .links-right a, p{
     font-size: 16px;
   }
-
+  
 }

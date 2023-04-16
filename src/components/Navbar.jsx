@@ -27,7 +27,7 @@ const Navbar = () => {
                     <NavLink to="shortlist"><FontAwesomeIcon icon={faHeart} className="fa-brands" /> Shortlist</NavLink>
                     <NavLink to="contact"><FontAwesomeIcon icon={faEnvelope} className="fa-brands" /> Contact us</NavLink>
                     </div>
-                <button class="hamburger-btn" onClick={()=>setShowLinks(!showLinks)}><FontAwesomeIcon icon={faBars} /></button>
+                <button className="hamburger-btn" onClick={()=>setShowLinks(!showLinks)}><FontAwesomeIcon icon={faBars} /></button>
             </div>
             {/* <div className="hamburger" onClick={handleToggle}>
                     <Hamburger isOpen={hamburgerOpen} />
