@@ -4,9 +4,12 @@ import { faChevronLeft, faBed, faBath, faHeart, faCheck, faSquareCheck, faCircle
 import OpenViewingModal from "../Modals/OpenModal";
 import Modal from "../Modals/Modal";
 import { Link } from "react-router-dom";
-//import { PropertiesContext } from "../Context/PropertiesContext";
+import { PropertiesContext } from "../Context/PropertiesContext";
+import "../styles/HomeDetails.css"
+import { IoBedOutline } from 'react-icons/io5'
+import{ MdOutlineBed, MdOutlineBathtub } from 'react-icons/md'
+import { FiCheck } from 'react-icons/fi'
 
-//---------------------------------------------------------------------------------
 
 const HomeDetails = ({cityProps, id}) => {
 
@@ -14,9 +17,8 @@ const HomeDetails = ({cityProps, id}) => {
   console.log("cityProps",cityProps)
   const [openModal, setOpenModal] = useState(false);
 
-  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li  key={index}> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
+  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index}> {keyFeatures} <FiCheck /></li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
   //const listBedroomPrices = cityProps.bedroom_prices.map((bedroomPrices, index) => <li key={index}> {bedroomPrices}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
-  
 //            
 
   return (
@@ -54,28 +56,28 @@ const HomeDetails = ({cityProps, id}) => {
             
             <hr style={{color: "black", height: "0.5px"}}/>
 
-            <div className="home-details-flex-container">
-                <div className="details-flex-items">
+            <div className="container">
+                <div className="flex-items bedroom">
                   <p>Bedrooms</p>
-                  <div className="p-color"><FontAwesomeIcon icon={faBed}  /> {cityProps.bedroom_count}</div>
+                  <div className="p-color"><MdOutlineBed size="2rem"/> {cityProps.bedroom_count}</div>
                 </div>
-                <div className="details-flex-items">
+                <div className="flex-items bathroom">
                   <p>Bathrooms</p>
-                  <div className="p-color"> <FontAwesomeIcon icon={faBath}  /> {cityProps.bathroom_count}</div>
+                  <div className="p-color"> <MdOutlineBathtub size="2rem" /> {cityProps.bathroom_count}</div>
                 </div>
-                <div className="details-flex-items">
+                <div className="flex-items property-type">
                   <p>Property Type</p>
                   <div className="p-color">{cityProps.property_type}</div>
                 </div>
-                <div className="details-flex-items">
+                <div className="flex-items price">
                   <p >Price</p>
                   <div className="p-color">  {"\u00A3"}{cityProps.bedroom_prices.bedroom_one}</div>
                 </div>
-                <div className="details-flex-items">
+                <div className="flex-items furnished-type">
                   <p>Furnished type</p>
                   <div className="p-color">{cityProps.furnished}</div>
                 </div>
-                <div className="details-flex-items">
+                <div className="flex-items availability">
                   <p>Available from</p>
                   <div className="p-color">{cityProps.availability}</div>
                 </div>
@@ -127,7 +129,7 @@ const HomeDetails = ({cityProps, id}) => {
 
         <div className="home-grid-item key-features grid-item-features">          
           <h3 className="home-details-h3">Key Features</h3>
-          <ul>{listKeyFeatures}</ul>
+          <ul >{listKeyFeatures}</ul>
         </div>
 
 
