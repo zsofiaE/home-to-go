@@ -1,11 +1,12 @@
 import React, { Fragment, useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { PropertiesContext } from "../Context/PropertiesContext";
+import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 import "../styles/CityList.css"
 
 const CityListCard = ({ city }) => 
 {
-  const { setSelectedCity } = useContext(PropertiesContext);
+  
+  const { setSelectedCity } = useContext(FilteredPropertiesContext);
 
   const descHandler = () => 
   {

@@ -5,8 +5,8 @@ export const CitiesContext = createContext();
 const CitiesContextProvider = ({children}) => {
    
     const[cities, setCities] = useState([]);
-    let [page, setPage] = useState(1);
     const [options, setOptions] = useState([]);
+    let [page, setPage] = useState(1);
 
     useEffect(() => {
       let abortController = new AbortController();
@@ -17,7 +17,7 @@ const CitiesContextProvider = ({children}) => {
         .then((data) => {
           setCities([...cities, ...data.response]);
 
-          /// loop over pages in the database 
+          // loop over pages in the database 
           if (page < 2) {
             setPage(page + 1);
           }
@@ -44,12 +44,11 @@ const CitiesContextProvider = ({children}) => {
       );
     }, [cities])
 
-
   return (
-    <CitiesContext.Provider value={{cities, setCities, options, setOptions}}>
-        {children}
-    </CitiesContext.Provider> 
-  )
+      <CitiesContext.Provider value={{cities, setCities, options, setOptions}}>
+          {children}
+      </CitiesContext.Provider> 
+    )
 }
 
 export default CitiesContextProvider;
