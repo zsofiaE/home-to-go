@@ -1,15 +1,12 @@
 import React, { Fragment, useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faBed, faBath, faHeart, faCheck, faSquareCheck, faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faBed, faBath, faHeart} from "@fortawesome/free-solid-svg-icons";
 import OpenViewingModal from "../Modals/OpenModal";
 import Modal from "../Modals/Modal";
 import { Link } from "react-router-dom";
-import { PropertiesContext } from "../Context/PropertiesContext";
 import "../styles/HomeDetails.css"
-import { IoBedOutline } from 'react-icons/io5'
 import{ MdOutlineBed, MdOutlineBathtub } from 'react-icons/md'
-import { FiCheck } from 'react-icons/fi'
-
+import { FiCheck, FiArrowRight } from 'react-icons/fi'
 
 const HomeDetails = ({cityProps, id}) => {
 
@@ -17,7 +14,7 @@ const HomeDetails = ({cityProps, id}) => {
   console.log("cityProps",cityProps)
   const [openModal, setOpenModal] = useState(false);
 
-  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index}> {keyFeatures} <FiCheck /></li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
+  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
   //const listBedroomPrices = cityProps.bedroom_prices.map((bedroomPrices, index) => <li key={index}> {bedroomPrices}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
 //            
 
@@ -26,14 +23,14 @@ const HomeDetails = ({cityProps, id}) => {
       <Link to={"/"} style={{ color: "black" }}>
         {" "}
         <h4>
-          <FontAwesomeIcon icon={faChevronLeft} /> Back to Search
+          <FontAwesomeIcon icon={faChevronLeft}  /> Back to Search
         </h4>
       </Link>
 
 
       <div className="home-grid-container">
         
-        <div className="home-grid-item grid-item-images">
+        <div className="home-grid-item grid-images">
           <div className="images">
               <img className="main-image" src={cityProps.images[0]} alt={cityProps.address.city}/>
               {/* <div className="property-bg-img"
@@ -50,34 +47,34 @@ const HomeDetails = ({cityProps, id}) => {
         </div>
 
 
-        <div className="home-grid-item grid-item-details">
+        <div className="home-grid-item grid-details">
           <div className="details">
-            <h3 className="home-details-h3" style={{textAlign: "center"}} >{cityProps.address.street}, {cityProps.address.city}, {cityProps.address.postcode}</h3> 
+            <h3>{cityProps.address.street}, {cityProps.address.city}, {cityProps.address.postcode}</h3> 
             
-            <hr style={{color: "black", height: "0.5px"}}/>
+            {/* <hr style={{color: "black", height: "0.3px"}}/> */}
 
             <div className="container">
-                <div className="flex-items bedroom">
+                <div className="grid-items bedroom">
                   <p>Bedrooms</p>
                   <div className="p-color"><MdOutlineBed size="2rem"/> {cityProps.bedroom_count}</div>
                 </div>
-                <div className="flex-items bathroom">
+                <div className="grid-items bathroom">
                   <p>Bathrooms</p>
                   <div className="p-color"> <MdOutlineBathtub size="2rem" /> {cityProps.bathroom_count}</div>
                 </div>
-                <div className="flex-items property-type">
+                <div className="grid-items property-type">
                   <p>Property Type</p>
                   <div className="p-color">{cityProps.property_type}</div>
                 </div>
-                <div className="flex-items price">
+                <div className="grid-items price">
                   <p >Price</p>
                   <div className="p-color">  {"\u00A3"}{cityProps.bedroom_prices.bedroom_one}</div>
                 </div>
-                <div className="flex-items furnished-type">
+                <div className="grid-items furnished-type">
                   <p>Furnished type</p>
                   <div className="p-color">{cityProps.furnished}</div>
                 </div>
-                <div className="flex-items availability">
+                <div className="grid-items availability">
                   <p>Available from</p>
                   <div className="p-color">{cityProps.availability}</div>
                 </div>
@@ -86,7 +83,7 @@ const HomeDetails = ({cityProps, id}) => {
             </div>
 
             <div className="buttons" style={{display: "flex"}}>
-              <button style={{width: "100%"}}> <FontAwesomeIcon icon={faHeart}/> Shortlist</button>
+              <button style={{width: "100%"}}> <FontAwesomeIcon icon={faHeart} /> Shortlist</button>
               <button style={{width: "100%"}}
                 className="open-modal-btn"
                 onClick={() => setOpenModal(true)}
@@ -97,37 +94,39 @@ const HomeDetails = ({cityProps, id}) => {
           </div>
         
 
-        <div className="home-grid-item desc grid-item-desc">
+        <div className="home-grid-item grid-desc">
           <h3 className="home-details-h3">Description</h3>
           <p className="p-desc">{cityProps.property_description}</p>
         </div>
 
 
-        <div className="home-grid-item prices grid-item-prices">
+        <div className="home-grid-item grid-prices">
         <h3 className="home-details-h3">Bedroom Prices</h3>
-          <div className="pr-flex-item">        
-          <h4>Bedroom 1</h4>
-          <h4>£{cityProps.bedroom_prices.bedroom_one} per week</h4>
+        <div className="border">
+          <div className="pr-grid-item">        
+            <h4>Bedroom 1</h4>
+            <h4>£{cityProps.bedroom_prices.bedroom_one} per week</h4>
           </div>
 
-          <div className="pr-flex-item">        
-          <h4>Bedroom 2</h4>
-          <h4>£{cityProps.bedroom_prices.bedroom_two} per week</h4>
+          <div className="pr-grid-item">        
+            <h4>Bedroom 2</h4>
+            <h4>£{cityProps.bedroom_prices.bedroom_two} per week</h4>
           </div>
 
-          <div className="pr-flex-item">        
-          <h4>Bedroom 3</h4>
-          <h4>£{cityProps.bedroom_prices.bedroom_three} per week</h4>
+          <div className="pr-grid-item">        
+            <h4>Bedroom 3</h4>
+            <h4>£{cityProps.bedroom_prices.bedroom_three} per week</h4>
           </div>
 
-          <div className="pr-flex-item">        
-          <h4>Bedroom 4</h4>
-          <h4>£{cityProps.bedroom_prices.bedroom_four} per week</h4>
+          <div className="pr-grid-item" style={{borderBottom:"none"}}>        
+            <h4>Bedroom 4</h4>
+            <h4>£{cityProps.bedroom_prices.bedroom_four} per week</h4>
           </div>
+        </div>
         </div>
 
 
-        <div className="home-grid-item key-features grid-item-features">          
+        <div className="home-grid-item grid-key-features">          
           <h3 className="home-details-h3">Key Features</h3>
           <ul >{listKeyFeatures}</ul>
         </div>

@@ -510,6 +510,28 @@ footer > p, .links-right > p{
 
    }
 
+   .students{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    margin: 100px 60px;
+   }
+
+   .students p, h3{
+    text-align: start;
+   }
+
+   .students div{
+    width: 95%;
+    padding: 20px;
+   }
+
+   .students img{
+    border-radius: var(--border-radius);
+    width: 100%;
+   }
+
 /*--------------------home details styling in a separate file ../styles/HomeDetails.css---------------*/
 
 @media only screen and (max-width: 1200px){
@@ -526,6 +548,12 @@ footer > p, .links-right > p{
 
   .logo {
     font-size: 20px;
+  }
+
+  .students{
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 30px;
   }
 
   /*-------------CTA section on the Homepage ----------------*/
@@ -620,6 +648,10 @@ footer > p, .links-right > p{
   align-items: center;
 
   /*under 700px would be better*/
+}
+
+students p{
+  font-size: 16px;;
 }
 
  .fa-brands{
