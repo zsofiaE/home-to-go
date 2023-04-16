@@ -65,7 +65,7 @@ const PropertiesCard = ({ property }) => {
           </div>
           <div style={{ alignSelf: "self-start", padding: '0 40px' }}>
             <FontAwesomeIcon icon={faLocationDot} className="fa-icons"style={{ padding: '0 5px' }}/>
-            {property.address.street},{property.address.city},{property.address.postcode}
+            {property.address.street}, {property.address.city}, {property.address.postcode}
           </div>
         </div>
         <Link to={"homes/"+ property._id}>

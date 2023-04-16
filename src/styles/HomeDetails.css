@@ -9,19 +9,18 @@
 .home-grid-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
     gap: 40px ;
     padding: 80px;
     max-width: 2000px
    }
 
 .home-grid-item{
-  text-align: left;
-    border: 1px dashed rgba(74, 152, 161, 0.8);
+    text-align: left;
+    /* border: 1px dashed rgba(74, 152, 161, 0.8); */ /*this border just for styling*/
     display: flex;
     flex-direction: column;
     width: 100%;
-
    }
 
 .main-image{
@@ -39,7 +38,6 @@
   border-radius: var(--border-radius);
   width: 32%;
   margin: 5px;
-
 }
 
  .details{
@@ -73,7 +71,7 @@
                         "price furnished-type availability";
  }
 
- .details .container .flex-items{
+ .details .container .grid-items{
   display: flex;
   flex-direction: column;
   flex: 0 0 160px;
@@ -103,16 +101,17 @@
     grid-area: availability;
  }
 
-
- .details .container .flex-items > p{
+ .details .container .grid-items > p{
   font-size: 16px;
  }
 
- .home-details-h3{
+ .home-grid-item .details h3{
   font-size: 30px;
   font-weight: 400;
+  text-align: center;
   /* line-height: 48px; */
   height: 25%;
+  border-bottom: solid 0.5px;
  }
 
  .p-color{
@@ -125,16 +124,45 @@
   align-items: center;
  }
 
- .pr-flex-item{
+ .pr-grid-item{
   display: flex;
   justify-content: space-between;
-  margin: 10px;
+  padding: 10px;
  }
 
  .p-desc{
   width: 80%;
-  line-height: 44px;
+  line-height: 40px;
  }
+
+ .grid-prices > div{
+  border: solid 1px #CED3D8;
+  border-radius: var(--border-radius);
+ }
+
+ .border > div {
+  border-bottom: solid 1px #CED3D8;
+ }
+
+ li{
+ font-size: 20px;
+ line-height: 40px;
+ 
+ }
+
+ ul{
+  list-style-type: none;
+  padding: 5px;
+ }
+
+ ul li:before {    
+  /* font-family: "Font Awesome 5 Free";
+  content: "\f061"; */
+}
+
+li{
+  margin: 20px 0 ;
+}
 
 .detailedPageTestMimi {
   display: flex;
@@ -151,6 +179,23 @@
         grid-template-columns: 1fr;
         max-width: 1000px
     }
+
+    .grid-images{
+      order: 1;
+    }
+    .grid-details{
+      order: 2;
+    }
+    .grid-prices{
+      order: 5;
+    }
+    .grid-desc{
+      order: 3;
+    }
+    .grid-key-features{
+      order: 4;
+    }
+
 }
 
 
