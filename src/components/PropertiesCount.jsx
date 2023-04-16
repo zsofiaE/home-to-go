@@ -1,19 +1,21 @@
 import React from "react";
 import { Fragment, useContext } from "react";
-import { PropertiesContext } from "../Context/PropertiesContext";
+import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 //------------------------------------------------------------------------------------------ 
 
 const PropertiesCount = () => {
 
-  const { homeDetails } = useContext(PropertiesContext);
+  const { filteredHomes, homes } = useContext(FilteredPropertiesContext);
+//console.log("homes", homes);
 
   return (
     <>
       <div className="detailedPageTestMimi">
-      <h3>{homeDetails.total} homes in {homeDetails.city_name}</h3>   
+      <h3>{filteredHomes.length} homes in </h3>   
       </div>
     </>
   );
 };
 
 export default PropertiesCount;
+//{filteredHomes.length} homes in {filteredHomes.address.city}

@@ -1,14 +1,15 @@
 import React, { useContext, useState } from "react";
 import Select from 'react-select';
 import { CitiesContext } from "../Context/CitiesContext";
-import { PropertiesContext } from "../Context/PropertiesContext";
+//import { PropertiesContext } from "../Context/PropertiesContext";
 import { Link } from "react-router-dom";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 
 const SearchBarProperties = () => {
   //const { options } = useContext(CitiesContext);
-  const { selectedCity } = useContext(PropertiesContext);
+  const { selectedCity } = useContext(FilteredPropertiesContext);
   
+  const { setFilteredHomes } = useContext(FilteredPropertiesContext);
 
   const { setSelectedBedrooms } = useContext(FilteredPropertiesContext);
   const { setSelectedBathrooms } = useContext(FilteredPropertiesContext);
@@ -24,72 +25,42 @@ const SearchBarProperties = () => {
     { value: selectedCity, label: 6 }
   ]
   const optionsBathroom = [
-    { value: 'id', label: 1 },
-    { value: 'id', label: 2 },
-    { value: 'id', label: 3 },
-    { value: 'id', label: 4 },
-    { value: 'id', label: 5 },
-    { value: 'id', label: 6 }
+    { value: selectedCity, label: 1 },
+    { value: selectedCity, label: 2 },
+    { value: selectedCity, label: 3 },
+    { value: selectedCity, label: 4 },
+    { value: selectedCity, label: 5 },
+    { value: selectedCity, label: 6 }
   ]
   const optionsPrice = [
-    { value: 'id', label: '1000' },
-    { value: 'id', label: '2000' },
-    { value: 'id', label: '3000' },
-    { value: 'id', label: '4000' },
-    { value: 'id', label: '5000' },
-    { value: 'id', label: '6000' }
+    { value: selectedCity, label: '1000' },
+    { value: selectedCity, label: '2000' },
+    { value: selectedCity, label: '3000' },
+    { value: selectedCity, label: '4000' },
+    { value: selectedCity, label: '5000' },
+    { value: selectedCity, label: '6000' }
   ]
   const optionsType = [
-    { value: 'id', label: 'Apartment' },
-    { value: 'id', label: 'Semi-Detached' },
-    { value: 'id', label: 'Detached' }
+    { value: selectedCity, label: 'Apartment' },
+    { value: selectedCity, label: 'Semi-Detached' },
+    { value: selectedCity, label: 'Detached' }
   ]
-  const [inputVal, setInputVal] = useState("");
 
   const handleChangeBedroom = (selectedOption) => {
-    console.log("handleChangeBeds", selectedOption);
     setSelectedBedrooms(selectedOption.label);
   };
 
   const handleChangeBathroom = (selectedOption) => {
-    console.log("handleChangeBath", selectedOption);
     setSelectedBathrooms(selectedOption.label);
   };
 
   const handleChangePrice = (selectedOption) => {
-    console.log("handleChangePrice", selectedOption);
     setSelectedPrice(selectedOption.label);
   };
 
   const handleChangeType = (selectedOption) => {
-    console.log("handleChangeType", selectedOption);
     setSelectedType(selectedOption.label);
   };
-
- /* const handleInputValue = (str, event) => {
-    console.log("string:  ", str, event);
-    if (event.action === "menu-close") {
-      if (!str) {
-        setInputVal(inputVal);
-      }
-    } else setInputVal(str);
-  };
-  
-    onInputChange={handleInputValue}
-          inputValue={inputVal} 
-  
-  */
-
-  /*load options for the search bar
-  useEffect( ()=>{
-   setBedroomCount(
-     cityProperties.map((item) => ({
-       label: item.bedroom_count,
-       value: item._id,
-     }))
-   );
- }, [cityProperties]);
- */
 
   return (
     <form >
@@ -110,7 +81,8 @@ const SearchBarProperties = () => {
           placeholder="Any bathroom"
           cacheOptions
           isClearable={true}
-          isSearchable={true} />
+          isSearchable={true} 
+        />
         <Select
           options={optionsPrice}
           onChange={handleChangePrice}
@@ -118,7 +90,8 @@ const SearchBarProperties = () => {
           placeholder="any price"
           cacheOptions
           isClearable={true}
-          isSearchable={true}        />
+          isSearchable={true}        
+        />
         <Select
           options={optionsType}
           onChange={handleChangeType}
@@ -129,7 +102,6 @@ const SearchBarProperties = () => {
           isSearchable={true}
         />
       </div>
-
     </form>
   );
 };

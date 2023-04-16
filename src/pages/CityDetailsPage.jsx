@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropertiesList from "../components/PropertiesList";
 import SearchBarProperties from "../components/SearchBarProperties";
-import FilteredPropertiesContext from "../Context/FilteredPropertiesContext";
+
 //---------------------------------------------------------------------------------
 
 const CityDetailsPage = () => {
@@ -11,7 +11,6 @@ const CityDetailsPage = () => {
           <SearchBarProperties/>
 
       <section>
-      <FilteredPropertiesContext/>
         <PropertiesList />
       </section>
     </>
@@ -21,3 +20,4 @@ const CityDetailsPage = () => {
 export default CityDetailsPage;
 
 
+//      <FilteredPropertiesContext/>

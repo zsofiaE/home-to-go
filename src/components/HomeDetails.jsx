@@ -4,7 +4,7 @@ import { faChevronLeft, faBed, faBath, faHeart, faCheck, faSquareCheck, faCircle
 import OpenViewingModal from "../Modals/OpenModal";
 import Modal from "../Modals/Modal";
 import { Link } from "react-router-dom";
-import { PropertiesContext } from "../Context/PropertiesContext";
+//import { PropertiesContext } from "../Context/PropertiesContext";
 
 //---------------------------------------------------------------------------------
 
