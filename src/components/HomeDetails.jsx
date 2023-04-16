@@ -9,7 +9,7 @@ import "../styles/HomeDetails.css"
 import { IoBedOutline } from 'react-icons/io5'
 import{ MdOutlineBed, MdOutlineBathtub } from 'react-icons/md'
 import { FiCheck } from 'react-icons/fi'
-//---------------------------------------------------------------------------------
+
 
 const HomeDetails = ({cityProps, id}) => {
 

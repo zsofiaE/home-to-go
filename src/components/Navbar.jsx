@@ -27,7 +27,10 @@ const Navbar = () => {
                     <NavLink to="shortlist"><FontAwesomeIcon icon={faHeart} className="fa-brands" /> Shortlist</NavLink>
                     <NavLink to="contact"><FontAwesomeIcon icon={faEnvelope} className="fa-brands" /> Contact us</NavLink>
                     </div>
-                <button className="hamburger-btn" onClick={()=>setShowLinks(!showLinks)}><FontAwesomeIcon icon={faBars} /></button>
+
+                    /*---------this button just appers under max-width 600px,
+                    as if showLinks is true (after clicking on button), the #id of .links chanages for #hidden; styling in css ----*/
+                <button class="hamburger-btn" onClick={()=>setShowLinks(!showLinks)}><FontAwesomeIcon icon={faBars} /></button>
             </div>
             {/* <div className="hamburger" onClick={handleToggle}>
                     <Hamburger isOpen={hamburgerOpen} />

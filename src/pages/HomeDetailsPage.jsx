@@ -1,15 +1,15 @@
 import React, { Fragment, useContext } from "react";
 import { useParams } from "react-router-dom";
 import HomeDetails from "../components/HomeDetails";
-import { PropertiesContext } from "../Context/PropertiesContext";
+import {FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 //------------------------------------------------------------------------------------------
 
 const HomeDetailsPage = () => {
-  const { cityProperties } = useContext(PropertiesContext);
+  const { filteredHomes } = useContext(FilteredPropertiesContext);
 
   const { id } = useParams();
 
-  const props = cityProperties.filter((props) => props._id === id)[0]
+  const props = filteredHomes.filter((props) => props._id === id)[0]
 
   return (
     <div className="HOME">
@@ -19,13 +19,3 @@ const HomeDetailsPage = () => {
 };
 
 export default HomeDetailsPage;
-/*
-return (
-    <div className="HOME">
-      {cityProperties.map((cityProps) => (
-        <HomeDetails cityProps={cityProps} key={cityProps._id}/>
-      ))}
-    </div>
-  );
-};
-*/

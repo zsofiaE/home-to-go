@@ -1,14 +1,22 @@
 import React, { useContext } from "react";
 import Select from 'react-select';
 import { CitiesContext } from "../Context/CitiesContext";
-import { PropertiesContext } from "../Context/PropertiesContext";
+import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 import { Link } from "react-router-dom";
 
 const SearchBarCityList = () => {
   const { options } = useContext(CitiesContext);
-  const { setSelectedCity, setCityProperties } = useContext(PropertiesContext);
-  const { bedroomCount } = useContext(PropertiesContext);
+  const { setSelectedCity, selectedCity, setSelectedBedrooms } = useContext(FilteredPropertiesContext);
 
+  //const { bedroomCount } = useContext(PropertiesContext);
+  const optionsBedroom = [
+    { value: selectedCity, label: 1 },
+    { value: selectedCity, label: 2 },
+    { value: selectedCity, label: 3 },
+    { value: selectedCity, label: 4 },
+    { value: selectedCity, label: 5 },
+    { value: selectedCity, label: 6 }
+  ]
 
   const handleChange = (selectedOption) => {
     console.log("handleChangeTest", selectedOption);
@@ -17,8 +25,9 @@ const SearchBarCityList = () => {
   };
 
   const handleChange2 = (selectedOption2) => {
-    console.log("handleChangeTest2", selectedOption2);
-    setBedroom(selectedOption2.value);
+    console.log("handleChangeBeds", selectedOption2);
+    setSelectedBedrooms(selectedOption2.label);
+
   };
 
   return (
@@ -34,7 +43,7 @@ const SearchBarCityList = () => {
         isSearchable={true}
       />
       <Select
-        options={bedroomCount}
+        options={optionsBedroom}
         onChange={handleChange2}
         backspaceRemovesValue
         placeholder="Any bedroom"
@@ -52,3 +61,10 @@ const SearchBarCityList = () => {
 };
 
 export default SearchBarCityList;
+
+/*
+
+
+    const { setSelectedCity, setCityProperties } = useContext(FilteredPropertiesContext);
+
+  */
