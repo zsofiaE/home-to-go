@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 import "../styles/CityList.css"
 
-const CityListCard = ({ city }) => 
-{
+const CityListCard = ({ city }) => {
   
   const { setSelectedCity } = useContext(FilteredPropertiesContext);
+  
+  console.log(city._id);
 
   const descHandler = () => 
   {
@@ -16,7 +17,7 @@ const CityListCard = ({ city }) =>
   return ( 
     <>
     <div className="city-list-card" >
-      <Link to={"cities/"+ city.name} onClick={(descHandler)} >
+      <Link to={"cities/"+ city._id} onClick={(descHandler)} >
       <img className="city-list-bg" src={city.image_url} alt={city.name} />
       <div className="city-list-details">
         <h3>{city.name}</h3>
