@@ -8,7 +8,6 @@ const SearchBarCityList = () => {
   const { options } = useContext(CitiesContext);
   const { setSelectedCity, selectedCity, setSelectedBedrooms } = useContext(FilteredPropertiesContext);
 
-  //const { bedroomCount } = useContext(PropertiesContext);
   const optionsBedroom = [
     { value: selectedCity, label: 1 },
     { value: selectedCity, label: 2 },
@@ -18,16 +17,12 @@ const SearchBarCityList = () => {
     { value: selectedCity, label: 6 }
   ]
 
-  const handleChange = (selectedOption) => {
-    console.log("handleChangeTest", selectedOption);
-   
+  const handleChange = (selectedOption) => { 
     setSelectedCity(selectedOption.value);
   };
 
   const handleChange2 = (selectedOption2) => {
-    console.log("handleChangeBeds", selectedOption2);
     setSelectedBedrooms(selectedOption2.label);
-
   };
 
   return (
@@ -52,7 +47,7 @@ const SearchBarCityList = () => {
         isSearchable={true}
   />
     </div>
-    <Link to={"cities/"+ setSelectedCity} >
+    <Link to={"cities/"+ selectedCity} >
     <button>Find Homes</button>
     </Link>
 
@@ -61,10 +56,3 @@ const SearchBarCityList = () => {
 };
 
 export default SearchBarCityList;
-
-/*
-
-
-    const { setSelectedCity, setCityProperties } = useContext(FilteredPropertiesContext);
-
-  */

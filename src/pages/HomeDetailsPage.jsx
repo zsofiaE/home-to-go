@@ -8,6 +8,7 @@ const HomeDetailsPage = () => {
   const { filteredHomes } = useContext(FilteredPropertiesContext);
 
   const { id } = useParams();
+  console.log("id2", id);
 
   const props = filteredHomes.filter((props) => props._id === id)[0]
 

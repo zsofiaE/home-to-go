@@ -4,8 +4,10 @@ import HP_Section from "../components/Section_Desktop";
 import SearchBarCityList from "../components/searchBar_HP";
 import Section_Desktop from "../components/Section_Desktop";
 import SectionCompare_hp from "../components/SectionCompare_hp";
+//---------------------------------------------------------------------- 
 
 const HomePage = () => {
+
   return (
     <div>
       <SearchBarCityList />
