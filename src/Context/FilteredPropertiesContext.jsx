@@ -13,6 +13,7 @@ const FilteredPropertiesContextProvider = ({ children }) => {
   const [selectedBathrooms, setSelectedBathrooms] = useState();
   const [selectedPrice, setSelectedPrice] = useState("");
   const [selectedType, setSelectedType] = useState();
+  const [showProperties, setShowProperties] = useState(false);
 
  
   console.log("selectedBedrooms",selectedBedrooms);
@@ -42,6 +43,7 @@ const FilteredPropertiesContextProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => {
         setFilteredHomes(data.response);
+        setShowProperties(true)
       })
       .catch((error) => console.log("error", error));
   }, [
@@ -68,7 +70,7 @@ const FilteredPropertiesContextProvider = ({ children }) => {
         selectedPrice, setSelectedPrice,
         selectedType, setSelectedType,
         filteredHomes, setFilteredHomes,
-        selectedCity, setSelectedCity,
+        selectedCity, setSelectedCity, showProperties
       }}
     >
       {children}

@@ -1,23 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Fragment, useContext } from "react";
 import PropertiesCard from "./PropertiesCard";
 import PropertiesCount from "./PropertiesCount";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
+
 //------------------------------------------------------------------------------------------ 
 
 const CityPropertiesList = ({id, name, universities, student_life}) => {
   
-  const { filteredHomes } = useContext(FilteredPropertiesContext);
+  const { filteredHomes,setSelectedCity, showProperties } = useContext(FilteredPropertiesContext);
+console.log(filteredHomes)
+useEffect(()=>  setSelectedCity(id), [] )
 
   return (
     <>
     <PropertiesCount key={id} name={name} />
       <div className="city-list-container properties-container">
-        {filteredHomes.map(
+       {showProperties ?
+        filteredHomes.map(
           (property) => (
             (<PropertiesCard property={property} key={property._id} />)
           )
-        )}
+        ) : <div>loading...</div> }
       </div>
       <section className="section-compare-box students">
         <div>

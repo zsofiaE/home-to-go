@@ -3,12 +3,16 @@ import PropertiesList from "../components/PropertiesList";
 import SearchBarProperties from "../components/SearchBarProperties";
 import { useParams } from "react-router-dom";
 import { CitiesContext } from "../Context/CitiesContext";
+
+
 //---------------------------------------------------------------------------------
 
 const CityDetailsPage = () => {
 
 const {id} = useParams();
 const { cities } = useContext(CitiesContext);
+
+
 const props = cities.filter((props) => props._id === id)[0]
 
   return (
