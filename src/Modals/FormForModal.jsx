@@ -27,6 +27,7 @@ const FormForModal = () => {
         <div className="form-left">
           <label>Name<br/>
           <input 
+            id="label" 
             type="text" 
             name="username"
             placeholder="Enter your name" 
@@ -36,6 +37,7 @@ const FormForModal = () => {
           </label><br/>
           <label>Email<br/>
             <input 
+              id="label" 
               type="email" 
               name="email" 
               placeholder="Enter your email address"
@@ -44,7 +46,9 @@ const FormForModal = () => {
             />
             </label><br/>
             <label>Phone Number<br/>
-              <input type="text"
+              <input 
+              type="text"
+              id="label" 
               name="phone"
               placeholder="Enter your phone number"
               value={inputs.phone || ""}
@@ -53,14 +57,14 @@ const FormForModal = () => {
             </label><br />
           </div>
           <div className="form-right">
-            <label >Message
+            <label >Message<br/>
               <textarea
-                  rows={8}
+                  rows={5}
                   placeholder="Enter your message" >
                   {/* value={textarea} 
                   onChange={handleChange} */}
               </textarea>
-            </label>
+            </label><br/>
             {/* <input type="submit" /> */}
             <button className="submit-btn">Submit</button>
           </div>
