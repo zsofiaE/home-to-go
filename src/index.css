@@ -92,7 +92,7 @@ html {
   z-index: 1;
 }
 
-input, textarea {
+input, textarea, select {
   background: #FFFFFF;
   border-radius: 12px;
   border: 1px solid #CED3D8;
@@ -192,14 +192,9 @@ button:hover {
   /* margin: 0 16px;*/
 } 
 
-/* .hamburger{
-  display: none;
+.links a:hover{
+  cursor: pointer;
 }
-
-.navigation a {
-  display: ${hamburgerOpen ? 'inline' : 'none'};
-  
-} */
 
 /*--------------------------------Styling Hero Section------------------------------------*/
 
