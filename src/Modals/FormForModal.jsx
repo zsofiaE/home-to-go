@@ -17,7 +17,7 @@ const FormForModal = ({closeModal}) => {
   
     const handleSubmit = (event) => {
       event.preventDefault();
-      alert(inputs);
+      alert('You have submitted the form.');
     }
   
     return (
@@ -60,9 +60,9 @@ const FormForModal = ({closeModal}) => {
             <label >Message<br/>
               <textarea
                   rows={7}
-                  placeholder="Enter your message" >
-                  {/* value={textarea} 
-                  onChange={handleChange} */}
+                  placeholder="Enter your message" 
+                  value={textarea} 
+                  onChange={handleChange}>
               </textarea>
             </label><br/>
             <button type="submit"  datadismiss="modal" className="submit-btn">Submit</button>
