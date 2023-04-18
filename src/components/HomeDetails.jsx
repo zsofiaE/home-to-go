@@ -12,6 +12,7 @@ const HomeDetails = ({cityProps, id}) => {
 
 
   console.log("cityProps",cityProps)
+
   const [openModal, setOpenModal] = useState(false);
 
   const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
@@ -26,7 +27,6 @@ const HomeDetails = ({cityProps, id}) => {
           <FontAwesomeIcon icon={faChevronLeft}  /> Back to Search
         </h4>
       </Link>
-
 
       <div className="home-grid-container">
         
@@ -45,7 +45,6 @@ const HomeDetails = ({cityProps, id}) => {
             </div>
           </div>
         </div>
-
 
         <div className="home-grid-item grid-details">
           <div className="details">
@@ -85,20 +84,18 @@ const HomeDetails = ({cityProps, id}) => {
             <div className="buttons" style={{display: "flex"}}>
               <button style={{width: "100%"}}> <FontAwesomeIcon icon={faHeart} /> Shortlist</button>
               <button style={{width: "100%"}}
+                type="button" dataToggle="modal"
+                dataTarget="#myModal"
                 className="open-modal-btn"
                 onClick={() => setOpenModal(true)}
-              >
-                Book Viewing
-              </button>
+              >Book Viewing</button>
             </div>
           </div>
         
-
         <div className="home-grid-item grid-desc">
           <h3 className="home-details-h3">Description</h3>
           <p className="p-desc">{cityProps.property_description}</p>
         </div>
-
 
         <div className="home-grid-item grid-prices">
         <h3 className="home-details-h3">Bedroom Prices</h3>
@@ -125,12 +122,10 @@ const HomeDetails = ({cityProps, id}) => {
         </div>
         </div>
 
-
         <div className="home-grid-item grid-key-features">          
           <h3 className="home-details-h3">Key Features</h3>
           <ul >{listKeyFeatures}</ul>
         </div>
-
 
       </div>
       

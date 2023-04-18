@@ -6,9 +6,10 @@ import { faEnvelopesBulk, faHouseCircleCheck } from '@fortawesome/free-solid-svg
 
 
 const Modal = ({ closeModal }) => {
+  
   return (
     <>
-    <div className="modal-background">
+    <div id="myModal" role="dialog" className="modal-background">
       <div className="modal-container">
           
           <div className="modal-header">
@@ -19,12 +20,12 @@ const Modal = ({ closeModal }) => {
             <div className='close-btn'>
             {/* <FontAwesomeIcon icon={faEnvelopesBulk} size="2xl" style={{color: "#3f5efb"}} pull="right" className='modal-icons'/> */}
            
-            <button onClick={() => closeModal(false)}>  <FontAwesomeIcon icon={faHouseCircleCheck} size="3x" style={{color: "#3f5efb"}} pull="right" className='modal-icon' /> </button>
+            <button type="button" datadismiss="modal" onClick={() => closeModal(false)}>  <FontAwesomeIcon icon={faHouseCircleCheck} size="3x" style={{color: "#3f5efb"}} pull="right" className='modal-icon' /> </button>
           </div>
 
           </div>
           <div className="modal-body">
-            <FormForModal />
+            <FormForModal closeModal={closeModal} />
           </div>
           {/* <div className="modal-footer"></div> */}
         </div>

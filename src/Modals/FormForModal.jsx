@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import React from 'react'
 
-const FormForModal = () => {
+const FormForModal = ({closeModal}) => {
 
     const [inputs, setInputs] = useState({});
     const [textarea, setTextarea] = useState();
@@ -29,7 +29,7 @@ const FormForModal = () => {
           <input 
             id="label" 
             type="text" 
-            name="username"
+            name="name"
             placeholder="Enter your name" 
             value={inputs.name || ""} 
             onChange={handleChange}
@@ -65,8 +65,8 @@ const FormForModal = () => {
                   onChange={handleChange} */}
               </textarea>
             </label><br/>
-            {/* <input type="submit" /> */}
-            <button className="submit-btn">Submit</button>
+            <button type="submit"  datadismiss="modal" className="submit-btn">Submit</button>
+            {/* <button type="submit" onClick={() => closeModal(false)}  datadismiss="modal" className="submit-btn">Submit</button> */}
           </div>
       </form>
 
