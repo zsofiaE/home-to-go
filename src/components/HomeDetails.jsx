@@ -16,6 +16,7 @@ const HomeDetails = ({cityProps, id}) => {
 
   const [openModal, setOpenModal] = useState(false);
   const [openContactModal, setOpenContactModal] = useState(false);
+  const [isContact, setIsContact] = useState(true)
 
   const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
   //const listBedroomPrices = cityProps.bedroom_prices.map((bedroomPrices, index) => <li key={index}> {bedroomPrices}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
@@ -131,7 +132,7 @@ const HomeDetails = ({cityProps, id}) => {
 
       </div>
       
-      {openModal && <Modal closeModal={setOpenModal}> <FormForModal /> </Modal>}
+      {openModal && <Modal closeModal={setOpenModal}> <FormForModal isContact={isContact}/> </Modal>}
     </div>
   );
 };

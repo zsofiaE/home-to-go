@@ -72,7 +72,7 @@
     margin: 10px;
 }
 
-  #label, textarea {
+  #label, textarea, select {
     width: 100%;
 }
 

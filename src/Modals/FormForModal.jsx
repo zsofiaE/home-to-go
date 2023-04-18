@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import React from 'react'
+import Select from 'react-select';
 
-const FormForModal = ({closeModal}) => {
+const FormForModal = ({closeModal, isContact}) => {
 
     const [inputs, setInputs] = useState({});
     const [textarea, setTextarea] = useState();
+   
 
     const handleChange = (event) => {
       const name = event.target.name;
@@ -14,6 +16,13 @@ const FormForModal = ({closeModal}) => {
       setInputs(values => ({...values, [name]: value}))
       setTextarea(event.target.value)
     }
+
+    // const statusOptions = [
+    //   { value: "student", label: "Student" },
+    //   { value: "employed", label: "Employed" },
+    //   { value: "other", label: "Other" }
+     
+    // ]
   
     const handleSubmit = (event) => {
       event.preventDefault();
@@ -57,11 +66,28 @@ const FormForModal = ({closeModal}) => {
             </label><br />
           </div>
           <div className="form-right">
+          {isContact?  <label>Are you a...<br/>
+              <select
+              name="status"
+              value={inputs.status || "Student"} 
+              onChange={handleChange}>
+              <option value="">Student</option>
+              <option value="Employed">Employed</option>
+              <option value="other">other</option>
+              </select>
+            </label>: <br/> }
+                 {/*  //the version above has the needed styling, but here the right code-probabyl this is better//  */}
+            {/*     <Select
+            name="status"
+            options={statusOptions}
+            defaultValue={statusOptions[0]}
+            onChange={handleChange}
+            backspaceRemovesValue></Select>  */}
             <label >Message<br/>
               <textarea
                   rows={7}
                   placeholder="Enter your message" 
-                  value={textarea} 
+                  value={inputs.textarea} 
                   onChange={handleChange}>
               </textarea>
             </label><br/>
