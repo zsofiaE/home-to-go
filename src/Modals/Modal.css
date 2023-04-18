@@ -84,12 +84,13 @@
     /*as i have text-alig left for the moda-body - it is also good for the labels - there is not working this styling)*/
          /* //second try with right-and left divs //  */
     display: grid;
+    column-gap: 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "leftSide rightSide";
 }
 
   .form-left{
-    padding-right: 50px; 
+    /* padding-right: 50px;  */
     grid-template-areas: leftSide;
   }
 
@@ -100,7 +101,7 @@
 
  .submit-btn{
     width: 100%;
-    margin: 15px 0;
+    margin: 20px 0;
   }
 
   @media only screen and (max-width: 1200px){
@@ -118,8 +119,16 @@
       }
    
   }
-  @media only screen and (max-width: 700px){
+  @media only screen and (max-width: 768px){
   .modal-icon{
     font-size: 30px;
   }
+
+  /* h3{
+    font-size: 24px;
+  }
+
+  #label, textarea{
+    font-size: 16px
+  } */
   }
