@@ -21,7 +21,8 @@
     width: 60%;
     max-width: 1000px;
     overflow-y: auto;
-    /* height: 70vh; */
+    /* height: 85vh; */
+    max-height: 100vh;
     border-radius: var(--border-radius);
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -124,15 +125,20 @@
    
   }
   @media only screen and (max-width: 768px){
-  .modal-icon{
+  .modal-icons{
     font-size: 30px;
   }
 
-  /* h3{
-    font-size: 24px;
-  }
+  .modal-header h3 {
+    font-size: 26px;
+}
 
-  #label, textarea{
-    font-size: 16px
-  } */
+  .modal-header p {
+    font-size: 18px;
+  }
+  
+  /* .modal-form-container div label > #status, #input  {
+      font-size: 16px
+    } */
+    
   }

@@ -20,8 +20,10 @@ body {
 :root{
   --primary-dark:black;
   --primary-light: rgb(240, 240, 240);
-  --pink: rgba(252,70,107,1);
   --blue: #3f5efb; 
+  --pink: #fc466b;
+  --purple: #8b58c5;
+  --lila: #bf529d;
   --light-shade-blue: #6878ff;
   --light-hover-shade-blue: #cfcdff;
   --border-radius: 24px;
@@ -99,7 +101,7 @@ input, textarea, select {
   font-family: 'Epilogue';
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
   padding: 12px 20px;
   margin: 15px 0;
@@ -282,14 +284,16 @@ button:hover {
   margin: 20px;
 }
 
-/*-------------------styling the 2. Section (SectionDesktop) Part of the HomePage---------*/
+/*-------------------styling the 2. Section (SectionDesktop)+3. Section of the HomePage---------*/
 
 .section-container{
+  padding: 50px 80px;
   display: flex;
   justify-content: space-around;
+  align-items: stretch;
   text-align: left;
   color:rgb(240, 240, 240);
-  padding: 50px 100px;
+  padding: 50px 80px;
 }
 
 .blue{
@@ -354,16 +358,11 @@ button:hover {
   padding-left: 30px;
 }
 
-/* .bg-section-right{
-  height: 100%;
-  width: 100%;
-  background-image: url(https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
-  background-position: center;
-  background-repeat: no-repeat;  
-} */
-
 /*-------------styling the CTA section Part of the Home Page-------------*/
 
+.keep-in-touch{
+  max-width: 450px;
+}
 
 .cta-icons-container{
   display: flex;
@@ -374,10 +373,6 @@ button:hover {
 .cta-icons-container > p > span {
   margin: 20px;
   vertical-align: text-bottom;
-}
-
-.keep-in-touch{
-  max-width: 450px;
 }
 
 #cta-input{
