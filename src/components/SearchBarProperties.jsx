@@ -1,15 +1,13 @@
 import React, { useContext, useState } from "react";
 import Select from 'react-select';
 import { CitiesContext } from "../Context/CitiesContext";
-//import { PropertiesContext } from "../Context/PropertiesContext";
 import { Link } from "react-router-dom";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 
 const SearchBarProperties = () => {
-  //const { options } = useContext(CitiesContext);
-  const { selectedCity } = useContext(FilteredPropertiesContext);
+  const { selectedCity, setSelectedCity } = useContext(FilteredPropertiesContext);
   
-  const { setFilteredHomes } = useContext(FilteredPropertiesContext);
+  const { fetchHomeDetails } = useContext(FilteredPropertiesContext);
 
   const { setSelectedBedrooms } = useContext(FilteredPropertiesContext);
   const { setSelectedBathrooms } = useContext(FilteredPropertiesContext);
@@ -47,18 +45,22 @@ const SearchBarProperties = () => {
   ]
 
   const handleChangeBedroom = (selectedOption) => {
+    setSelectedCity(selectedOption.value)
     setSelectedBedrooms(selectedOption.label);
   };
 
   const handleChangeBathroom = (selectedOption) => {
+    setSelectedCity(selectedOption.value)
     setSelectedBathrooms(selectedOption.label);
   };
 
   const handleChangePrice = (selectedOption) => {
+    setSelectedCity(selectedOption.value)
     setSelectedPrice(selectedOption.label);
   };
 
   const handleChangeType = (selectedOption) => {
+    setSelectedCity(selectedOption.value)
     setSelectedType(selectedOption.label);
   };
 
@@ -107,8 +109,3 @@ const SearchBarProperties = () => {
 };
 
 export default SearchBarProperties;
-/*
-   <Link to={"cities/"+ setSelectedCity} >
-    <button>Find Homes</button>
-    </Link>
-*/

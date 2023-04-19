@@ -1,38 +1,38 @@
 import React from "react";
-import { Fragment, useContext } from "react";
+import { Fragment } from "react";
 import PropertiesCard from "./PropertiesCard";
 import PropertiesCount from "./PropertiesCount";
-import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
-//------------------------------------------------------------------------------------------ 
+//------------------------------------------------------------------------------------------
 
-const CityPropertiesList = ({id, name, universities, student_life}) => {
-  
-  const { filteredHomes } = useContext(FilteredPropertiesContext);
-
+const PropertiesList = ({ name, universities, student_life, filteredHomes,}) =>
+{
   return (
     <>
-    <PropertiesCount key={id} name={name} />
+      <PropertiesCount name={name} />
       <div className="city-list-container properties-container">
-        {filteredHomes.map(
-          (property) => (
-            (<PropertiesCard property={property} key={property._id} />)
-          )
-        )}
+        {filteredHomes.map((property) => (
+          <PropertiesCard property={property} key={property._id} />
+        ))}
       </div>
       <section className="section-compare-box students">
         <div>
           <h3>Being a student in {name}</h3>
-          <p>{student_life}
+          <p>
+            {student_life}
             <br />
             <br />
-            {universities}</p>
+            {universities}
+          </p>
         </div>
         <div>
-          <img src="../public/students.png" alt="happy young students laugting" />
+          <img
+            src="../public/students.png"
+            alt="happy young students laugting"
+          />
         </div>
       </section>
     </>
   );
 };
 
-export default CityPropertiesList;
+export default PropertiesList;
