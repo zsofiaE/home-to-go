@@ -17,7 +17,7 @@ const AboutUs = () => {
         </div>
         <Link to={"/"} style={{ color: "black", textAlign: "center" }}>
         {" "}
-        <h4><FontAwesomeIcon icon={faChevronLeft}  /> Back to Search</h4>
+        <h4><FontAwesomeIcon icon={faChevronLeft}  /> Back to Home</h4>
         </Link>
         </>
      );

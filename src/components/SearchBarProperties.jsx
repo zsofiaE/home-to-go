@@ -1,7 +1,5 @@
 import React, { useContext, useState } from "react";
 import Select from 'react-select';
-import { CitiesContext } from "../Context/CitiesContext";
-import { Link } from "react-router-dom";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 
 const SearchBarProperties = () => {

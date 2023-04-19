@@ -46,6 +46,14 @@
     letter-spacing: 1.5px;;
   }
 
+  .city-list-details h3{
+    margin: 16px 0;
+  }
+
+  .city-list-details h5{
+    margin:  0;
+  }
+
   .city-list-details:hover{
     color: var(--light-hover-shade-blue);
   }
@@ -67,9 +75,6 @@
         grid-auto-rows: auto;
       }
      
-
-
-
 }
 @media only screen and (max-width: 600px){
 	/*Big smartphones [426px -> 600px]*/

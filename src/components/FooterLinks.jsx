@@ -14,7 +14,6 @@ const FooterLinks = () => {
                 <Link to="/"><p className="">©home to go</p></Link>
             </div>
         </footer>
-
     )
 };
 

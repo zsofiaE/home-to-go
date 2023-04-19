@@ -2,7 +2,6 @@ import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart, faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
 import { RiHomeSmile2Line } from "react-icons/ri";
-
 import { useState } from "react";
 import Modal from "../Modals/Modal";
 import ContactModal from "../Modals/FormForModal";

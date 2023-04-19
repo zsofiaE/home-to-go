@@ -27,7 +27,8 @@ body {
   --light-shade-blue: #6878ff;
   --light-hover-shade-blue: #cfcdff;
   --border-radius: 24px;
-  --gradient: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  --gradientPink: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  --gradient: linear-gradient(238deg, #6bbaa2 0%, rgba(99,181,204,1) 37%, rgba(139,88,197,1) 100%);
 }
 
 #root {
@@ -134,7 +135,7 @@ button {
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.25s;
-  background-color: var(--blue);
+  background-color: var(--purple);
   /* background:linear-gradient(135deg,#00F5A0 0%,#00D9F5 100%); */
   color: white;
   margin: 20px;
@@ -142,7 +143,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: #6878ff;
+  background-color:#6bbaa2;
 }
 
 /*----------------------------styling Navbar -----------------------*/
@@ -152,14 +153,9 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
-  /* background: linear-gradient(90deg, hsla(280, 95%, 57%, 1) 0%, hsla(193, 90%, 55%, 1) 100%); */
-  /* background: linear-gradient(90deg, hsla(197, 100%, 63%, 1) 0%, hsla(294, 100%, 55%, 1) 100%); */
-  /* background: linear-gradient(90deg, #00CEE0 0%, #bb1cff 100%); */
-  /* background: linear-gradient(300deg, rgba(99,182,204,1) 20%, rgba(163,111,205,1) 60%); */
-  /* background:linear-gradient(90deg,#227B56 0%,#66B790 100%); */
-  /* background:linear-gradient(125deg,#870FFF 0%,#F89B29 100%); */
-  /* background:linear-gradient(135deg,#00F5A0 0%,#00D9F5 100%); */
-  background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  background: linear-gradient(238deg, rgba(107,186,162,1) 0%, rgba(99,181,204,1) 37%, rgba(139,88,197,1) 100%);
+  /* background: linear-gradient(45deg, rgba(107,186,162,1) 0%, rgba(99,181,204,1) 50%, rgba(139,88,197,1) 100%); */
+  /* background: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); */
   padding: 0 20px;
 }
 
@@ -182,7 +178,8 @@ button:hover {
 
 .icon{
   position: relative;
-  top: 5px;
+  top: 6px;
+  
 }
 
 .navigation{
@@ -209,7 +206,6 @@ button:hover {
 .links a:hover{
   cursor: pointer;
 }
-
 /*--------------------------------Styling Hero Section------------------------------------*/
 
 .hero-title{
@@ -290,7 +286,6 @@ button:hover {
   padding: 1%;
   margin: 20px;
 }
-
 /*-------------------styling the 2. Section (SectionDesktop)+3. Section of the HomePage---------*/
 
 .section-container{
@@ -314,6 +309,7 @@ button:hover {
 .section-left{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -407,7 +403,6 @@ button:hover {
   position: relative;
   top: 5px;
 }
-
 /*-----------------------------------styling the footer------------------------------------*/
 
 footer{
@@ -483,7 +478,10 @@ footer > p, .links-right > p{
   .property-price-and-details{
     width: 100%;
     height: 32%;
-    background: var(--gradient);
+    /* background: linear-gradient(310deg, #63b5cc 0%, rgba(182,160,207,1) 33%);  */
+    background: linear-gradient(45deg, rgba(107,186,162,1) 0%, rgba(99,181,204,1) 50%, rgba(139,88,197,1) 100%);
+    /* background:  #8b58c5; */
+    /* background: #6bbaa2; */
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -527,6 +525,17 @@ footer > p, .links-right > p{
     border: solid 0.5px #CED3D8;
 
    }
+
+   .property-view-btn .icon{
+   color: #6878ff;
+  }
+
+  .property-view-btn:hover{
+    color: white;
+    background-color: var(--light-hover-shade-blue);
+    
+  }
+
 
    .students{
     display: flex;
