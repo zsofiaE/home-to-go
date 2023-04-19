@@ -2,11 +2,14 @@ import { createContext, useEffect, useState } from 'react'
 export const CitiesContext = createContext();
 //------------------------------------------------------------------------------------------ 
 
+const cityTemplate = {_id: '', name: '', universities: '', student_life: '', image_url: '',}
+
 const CitiesContextProvider = ({children}) => {
    
     const[cities, setCities] = useState([]);
     const [options, setOptions] = useState([]);
     let [page, setPage] = useState(1);
+    const[singleCity, setSingleCity] = useState(cityTemplate);
 
     useEffect(() => {
       let abortController = new AbortController();
@@ -44,8 +47,18 @@ const CitiesContextProvider = ({children}) => {
       );
     }, [cities])
 
+    const fetchCity = (id) =>
+    {
+      fetch(`https://unilife-server.herokuapp.com/cities/${id}`
+      )
+      .then((res) => res.json())
+      .then((response) => {
+        setSingleCity(response.data[0]);
+      })        
+    }
+
   return (
-      <CitiesContext.Provider value={{cities, setCities, options, setOptions}}>
+      <CitiesContext.Provider value={{cities, setCities, options, setOptions, fetchCity, singleCity}}>
           {children}
       </CitiesContext.Provider> 
     )

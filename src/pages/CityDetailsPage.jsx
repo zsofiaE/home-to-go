@@ -1,30 +1,36 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import PropertiesList from "../components/PropertiesList";
 import SearchBarProperties from "../components/SearchBarProperties";
 import { useParams } from "react-router-dom";
 import { CitiesContext } from "../Context/CitiesContext";
-
-
+import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 //---------------------------------------------------------------------------------
 
 const CityDetailsPage = () => {
 
 const {id} = useParams();
-const { cities } = useContext(CitiesContext);
+const { singleCity, fetchCity } = useContext(CitiesContext);
+const { fetchProperties, filteredHomes, setSelectedCity, selectedBedrooms, selectedBathrooms, selectedPrice,selectedType } = useContext(FilteredPropertiesContext);
+console.log("selectedCity", selectedBedrooms);
+
+useEffect(()=>{
+  fetchProperties(id)
+  fetchCity(id)
+  setSelectedCity(id)
+},[id, selectedBedrooms, selectedBathrooms, selectedPrice, selectedType])
 
 
-const props = cities.filter((props) => props._id === id)[0]
-
-  return (
+return (
     <>
       <SearchBarProperties/>
       <section>
-        <PropertiesList key={props._id} id={props._id} name={props.name} universities={props.universities} student_life={props.student_life}/>
+      <PropertiesList filteredHomes={filteredHomes} name={singleCity.name} universities={singleCity.universities} student_life={singleCity.student_life}/>
       </section>
     </>
   );
 };
 
 export default CityDetailsPage;
+
 
 

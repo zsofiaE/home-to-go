@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect, createContext } from "react";
 export const FilteredPropertiesContext = createContext();
 //----------------------------------------------------------------------------------
 
@@ -13,11 +13,12 @@ const FilteredPropertiesContextProvider = ({ children }) => {
   const [selectedBathrooms, setSelectedBathrooms] = useState();
   const [selectedPrice, setSelectedPrice] = useState("");
   const [selectedType, setSelectedType] = useState();
-  const [showProperties, setShowProperties] = useState(false);
+  const [flatDetails, setFlatDetails] = useState([]);
 
- 
-  console.log("selectedBedrooms",selectedBedrooms);
-  
+console.log("selectedCity", selectedCity);
+console.log("selectedBedrooms", selectedBedrooms);
+
+  /*
   useEffect(() => {
     var raw = JSON.stringify({
       query: {
@@ -29,13 +30,13 @@ const FilteredPropertiesContextProvider = ({ children }) => {
       },
     });
 
-    var requestOptions = {
+    const requestOptions = {
       method: "POST",
       headers: myHeaders,
       body: raw,
       redirect: "follow",
     };
-
+   
     fetch(
       "https://unilife-server.herokuapp.com/properties/filter",
       requestOptions
@@ -53,14 +54,88 @@ const FilteredPropertiesContextProvider = ({ children }) => {
     selectedPrice,
     selectedType,
   ]);
+*/
+  
 
-  // clear the searchBarProperties when city changes
-  useEffect(() => {
-    setSelectedBedrooms();
-    setSelectedBathrooms();
-    setSelectedPrice("");
-    setSelectedType();
-  }, [selectedCity]);
+// function to fetch Properties
+
+const fetchProperties = (id) =>
+{
+  const rawQuery = JSON.stringify({
+    query: {
+      city_id: id,
+      bedroom_count: selectedBedrooms,      
+      bathroom_count: selectedBathrooms,
+      rent: selectedPrice,
+      property_type: selectedType,
+    },
+  });
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: rawQuery,
+    redirect: "follow",
+  };
+
+  fetch(
+    "https://unilife-server.herokuapp.com/properties/filter",
+    requestOptions
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      setFilteredHomes(data.response);
+    })
+    .catch((error) => console.log("error", error));
+}
+
+/*function to fetch Home Details
+const fetchHomeDetails = (id) =>
+{
+
+  console.log("ididid", id);
+  const rawQuery2 = JSON.stringify({
+    query: {
+      city_id: id,
+      bedroom_count: selectedBedrooms,
+      bathroom_count: selectedBathrooms,
+      rent: selectedPrice,
+      property_type: selectedType,
+    },
+  });
+
+  const requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: rawQuery2,
+    redirect: "follow",
+  };
+
+  fetch(
+    "https://unilife-server.herokuapp.com/properties/filter",
+    requestOptions
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      console.log("data.", data.response);
+
+      setFlatDetails(data.response);
+    })
+    .catch((error) => console.log("error", error));
+}
+
+*/
+
+
+// clear the searchBarProperties when city ID changes
+useEffect(() => {
+  setSelectedBedrooms();
+  setSelectedBathrooms();
+  setSelectedPrice("");
+  setSelectedType();
+}, [selectedCity]);
+
+
 
   return (
     <FilteredPropertiesContext.Provider
@@ -70,7 +145,8 @@ const FilteredPropertiesContextProvider = ({ children }) => {
         selectedPrice, setSelectedPrice,
         selectedType, setSelectedType,
         filteredHomes, setFilteredHomes,
-        selectedCity, setSelectedCity, showProperties
+        selectedCity, setSelectedCity, 
+        fetchProperties
       }}
     >
       {children}
@@ -79,3 +155,4 @@ const FilteredPropertiesContextProvider = ({ children }) => {
 };
 
 export default FilteredPropertiesContextProvider;
+//fetchProperties, flatDetails, setFlatDetails, fetchHomeDetails
