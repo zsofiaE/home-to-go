@@ -22,7 +22,6 @@ const Navbar = () => {
         <nav className="navbar">
             <Link to="/">
             <div className="navbar-logo">
-                {/* <img className="logo-icon" src="/icons-house.png" alt="house" /> */}
                 <h3 className="logo"> <RiHomeSmile2Line size="30px" className="icon"/> home to go</h3>
             </div>
             </Link>
