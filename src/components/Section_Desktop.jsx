@@ -11,49 +11,25 @@ const Section_Desktop = () => {
     <section className="section-container dark">
       <div className="section-left">
         <div className="section-left-icons">
-            {/* <img
-              src="/real-estate-agent.png"
-              alt="Hands holding house"
-              width="52px"
-            /> */}
-            <div><FontAwesomeIcon icon={faHandPointRight} size="2xl" className="fa-icons" /></div>
+            <div><FontAwesomeIcon icon={faHandPointRight} size="3x" className="fa-icons" /></div>
             <div className="real-estate">
               <h3>Best selection</h3>
               <p>
                 Best selection of student accommodations.
-                <br />
-                Never been easier to find a home that's
-                <br />
-                right for you.
+                Never been easier to find a home that's right for you.
               </p>
           </div>
         </div>
           <div className="section-left-icons">
-            {/* <img 
-              src="/icon_favorites.png" 
-              alt="Favorits" 
-              width="52px" /> */}
-              <div><FontAwesomeIcon icon={faHeart} size="2xl" className="fa-icons" /></div>
-             <div className="favorites">
+              <div><FontAwesomeIcon icon={faHeart} size="3x" className="fa-icons" /></div>
+              <div className="favorites">
                 <h3>Your favorite</h3>
                 <p>
-                  Shortlist your favourite properties and send <br />
+                  Shortlist your favourite properties and send 
                   enquiries in one click.
                 </p>
             </div>
           </div>
-
-          {/* <div className="section-left-icons">
-          <h3><FontAwesomeIcon icon={faHeart} className="fa-brands heart" size="1x"></FontAwesomeIcon>Your favorite</h3>
-             <div className="favorites">
-              
-                <p>
-                  Shortlist your favourite properties and send <br />
-                  enquiries in one click.
-                </p>
-            </div>
-          </div> */}
-        
       </div>
       <div className="section-right">
         {/* <div className="bg-section-right"></div> */}

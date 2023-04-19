@@ -12,9 +12,6 @@ const PropertiesCard = ({ property }) => {
         className="property-bg-img"
         style={{ backgroundImage: `url(${property.images[0]})` }}
       ></div>
-      {/* <img className="propery-img" 
-            src={property.images[0]} 
-            alt={property.property_type} /> */}
       <div
         className="property-list-details"
         style={{ 

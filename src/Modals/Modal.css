@@ -13,83 +13,126 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 99;
+
 }
 
 .modal-container{
-    width: 65%;
-    height: 70vh;
+    width: 60%;
+    max-width: 1000px;
+    overflow-y: auto;
+    /* height: 70vh; */
     border-radius: var(--border-radius);
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
     padding: 15px 25px;
-
+   
 }
 
-.close-btn {
-    display: flex;
-    justify-content: flex-end;
-  
-}
-
-.close-btn button {
-    background-color: transparent;
-    border: none;
-    font-size: 20px;
-    color: black;
-    margin: 0;
-    z-index: 2;
-  
-}
-
-.modal-icons{
-    font-size: 64px;
-
-}
-
-.modal-title{
+.modal-header{
     text-align: left;
     /* padding: 20px; */
     font-weight: 500;
     font-size: 26px;
     /* line-height: 48px; */
     margin: 10px;
-    }
+    display: flex;
+    justify-content: space-between;
+}
 
-    .modal-title h3 {
+ .modal-header h3 {
         margin: 0;
-    }
+}
 
-    .modal-title  p {
-        margin: 15px 0 15px 10px;
+ .modal-header  p {
+        margin: 15px 0;
         font-weight: 400;
-    }
+}
+
+.close-btn button {
+    background-color: transparent;
+    border: none;
+    /* font-size: 20px; */
+    /* color: black; */
+    margin: 0;
+    padding: 0;
+    z-index: 99;
+}
+
+.close-btn button:hover{
+  background-color: transparent;
+}
 
 .modal-body {
     flex: 50%;
     text-align: left;
     /* padding: 20px; */
+    margin: 10px;
+}
+
+  #label, textarea, select {
+    width: 100%;
 }
 
 /* .modal-footer {
-    
     display: flex;
     justify-content: flex-end;
   } */
   
   .modal-form-container{
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-content: space-between;
+    align-content: space-between; */
     /*as i have text-alig left for the moda-body - it is also good for the labels - there is not working this styling)*/
-  }
+         /* //second try with right-and left divs //  */
+    display: grid;
+    column-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "leftSide rightSide";
+}
 
   .form-left{
-    padding-right: 50px; 
+    /* padding-right: 50px;  */
+    grid-template-areas: leftSide;
   }
 
+  .form-right{
+    /* padding-right: 50px;  */
+    grid-template-areas: rightSide;
+  }
 
+ .submit-btn{
+    width: 100%;
+    margin: 20px 0;
+  }
 
+  @media only screen and (max-width: 1200px){
 
+    .modal-form-container{
+        max-width: 700px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "leftSide"
+                            "rightSide";
+    }
 
+    .form-left{
+        padding-right: 0px; 
+        
+      }
+   
+  }
+  @media only screen and (max-width: 768px){
+  .modal-icon{
+    font-size: 30px;
+  }
+
+  /* h3{
+    font-size: 24px;
+  }
+
+  #label, textarea{
+    font-size: 16px
+  } */
+  }
