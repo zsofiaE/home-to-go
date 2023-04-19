@@ -79,6 +79,13 @@ h5{
   font-size: 20px;
 }
 
+h6{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 15px 0;
+}
+
 p{
   font-size: 20px;
   line-height: 32px;
@@ -381,6 +388,24 @@ button:hover {
 
 .fa-brands{
   padding: 0px 10px 0px 0;
+}
+
+/*-----------------------------------styling other pages------------------------------------*/
+.text-container{
+  padding: 20px 100px;
+  text-align: justify;
+}
+
+.text-container h1 {
+  text-align: center;
+  padding: 20px;;
+}
+
+.li-icons{
+  color: var(--light-shade-blue);
+  font-size: 40px;
+  position: relative;
+  top: 5px;
 }
 
 /*-----------------------------------styling the footer------------------------------------*/
