@@ -68,6 +68,7 @@ const FormForModal = ({closeModal, isContact}) => {
           <div className="form-right">
           {isContact?  <label>Are you a...<br/>
               <select
+              id="status"
               name="status"
               value={inputs.status || "Student"} 
               onChange={handleChange}>
@@ -85,6 +86,7 @@ const FormForModal = ({closeModal, isContact}) => {
             backspaceRemovesValue></Select>  */}
             <label >Message<br/>
               <textarea
+              id="input"
                   rows={7}
                   placeholder="Enter your message" 
                   value={inputs.textarea} 

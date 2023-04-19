@@ -11,10 +11,10 @@ const Modal = ({ closeModal, isContact } ) => {
   
   return (
     <>
-                                                      //👇with this onClick we allow outside close
+                                                      {/* //👇with this onClick we allow outside close */}
     <div id="myModal" role="dialog" className="modal-background" onClick={() => closeModal(false)} >
-      //here 👆 we allow outside click to close so here 👇 we need to prevent for inside click 
-      //if you click inside the content, it will stop at .modal-container and the onClick in .modal-background will never be called.
+      {/* //here 👆 we allow outside click to close so here 👇 we need to prevent for inside click 
+      //if you click inside the content, it will stop at .modal-container and the onClick in .modal-background will never be called. */}
       <div className="modal-container" onClick={e => e.stopPropagation()}>
           
           <div className="modal-header">
