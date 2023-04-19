@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
      
         <FilteredPropertiesContextProvider>
           <App />
-          </FilteredPropertiesContextProvider>
+         </FilteredPropertiesContextProvider>
     </CitiesContextProvider>
   </React.StrictMode>
 );

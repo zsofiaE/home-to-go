@@ -1,5 +1,5 @@
 import React from "react";
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 //------------------------------------------------------------------------------------------ 
 

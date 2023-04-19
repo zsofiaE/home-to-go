@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CityListCard from "./CityListCard";
-import { Fragment, useContext } from "react";
+import { useContext } from "react";
 import { CitiesContext } from "../Context/CitiesContext";
 
 const CityList = () => {

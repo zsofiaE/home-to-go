@@ -1,28 +1,25 @@
-import React, { Fragment, useContext, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft, faBed, faBath, faHeart} from "@fortawesome/free-solid-svg-icons";
-import OpenViewingModal from "../Modals/OpenModal";
+import { faChevronLeft, faHeart} from "@fortawesome/free-solid-svg-icons";
 import Modal from "../Modals/Modal";
 import { Link } from "react-router-dom";
 import "../styles/HomeDetails.css"
 import{ MdOutlineBed, MdOutlineBathtub } from 'react-icons/md'
-import { FiCheck, FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'
 import FormForModal from "../Modals/FormForModal";
 
 const HomeDetails = ({cityProps, id}) => {
 
-
-  console.log("cityProps",cityProps)
+ // console.log("cityProps",cityProps)
 
   const [openModal, setOpenModal] = useState(false);
   const [openContactModal, setOpenContactModal] = useState(false);
   const [isContact, setIsContact] = useState(true);
 
-  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
-  //const listBedroomPrices = cityProps.bedroom_prices.map((bedroomPrices, index) => <li key={index}> {bedroomPrices}</li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:
-//            
+  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:        
 
   return (
+    <>
     <div className="property">
       <Link to={"/"} style={{ color: "black" }}>
         {" "}
@@ -52,9 +49,6 @@ const HomeDetails = ({cityProps, id}) => {
         <div className="home-grid-item grid-details">
           <div className="details">
             <h3>{cityProps.address.street}, {cityProps.address.city}, {cityProps.address.postcode}</h3> 
-            
-            {/* <hr style={{color: "black", height: "0.3px"}}/> */}
-
             <div className="container">
                 <div className="grid-items bedroom">
                   <p>Bedrooms</p>
@@ -134,7 +128,9 @@ const HomeDetails = ({cityProps, id}) => {
       
       {openModal && <Modal onClose={() => setOpenModal(false)} closeModal={setOpenModal} openModal={openModal} > <FormForModal isContact={isContact}/> </Modal>}
     </div>
+    </>
   );
 };
+
 
 export default HomeDetails;

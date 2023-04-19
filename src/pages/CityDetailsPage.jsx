@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import PropertiesList from "../components/PropertiesList";
 import SearchBarProperties from "../components/SearchBarProperties";
 import { useParams } from "react-router-dom";

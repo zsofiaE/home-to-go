@@ -1,5 +1,4 @@
 import React from "react";
-import { Fragment } from "react";
 import PropertiesCard from "./PropertiesCard";
 import PropertiesCount from "./PropertiesCount";
 //------------------------------------------------------------------------------------------

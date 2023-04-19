@@ -9,7 +9,6 @@ import Error from "./pages/Error";
 import About from "./pages/About";
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyCookiePolicies from "./pages/PrivacyCookiePolicies";
-import Modal from "./Modals/Modal";
 
 function App() {
   const router = createBrowserRouter(

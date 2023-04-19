@@ -66,7 +66,7 @@ const FormForModal = ({closeModal, isContact}) => {
             </label><br />
           </div>
           <div className="form-right">
-          {isContact?  <label>Are you a...<br/>
+          {isContact ?  <label>Are you a...<br/>
               <select
               id="status"
               name="status"
