@@ -16,7 +16,7 @@ const HomeDetails = ({cityProps, id}) => {
   const [openContactModal, setOpenContactModal] = useState(false);
   const [isContact, setIsContact] = useState(true);
 
-  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:        
+  const listKeyFeatures = cityProps.key_features.map((keyFeatures, index) => <li   key={index} > <FiArrowRight size="25px" color="#6878ff"/> {keyFeatures} </li>); //When you don’t have stable IDs for rendered items, you may use the item index as a key as a last resort:        
 
   return (
     <>

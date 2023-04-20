@@ -6,7 +6,7 @@ import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 const PrivacyCookiePolicies = () => {
   return (
     <>
-    <div className="section-compare-box">
+    <div className="section-box">
 
         <div className="text-container">
                   <h1>Generic Cookie Policy </h1>

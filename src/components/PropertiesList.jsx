@@ -3,7 +3,8 @@ import PropertiesCard from "./PropertiesCard";
 import PropertiesCount from "./PropertiesCount";
 //------------------------------------------------------------------------------------------
 
-const PropertiesList = ({ name, universities, student_life, filteredHomes,}) =>
+const PropertiesList = ({ name, universities, student_life, filteredHomes, image_url
+}) =>
 {
   return (
     <>
@@ -13,7 +14,7 @@ const PropertiesList = ({ name, universities, student_life, filteredHomes,}) =>
           <PropertiesCard property={property} key={property._id} />
         ))}
       </div>
-      <section className="section-compare-box students">
+      <section className="section-box students">
         <div>
           <h3>Being a student in {name}</h3>
           <p>
@@ -23,12 +24,12 @@ const PropertiesList = ({ name, universities, student_life, filteredHomes,}) =>
             {universities}
           </p>
         </div>
-        <div>
-          <img
-            src="../public/students.png"
-            alt="happy young students laugting"
-          />
-        </div>
+        {/* <div><img src="../public/students.png" alt="happy young students laugting"/> </div> */}
+          <div className="students-bg-img"
+                style={{ backgroundImage: `url(${image_url})` }}>
+            <div className="students-overlay"></div>
+          </div>
+      
       </section>
     </>
   );

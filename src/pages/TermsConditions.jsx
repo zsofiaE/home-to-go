@@ -6,7 +6,7 @@ import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 const TermsConditions = () => {
   return (
     <>
-    <div className="section-compare-box">
+    <div className="section-box">
 
         <div className="text-container">
           <h1>Terms and Conditions </h1>

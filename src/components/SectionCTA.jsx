@@ -18,9 +18,9 @@ const CTA = () => {
          <div className="socialize">
             <h3>Let's Socialize</h3>
             <div className='cta-icons-container'>
-                    <p><FontAwesomeIcon icon={faFacebook}  className="fa-brands" size="xl" /> Facebook </p>
-                    <p><FontAwesomeIcon icon={faTwitter} className="fa-brands" size="xl" /> Twitter</p> 
-                    <p><FontAwesomeIcon icon={faInstagram} className="fa-brands" size="xl" /> Instagram</p>                          
+                    <p><FontAwesomeIcon icon={faFacebook}  className="fa-brands" size="lg" /> Facebook </p>
+                    <p><FontAwesomeIcon icon={faTwitter} className="fa-brands" size="lg" /> Twitter</p> 
+                    <p><FontAwesomeIcon icon={faInstagram} className="fa-brands" size="lg" /> Instagram</p>                          
                 </div>
             </div>
     </section>
