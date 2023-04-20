@@ -19,12 +19,12 @@ useEffect(()=>{
   setSelectedCity(id)
 },[id, selectedBedrooms, selectedBathrooms, selectedPrice, selectedType])
 
-
+console.log(singleCity)
 return (
     <>
       <SearchBarProperties/>
       <section>
-      <PropertiesList filteredHomes={filteredHomes} name={singleCity.name} universities={singleCity.universities} student_life={singleCity.student_life}/>
+      <PropertiesList filteredHomes={filteredHomes} name={singleCity.name} universities={singleCity.universities} student_life={singleCity.student_life} image_url={singleCity.image_url} />
       </section>
     </>
   );

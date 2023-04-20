@@ -5,7 +5,7 @@ import {faChevronLeft} from "@fortawesome/free-solid-svg-icons";
 const AboutUs = () => {
     return (
       <>
-      <div className="section-compare-box">
+      <div className="section-box">
 
           <div className="text-container">
                     <h1>About Us</h1>

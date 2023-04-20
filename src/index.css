@@ -23,12 +23,13 @@ body {
   --blue: #3f5efb; 
   --pink: #fc466b;
   --purple: #8b58c5;
+  --light-blue: #63b5cc;
   --lila: #bf529d;
   --light-shade-blue: #6878ff;
   --light-hover-shade-blue: #cfcdff;
   --border-radius: 24px;
   --gradientPink: linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-  --gradient: linear-gradient(238deg, #6bbaa2 0%, rgba(99,181,204,1) 37%, rgba(139,88,197,1) 100%);
+  --gradient: linear-gradient(238deg, #6bbaa2 0%, #63b5cc 37%, #8b58c5 100%);
 }
 
 #root {
@@ -255,6 +256,7 @@ button:hover {
   height: 45vh;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  background: rgba(71, 57, 80, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -268,7 +270,7 @@ button:hover {
 
 /*-----------styling the 1. Section (SectionCompare) Part of the HomePage ---------*/
 
-.section-compare-box{
+.section-box{
   background-color:  rgba(63, 94, 251, 0.10);
   border-radius: var(--border-radius);
   margin: 40px;
@@ -316,8 +318,9 @@ button:hover {
 .fa-icons{
   line-height: 2em;
   padding: 0 15px 0 30px;
-  color: var(--light-shade-blue)
-  /* color:#7980ff; */
+  color: var(--light-shade-blue);
+  
+  color:#7980ff;
 }
 
 .favorites-title{
@@ -403,6 +406,24 @@ button:hover {
   position: relative;
   top: 5px;
 }
+
+.fav-img{
+  /* background-image: url('../public/fav1.jpg'); */
+  width: 100%;
+ 
+}
+
+.fav{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 400px;
+  /* height: 500px; */
+  display: flex;
+  flex-direction: column;
+
+ border-radius: 24px;
+ margin: 20px;
+}
+
 /*-----------------------------------styling the footer------------------------------------*/
 
 footer{
@@ -449,7 +470,7 @@ footer > p, .links-right > p{
    
   }
 
-  .property-bg-img{
+  .property-bg-img, .fav-bg-img{
     width: 100%;
     height: 52%;
     border-radius: 24px 24px 0px 0px;
@@ -523,7 +544,11 @@ footer > p, .links-right > p{
     vertical-align: bottom;
     border-radius: 0 0 24px 24px;
     border: solid 0.5px #CED3D8;
+   }
 
+   .favorites{
+    height: 100%;
+    max-height: 100px;
    }
 
    .property-view-btn .icon{
@@ -551,13 +576,29 @@ footer > p, .links-right > p{
 
    .students div{
     width: 95%;
-    padding: 20px;
+    /* padding: 20px; */
    }
 
-   .students img{
+   .students .students-bg-img{
     border-radius: var(--border-radius);
-    width: 100%;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 30px;
+
    }
+    .students-overlay{
+      border-radius: var(--border-radius);
+      background: rgba(207, 166, 235, 0.3);
+      /* background: rgba(23, 22, 23, 0.25); */
+      /* background:  rgb(139, 88, 197, 0.3); */
+      min-height:400px;
+      min-width: 100%;
+     
+  }
+
+
 
 /*--------------------home details styling in a separate file ../styles/HomeDetails.css---------------*/
 
@@ -639,6 +680,7 @@ footer > p, .links-right > p{
     /* max-height: 280px; */
     width: 100%;
     background-color: var(--blue);
+    background-color: var(--purple);
     display: flex;
     flex-direction: column;
     align-items: center;

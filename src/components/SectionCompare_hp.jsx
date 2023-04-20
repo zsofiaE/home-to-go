@@ -4,7 +4,7 @@ import { faEarthEurope, faListCheck, faReceipt, faMagnifyingGlass } from '@forta
 
 const SectionCompare_hp = () => {
   return (
-    <div className="section-compare-box">
+    <div className="section-box">
         <h3>Compare all inclusive student homes.</h3>
 
         <div className='compare section-flex-container'>
