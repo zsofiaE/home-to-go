@@ -681,6 +681,7 @@ footer > p, .links-right > p{
     width: 100%;
     background-color: var(--blue);
     background-color: var(--purple);
+    /* background-color: #a49dd3; */
     display: flex;
     flex-direction: column;
     align-items: center;

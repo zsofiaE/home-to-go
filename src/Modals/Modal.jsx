@@ -23,9 +23,9 @@ const Modal = ({ closeModal, isContact } ) => {
 Looking forward to hear from you.</p> :  <p>Address street, City, 1234</p>}
               </div>
             <div className='close-btn'>
-            { isContact ? <button type="button" datadismiss="modal" onClick={() => closeModal(false)}> <FontAwesomeIcon icon={faEnvelopesBulk} size="2xl" style={{color: "#3f5efb"}} pull="right" className='modal-icons'/></button>
+            { isContact ? <button type="button" datadismiss="modal" onClick={() => closeModal(false)}> <FontAwesomeIcon icon={faEnvelopesBulk} size="2xl" style={{color: "#8b58c5"}} pull="right" className='modal-icons'/></button>
                         :
-                          <button type="button" datadismiss="modal" onClick={() => closeModal(false)}>  <MdOutlineAddHomeWork size="70px" style={{color: "#3f5efb"}} pull="right"  /> </button>}
+                          <button type="button" datadismiss="modal" onClick={() => closeModal(false)}>  <MdOutlineAddHomeWork size="70px" style={{color: "#8b58c5"}} pull="right"  /> </button>}
           </div>
 
           </div>
