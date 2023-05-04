@@ -15,50 +15,7 @@ const FilteredPropertiesContextProvider = ({ children }) => {
   const [selectedType, setSelectedType] = useState();
   const [flatDetails, setFlatDetails] = useState([]);
 
-console.log("selectedCity", selectedCity);
-console.log("selectedBedrooms", selectedBedrooms);
-
-  /*
-  useEffect(() => {
-    var raw = JSON.stringify({
-      query: {
-        city_id: selectedCity,
-        bedroom_count: selectedBedrooms,
-        bathroom_count: selectedBathrooms,
-        rent: selectedPrice,
-        property_type: selectedType,
-      },
-    });
-
-    const requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-   
-    fetch(
-      "https://unilife-server.herokuapp.com/properties/filter",
-      requestOptions
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setFilteredHomes(data.response);
-        setShowProperties(true)
-      })
-      .catch((error) => console.log("error", error));
-  }, [
-    selectedCity,
-    selectedBedrooms,
-    selectedBathrooms,
-    selectedPrice,
-    selectedType,
-  ]);
-*/
-  
-
 // function to fetch Properties
-
 const fetchProperties = (id) =>
 {
   const rawQuery = JSON.stringify({
@@ -89,44 +46,6 @@ const fetchProperties = (id) =>
     .catch((error) => console.log("error", error));
 }
 
-/*function to fetch Home Details
-const fetchHomeDetails = (id) =>
-{
-
-  console.log("ididid", id);
-  const rawQuery2 = JSON.stringify({
-    query: {
-      city_id: id,
-      bedroom_count: selectedBedrooms,
-      bathroom_count: selectedBathrooms,
-      rent: selectedPrice,
-      property_type: selectedType,
-    },
-  });
-
-  const requestOptions = {
-    method: "POST",
-    headers: myHeaders,
-    body: rawQuery2,
-    redirect: "follow",
-  };
-
-  fetch(
-    "https://unilife-server.herokuapp.com/properties/filter",
-    requestOptions
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      console.log("data.", data.response);
-
-      setFlatDetails(data.response);
-    })
-    .catch((error) => console.log("error", error));
-}
-
-*/
-
-
 // clear the searchBarProperties when city ID changes
 useEffect(() => {
   setSelectedBedrooms();
@@ -134,8 +53,6 @@ useEffect(() => {
   setSelectedPrice("");
   setSelectedType();
 }, [selectedCity]);
-
-
 
   return (
     <FilteredPropertiesContext.Provider
@@ -155,4 +72,3 @@ useEffect(() => {
 };
 
 export default FilteredPropertiesContextProvider;
-//fetchProperties, flatDetails, setFlatDetails, fetchHomeDetails

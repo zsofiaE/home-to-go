@@ -3,6 +3,7 @@ import Select from 'react-select';
 import { CitiesContext } from "../Context/CitiesContext";
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
 import { Link } from "react-router-dom";
+//------------------------------------------------------------------------------------------
 
 const SearchBarCityList = () => {
   const { options } = useContext(CitiesContext);

@@ -11,7 +11,6 @@ const CityDetailsPage = () => {
 const {id} = useParams();
 const { singleCity, fetchCity } = useContext(CitiesContext);
 const { fetchProperties, filteredHomes, setSelectedCity, selectedBedrooms, selectedBathrooms, selectedPrice,selectedType } = useContext(FilteredPropertiesContext);
-console.log("selectedCity", selectedBedrooms);
 
 useEffect(()=>{
   fetchProperties(id)
@@ -19,7 +18,6 @@ useEffect(()=>{
   setSelectedCity(id)
 },[id, selectedBedrooms, selectedBathrooms, selectedPrice, selectedType])
 
-console.log(singleCity)
 return (
     <>
       <SearchBarProperties/>

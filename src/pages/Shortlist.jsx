@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronLeft, faHeart, faLocationDot} from "@fortawesome/free-solid-svg-icons";
 import {RiHomeSmile2Line} from "react-icons/ri"
+//------------------------------------------------------------------------------------------
 
 const Shortlist = () => {
   return (
