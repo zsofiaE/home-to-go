@@ -1,12 +1,11 @@
 import React, { useContext, useState } from "react";
 import Select from 'react-select';
 import { FilteredPropertiesContext } from "../Context/FilteredPropertiesContext";
+//------------------------------------------------------------------------------------------
 
 const SearchBarProperties = () => {
-  const { selectedCity, setSelectedCity } = useContext(FilteredPropertiesContext);
-  
-  const { fetchHomeDetails } = useContext(FilteredPropertiesContext);
 
+  const { selectedCity, setSelectedCity } = useContext(FilteredPropertiesContext);
   const { setSelectedBedrooms } = useContext(FilteredPropertiesContext);
   const { setSelectedBathrooms } = useContext(FilteredPropertiesContext);
   const { setSelectedPrice } = useContext(FilteredPropertiesContext);

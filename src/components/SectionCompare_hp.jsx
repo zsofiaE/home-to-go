@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEarthEurope, faListCheck, faReceipt, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+//------------------------------------------------------------------------------------------
 
 const SectionCompare_hp = () => {
   return (

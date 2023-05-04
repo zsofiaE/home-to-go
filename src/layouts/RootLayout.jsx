@@ -3,6 +3,7 @@ import FooterLinks from "../components/FooterLinks";
 import { Link, NavLink, Outlet } from  'react-router-dom';
 import HeroSection from "../components/HeroSection";
 import SectionCTA from "../components/SectionCTA";
+//------------------------------------------------------------------------------------------
 
 const RootLayout = () => {
     return(

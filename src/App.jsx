@@ -5,10 +5,10 @@ import CityDetailsPage from "./pages/CityDetailsPage";
 import HomeDetailsPage from "./pages/HomeDetailsPage";
 import Shortlist from "./pages/Shortlist";
 import Error from "./pages/Error";
-
 import About from "./pages/About";
 import TermsConditions from "./pages/TermsConditions";
 import PrivacyCookiePolicies from "./pages/PrivacyCookiePolicies";
+//------------------------------------------------------------------------------------------
 
 function App() {
   const router = createBrowserRouter(
@@ -16,7 +16,7 @@ function App() {
       <Route path="/" element={<RootLayout />}>
         <Route index element={<HomePage />} />
         <Route path="cities/:id/" element={<CityDetailsPage />} />
-        <Route path="cities/:id/homes/:id/" element={<HomeDetailsPage />} />
+        <Route path="homes/:homes_id/" element={<HomeDetailsPage />} />
         {/* <Route path="contact" element={<Contact />} /> */}
         <Route path="shortlist" element={<Shortlist />} />
         <Route path="about" element={<About />} />

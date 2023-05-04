@@ -1,12 +1,12 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHandPointRight, faHeart  } from '@fortawesome/free-solid-svg-icons';
-
+//------------------------------------------------------------------------------------------
 
 const Section_Desktop = () => {
-  return (
  
-    <section className="section-container dark">
+  return (
+     <section className="section-container dark">
       <div className="section-left">
         <div className="section-left-icons">
             <div><FontAwesomeIcon icon={faHandPointRight} size="3x" className="fa-icons" /></div>

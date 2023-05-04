@@ -67,7 +67,7 @@ const PropertiesCard = ({ property }) => {
               {property.address.street}, {property.address.city}, {property.address.postcode}
             </div>
           </div>
-          <Link to={"homes/"+ property._id}>
+          <Link to={"../homes/"+ property._id}>
           <button className="property-view-btn">
             <RiHomeSmile2Line size="30px" className="icon"/> View Home
           </button>
